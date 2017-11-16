@@ -1,0 +1,19 @@
+{
+  "name": "bbn/appui-server",
+  "description": "GUI for managing languages and translations in appui",
+  "keywords": ["virtualmin","webmin","server","appui"],
+  "homepage": "https://github.com/nabab/appui-server",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thomas Nabet",
+      "email": "thomas.nabet@gmail.com",
+      "homepage": "http://bbn.solutions",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "bbn/bbn": "dev-master"
+  }
+}
