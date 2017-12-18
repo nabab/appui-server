@@ -1,0 +1,1 @@
+<appui-server-main :source="source" :server="server"></appui-server-main>

@@ -1,0 +1,1 @@
+<appui-server-tab-domain :source="source"></appui-server-tab-domain>
