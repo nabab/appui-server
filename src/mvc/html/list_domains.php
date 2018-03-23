@@ -14,7 +14,7 @@
     <br><a href="https://www.bbn.so/fiddle" target="_blank">BBN.SO/fiddle</a>
     <br><a href="https://lasai.fr" target="_blank">LASAI.FR</a>
     <br><a href="https://amiral-services.com/" target="_blank">AMIRAL</a>
-    <br><a href="https://www.appui.app.travel/" target="_blank">APST TRAVEL</a>
+    <br><a href="https://www.apst.travel/" target="_blank">APST TRAVEL</a>
   </div>
   <div>
     <span>
@@ -33,9 +33,9 @@
       <h2>APST</h2>
     </span>
     <span>
-      &nbsp; &mdash;&gt; &nbsp;<a href="https://appui.app.lan:10000" target="_blank">virtualmin</a>
+      &nbsp; &mdash;&gt; &nbsp;<a href="https://apst.lan:10000" target="_blank">virtualmin</a>
     </span>
-    <br><a href="https://app.appui.app.lan/" target="_blank">APP.APST.LAN</a>
+    <br><a href="https://app.apst.lan/" target="_blank">APP.APST.LAN</a>
   </div>
   <div>
     <span>
@@ -79,7 +79,7 @@
     <span>
        &nbsp; &mdash;&gt; &nbsp;<a href="https://thomas.lan:10000" target="_blank">virtualmin</a>
     </span>
-    <br><a href="https://appui.app.thomas.lan/" target="_blank">APST.THOMAS.LAN</a>
+    <br><a href="https://apst.thomas.lan/" target="_blank">APST.THOMAS.LAN</a>
     <br><a href="https://apstapp.thomas.lan/" target="_blank">APSTAPP.THOMAS.LAN</a>
     <br><a href="https://cdn.thomas.lan/" target="_blank">CDN.THOMAS.LAN</a>
   </div>
