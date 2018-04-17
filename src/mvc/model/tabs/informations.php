@@ -16,8 +16,8 @@ if ( !empty($model->data['domain']) ){
     'ssl_cert_file',
   ];
   $conf = [
-    'user' => 'bbn',
-    'pass' => 'bbnsolutions',
+    'user' => '',
+    'pass' => '',
     'host' => $model->data['domain'] . ".lan"
   ];
 

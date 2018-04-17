@@ -9,8 +9,8 @@
 
 if ( !empty($model->data['server']) ){
   $conf = [
-    'user' => 'bbn',
-    'pass' => 'bbnsolutions',
+    'user' => '',
+    'pass' => '',
     'host' => $model->data['server'] . ".lan"
   ];
 

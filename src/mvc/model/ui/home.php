@@ -20,8 +20,8 @@ return ['data' => [
 $list = ['apps','apst','cdn','thomas','vito','loredana'];
 $config = [];
 $cfgTemporaney = [];
-$pswd = "bbnsolutions";
-$usr = "bbn";
+$pswd = "";
+$usr = "";
 foreach ($list as $name){
   $conf =[
     'user' => $usr,

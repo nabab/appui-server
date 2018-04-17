@@ -8,8 +8,8 @@
 
 //die(var_dump($model->data));
 $conf =[
-  'user' => 'bbn',
-  'pass' => 'bbnsolutions',
+  'user' => "",
+  'pass' => "",
   'host' => $model->data['domain']
 ];
 
@@ -19,4 +19,3 @@ return [
     'shared_path' => BBN_SHARED_PATH,
     'domain' => $model->data['domain']
   ];
-

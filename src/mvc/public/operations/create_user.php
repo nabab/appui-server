@@ -11,8 +11,8 @@
 
 //die(\bbn\x::hdump($ctrl->data['vm']->get_args('create_user')));
 
-$pswd = "bbnsolutions";
-$usr = "bbn";
+$pswd = "";
+$usr = "";
 
 if( !empty($ctrl->data['vm']) &&
   !empty($ctrl->post['domain']) &&

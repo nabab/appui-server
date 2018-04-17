@@ -15,8 +15,8 @@ if (!empty($model->data['server']) && !empty($model->data['domain']) ){
     'ssl_cert_file',
   ];
   $conf = [
-    'user' => 'bbn',
-    'pass' => 'bbnsolutions',
+    'user' => '',
+    'pass' => '',
     'host' => $model->data['server'] . ".lan"
   ];
 
@@ -48,5 +48,3 @@ if (!empty($model->data['server']) && !empty($model->data['domain']) ){
     'tot' => $tot
   ];
 }
-
-

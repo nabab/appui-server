@@ -9,18 +9,18 @@
  */
 
 /*
-$pswd = "bbnsolutions";
-$usr = "bbn";
+$pswd = "";
+$usr = "";
 
 if ( !empty($ctrl->post['host']) ) {
 
   $conf =[
-    'user' => 'bbn',
-    'pass' => 'bbnsolutions'
+    'user' => '',
+    'pass' => ''
     'host' => $ctrl->post['host']
   ];
 
-  
+
  $ctrl->data['vm'] = new \bbn\api\virtualmin($conf);
   if ( !empty($ctrl->data['vm']) ){
     return true;

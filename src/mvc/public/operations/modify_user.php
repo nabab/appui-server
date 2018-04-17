@@ -9,8 +9,8 @@
  */
 
 die(var_dump("cccd"));
-$pswd = "bbnsolutions";
-$usr = "bbn";
+$pswd = "";
+$usr = "";
 
 
 if( !empty($ctrl->post['domain']) &&

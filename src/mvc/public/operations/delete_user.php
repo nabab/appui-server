@@ -9,8 +9,8 @@
  */
 
 
-$pswd = "bbnsolutions";
-$usr = "bbn";
+$pswd = "";
+$usr = "";
 
 if( !empty($ctrl->data['vm']) &&
   !empty($ctrl->post['domain']) &&
