@@ -3,11 +3,11 @@
               :scrollable="true"
               :autoload="true"
   >
-    <bbn-tab url="home"
+    <bbns-tab url="home"
              :static="true"
              :load="true"
              :title="'<i class=\'fa fa-home\'> </i>&nbsp;<?=_("Dashboard")?>'"
-    ></bbn-tab>
+    ></bbns-tab>
   </bbn-tabnav>
 </div>
 <!--<script v-for="temp in source.templates" :id="temp.id" type="text/x-template" v-html="temp.html"></script>-->

@@ -6,37 +6,26 @@
  * Time: 14.38
  */
 
-
-if ( !empty($model->data['server']) ){
-  $conf = [
-    'user' => '',
-    'pass' => '',
-    'host' => $model->data['server'] . ".lan"
-  ];
-
-
-  $vm = new \bbn\api\virtualmin($conf);
-  $domains = $vm->list_domains();
-
-
-  $tot = 0;
-  $all = [];
-
+$tot = 0;
+$all = [];
+if ( !empty($model->data['id']) &&  !empty($model->inc->vm) ){
+  $server = $model->inc->options->option($model->data['id']);
+  $domains = $model->inc->vm->list_domains(['domain' => $server['text'], 'toplevel' => 1]);
   foreach ( $domains as $i => $v ){
     $users = "";
     $parms_list =  [
       'all-domains' => 1,
       'domain' => $v['name'],
-      'domain-user' => $conf['user'],
+      'domain-user' => $server['user'],
       'email-only' => 1,
       'include-owner' => 1,
       'multiline' => 1,
       'name-only' => 1,
       'simple-aliases' => 1,
     ];
-    $all_users = $vm->list_users($parms_list);
+    $all_users = $model->inc->vm->list_users($parms_list);
     if( !empty($all_users) ){
-      foreach ( $all_users as $j => $val ){
+      foreach ( $all_users as $val ){
         if ( $val['values']['domain'][0] == $v['name'] ){
           $users .= $val['name']. "  ";
         }
@@ -46,17 +35,19 @@ if ( !empty($model->data['server']) ){
       $users = " ";
     }
 
-    array_push($all, [
-      'server' => $conf['host'],
-      'domain' => $v['name'],
-      'users' => $users
-    ]);
-    $tot = $tot + 1;
+      array_push($all, [
+        'server' => $server['text'],
+        'domain' => $v['name'],
+        'disabled' => isset($v['values']['disabled']) ? true : false,
+        'users' => $users,
+        'created' => $v['values']['created_on'][0],
+        'total_info' => $v['values'],
+      ]);
+      $tot = $tot + 1;
+
   }
-
-  return [
-    'data' => $all,
-    'tot' => $tot
-  ];
-
 }
+return [
+  'data' => $all,
+  'tot' => $tot
+];

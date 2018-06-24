@@ -5,7 +5,15 @@
  * Date: 23/11/17
  * Time: 14.38
  */
-if (!empty($model->data['server']) && !empty($model->data['domain']) ){
+
+$tot = 0;
+$all = [];
+$infos= "";
+
+if (!empty($model->inc->vm) &&
+ !empty($model->data['server']) &&
+ !empty($model->data['domain'])
+){
   $selected_info = [
     'php_version',
     'user_quota_used',
@@ -13,19 +21,9 @@ if (!empty($model->data['server']) && !empty($model->data['domain']) ){
     'ssl_key_file',
     'shell_type',
     'ssl_cert_file',
+    'description'
   ];
-  $conf = [
-    'user' => '',
-    'pass' => '',
-    'host' => $model->data['server'] . ".lan"
-  ];
-
-  $vm = new \bbn\api\virtualmin($conf);
-  $domains = $vm->list_domains();
-
-  $tot = 0;
-  $all = [];
-
+  $domains = $model->inc->vm->list_domains();
   foreach($domains as $key => $val){
 
     if( $val['name'] === $model->data['domain'] ){
@@ -34,17 +32,18 @@ if (!empty($model->data['server']) && !empty($model->data['domain']) ){
           if( $j === $value ){
             array_push($all, [
               'info' => $j,
-              'value' => $v[0]
+              'value' => $v[0],
             ]);
             $tot = $tot + 1;
           }
         }
       }
+      $infos = $val['values'];
     }
   }
-
-  return [
-    'data' => $all,
-    'tot' => $tot
-  ];
 }
+return [
+  'data' => $all,
+  'total_info' => $infos,
+  'tot' => $tot
+];

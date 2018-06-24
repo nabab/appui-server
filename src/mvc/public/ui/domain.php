@@ -14,5 +14,11 @@ if ( isset($ctrl->post['server'], $ctrl->post['domain']) ){
     'server' => $ctrl->post['server'],
     'domain' => $ctrl->post['domain']
   ])->combo($ctrl->post['domain'], true);
-  $ctrl->obj->url = APPUI_SERVER_ROOT.'ui/server/'.$ctrl->post['server']. '/domain/'.$ctrl->post['domain'];
+}
+$ctrl->obj->url = APPUI_SERVER_ROOT.'ui/server/'.$ctrl->arguments[0]. (
+  $ctrl->arguments[2] ? '/domain/'.$ctrl->arguments[2] : '/domains'
+);
+//$ctrl->obj->url = APPUI_SERVER_ROOT.'ui/server/'.$ctrl->arguments[0];
+if ( !empty($ctrl->arguments[3]) ){
+  $ctrl->obj->url .= '/'.$ctrl->arguments[3];
 }

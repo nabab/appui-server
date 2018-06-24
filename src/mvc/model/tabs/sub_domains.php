@@ -6,11 +6,11 @@
  * Time: 14.38
  */
 
-
+/*
 if ( !empty($model->data['server']) ){
   $conf = [
-    'user' => '',
-    'pass' => '',
+    'user' => BBN_DB_USER,
+    'pass' => BBN_DB_PASS,
     'host' => $model->data['server'] . ".lan"
   ];
 
@@ -63,3 +63,4 @@ if ( !empty($model->data['server']) ){
   ];
 
 }
+*/

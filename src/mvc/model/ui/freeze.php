@@ -8,8 +8,8 @@
 
 //die(var_dump($model->data));
 $conf =[
-  'user' => "",
-  'pass' => "",
+  'user' => BBN_DB_USER,
+  'pass' => BBN_DB_PASS,
   'host' => $model->data['domain']
 ];
 

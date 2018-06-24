@@ -6,8 +6,9 @@
  * Time: 13.14
  */
 
-
+/*
 if( !empty($ctrl->arguments[0]) ){
   $ctrl->obj = $ctrl->get_object_model(['server' => $ctrl->arguments[0]]);
  // $ctrl->obj = $ctrl->get_cached_model(['server' => $ctrl->arguments[0]], 400);
 }
+*/

@@ -19,13 +19,6 @@
           this.server = this.getServer().server;
         }
       }];
-      bbn.vue.setComponentRule(this.source.root + 'components/tab', 'appui-server-tab');
-      bbn.vue.addComponent('domains', mixins);
-      bbn.vue.addComponent('commands', mixins);
-      bbn.vue.addComponent('info', mixins);
-      bbn.vue.addComponent('domain', mixins);
-      bbn.vue.addComponent('users', mixins);
-      bbn.vue.unsetComponentRule();
     },
     data(){
       return this.source;

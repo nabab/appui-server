@@ -1,0 +1,1 @@
+<div> informations cloudmin </div>

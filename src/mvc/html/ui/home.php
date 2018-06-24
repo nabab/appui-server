@@ -1,8 +1,8 @@
 <div class="bbn-full-screen">
   <bbn-dashboard>
-    <bbn-widget title="<?=_("Servers:")?>"
+    <bbns-widget title="<?=_("Servers:")?>"
                 item-component="appui-server-widget-servers"
-                :items="source.data"
-    ></bbn-widget>
+                :items="source.servers"
+    ></bbns-widget>
   </bbn-dashboard>
 </div>

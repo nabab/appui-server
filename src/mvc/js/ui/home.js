@@ -6,10 +6,5 @@
  */
 /* jshint esversion: 6 */
 (()=>{
-  return {
-    props:['source'],
-    data(){
-      return this.source;
-    },
-  };
+  return {}
 })();

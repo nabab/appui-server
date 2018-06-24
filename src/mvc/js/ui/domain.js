@@ -6,12 +6,8 @@
  */
 
 (()=>{
+  let domain;
   return {
-    created(){
-      bbn.vue.setComponentRule('server/components/tab', 'appui-server');
-      bbn.vue.addComponent('domain/information');
-      bbn.vue.unsetComponentRule();
-    },
     data(){
       return this.source
     }
