@@ -16,18 +16,18 @@ if ( !empty($model->data['id']) ){
   ];
   $vm = new \bbn\api\virtualmin($conf);
 
-  $domains = $vm->list_commands();
-  //$domains = $vm->list_systems();
+  //$domains = $vm->list_commands();
+  $domains = $vm->list_systems();
 
 
-
-  $names = array_map(function($a){ return $a['name'];}, $domains);
-  $names = array_filter($names, function($a){ return strpos($a, 'list') !== false;});
-  sort($names);
+  //
+  // $names = array_map(function($a){ return $a['name'];}, $domains);
+  // $names = array_filter($names, function($a){ return strpos($a, 'list') !== false;});
+  // sort($names);
 
   return [
-    'data' => $conf,
-    'cf' => $names
-
+    // 'data' => $conf,
+    // 'cf' => $names,
+    'ddd' => $domains
   ];
 }

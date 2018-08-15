@@ -123,7 +123,7 @@
     created(){
       users = this.source;
       dataUser = this;
-      let mixins = [{
+      /*let mixins = [{
         data(){
           return dataUser.source;
         }
@@ -132,7 +132,7 @@
       bbn.vue.addComponent('popup/domains/user/add');
       bbn.vue.addComponent('popup/domains/user/edit');
       bbn.vue.addComponent('popup/domains/user/autoreply', mixins);
-      bbn.vue.unsetComponentRule();
+      bbn.vue.unsetComponentRule();*/
       //for add in menu of the tab delete cache
       bbn.vue.closest(this, "bbns-tab").addMenu({
         text: bbn._("Delete cache"),

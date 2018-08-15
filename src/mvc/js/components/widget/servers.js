@@ -5,5 +5,9 @@
  * Time: 14.48
  */
 (() => {
-  return {};
+  return {
+    data(){
+      return bbn.vue.closest(this, 'appui-server-main').source
+    }
+  };
 })();
