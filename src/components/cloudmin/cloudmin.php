@@ -8,7 +8,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-cloudmin-tab-hosts"
-             icon="fa fa-server"
+             icon="fas fa-server"
              :source="source"
              :title="'<?=_("Hosts")?>'"
     ></bbns-tab>
@@ -16,7 +16,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-cloudmin-tab-commands"
-             icon="fa fa-cogs"
+             icon="fas fa-cogs"
              :source="source"
              :title="'<?=_("Commands")?>'"
     ></bbns-tab>
@@ -24,7 +24,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-cloudmin-tab-informations"
-             icon="fa fa-info"
+             icon="fas fa-info"
              :source="source"
              :title="'<?=_("Information")?>'"
     ></bbns-tab>

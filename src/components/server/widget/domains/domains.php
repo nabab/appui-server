@@ -9,9 +9,9 @@
     </a>
   </div>
   <!--quota-->
-  <div class="bbn-xl">
+  <div class="bbn-xl" v-if="source.rapport_quota !== 'undefined'">
       <span style="padding-right: 5px;" v-text="source.rapport_quota"></span>
-      <i class="fa fa-database"></i>
-      <i v-if="source.alert_quota" class="fa fa-exclamation-triangle bbn-red"></i>
+      <i class="fas fa-database"></i>
+      <i v-if="source.alert_quota" class="fas fa-exclamation-triangle bbn-red"></i>
   </div>
 </div>

@@ -9,6 +9,7 @@
 
 
 if ( isset($ctrl->post['server'], $ctrl->post['domain']) ){
+
   echo $ctrl->add_data([
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->post['server'],
@@ -18,6 +19,10 @@ if ( isset($ctrl->post['server'], $ctrl->post['domain']) ){
 $ctrl->obj->url = APPUI_SERVER_ROOT.'ui/server/'.$ctrl->arguments[0]. (
   $ctrl->arguments[2] ? '/domain/'.$ctrl->arguments[2] : '/domains'
 );
+
+//$ctrl->obj->url = '/domain/'.$ctrl->arguments[2];
+
+
 //$ctrl->obj->url = APPUI_SERVER_ROOT.'ui/server/'.$ctrl->arguments[0];
 if ( !empty($ctrl->arguments[3]) ){
   $ctrl->obj->url .= '/'.$ctrl->arguments[3];

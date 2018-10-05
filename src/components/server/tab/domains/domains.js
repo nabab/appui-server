@@ -9,7 +9,7 @@
   return {
     methods:{
       renderDomain(row){
-        return '<a href="' + this.root + 'ui/server/' + this.server + '/domain/' + row.domain + '"><span>' + row.domain + '</span></a>';
+        return '<a href="'+ this.source.root+ 'ui/server/' + this.source.server + '/domain/' + row.domain + '"><span>' + row.domain + '</span></a>';
       },
       stateButtonDomain(row){
         if( row.disabled === true ){
@@ -18,7 +18,7 @@
             class:'enableBtn',
             command: this.enableDomain,
             notext: true,
-            icon: 'fa fa-play',
+            icon: 'fas fa-play',
           }];
         }
         else{
@@ -125,7 +125,7 @@
     },
     components: {
       'newDomain':{
-        template:`<bbn-button :title="title_button" @click="addDomain" icon="fa fa-plus"></bbn-button>`,
+        template:`<bbn-button :title="title_button" @click="addDomain" icon="fas fa-plus"></bbn-button>`,
         data(){
           return {
             title_button: bbn._('New domain')

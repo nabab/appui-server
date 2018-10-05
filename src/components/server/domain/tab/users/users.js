@@ -5,18 +5,18 @@
     methods:{
       renderDisabled(row){
         if( row.disabled === "Yes"){
-          return  '<div class="bbn-c"><i style="color: red" class="fa fa-user-times"></i></div>'
+          return  '<div class="bbn-c"><i style="color: red" class="fas fa-user-times"></i></div>'
         }
         else{
-            return  '<div class="bbn-c"><i style="color: green" class="fa fa-user"></i></div>'
+            return  '<div class="bbn-c"><i style="color: green" class="fas fa-user"></i></div>'
         }
       },
       renderFtp(row){
         if( row.ftp_user === "Yes"){
-          return  '<div class="bbn-c"><i style="color: green" class="fa fa-chevron-down"></i></div>'
+          return  '<div class="bbn-c"><i style="color: green" class="fas fa-chevron-down"></i></div>'
         }
         else{
-            return  '<div class="bbn-c"><i style="color: red" class="fa fa-ban"></i></div>'
+            return  '<div class="bbn-c"><i style="color: red" class="fas fa-ban"></i></div>'
         }
       },
       renderQuota(row){
@@ -47,10 +47,10 @@
           (row.autoreply_start.length) &&
           (row.autoreply_end.length)
         ){
-          return `<i  class="fa fa-chevron-down" style="color: green"></i>`
+          return `<i  class="fas fa-chevron-down" style="color: green"></i>`
         }
         else{
-          return `<i class="fa fa-ban" style="color: red"></i>`
+          return `<i class="fas fa-ban" style="color: red"></i>`
         }
       },
       //TODO
@@ -66,7 +66,7 @@
             command: (row)=>{this.autoreply_config(row)},
             notext: true,
             class:"bbn-green",
-            icon: 'fa fa-send',
+            icon: 'fas fa-calculatorfa-send',
           }];
         }
         else{
@@ -75,7 +75,7 @@
             command: (row)=>{this.autoreply_config(row)},
             notext: true,
             class:"bbn-red",
-            icon:'fa fa-pencil-square',
+            icon:'fas fa-pencil-square',
           }];
         }
       },*/
@@ -153,7 +153,7 @@
     },
     components: {
       'newUser':{
-        template:`<bbn-button @click="addUser" :title="title" icon="fa fa-user-plus"></bbn-button>`,
+        template:`<bbn-button @click="addUser" :title="title" icon="fas fa-user-plus"></bbn-button>`,
         data(){
           return {
             title : bbn._('new user')

@@ -118,7 +118,7 @@
       <find>center</find>
       <find>cont</find>
       <find>List Comma</find>
-      <find>fa fa-window-close</find>
+      <find>fas fa-window-close</find>
       <find>this.listUsers</find>
       <find>$domains</find>
       <find>formShow</find>

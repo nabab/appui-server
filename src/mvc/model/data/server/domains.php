@@ -5,12 +5,11 @@
  * Date: 23/11/17
  * Time: 14.38
  */
-
 $tot = 0;
 $all = [];
 if ( !empty($model->data['id']) &&  !empty($model->inc->vm) ){
   $server = $model->inc->options->option($model->data['id']);
-  $domains = $model->inc->vm->list_domains(['domain' => $server['text'], 'toplevel' => 1]);
+  $domains = $model->inc->vm->list_domains(['domain' => $server['text']]);
   foreach ( $domains as $i => $v ){
     $users = "";
     $parms_list =  [

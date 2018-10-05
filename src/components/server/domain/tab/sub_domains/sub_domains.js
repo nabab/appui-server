@@ -8,7 +8,7 @@
             class:'enableBtn',
             command: this.enableSubDomain,
             notext: true,
-            icon: 'fa fa-play',
+            icon: 'fas fa-play',
           }];
         }
         else{
@@ -81,7 +81,7 @@
     },
     components: {
       'newSubDomain':{
-        template:`<bbn-button @click="addSubDomain" icon="fa fa-plus"></bbn-button>`,
+        template:`<bbn-button @click="addSubDomain" icon="fas fa-plus"></bbn-button>`,
         methods:{
           addSubDomain(){
             alert("new SubDomain");

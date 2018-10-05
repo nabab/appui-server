@@ -27,16 +27,16 @@
                   text: '<?=_("Edit Sub-domain")?>',
                   command: editSubDomain,
                   notext: true,
-                  icon: 'fa fa-edit'
+                  icon: 'fas fa-edit'
                 },{
                   text: '<?=_("Clone Sub-domain")?>',
                   command: cloneSubDomain,
                   notext: true,
-                  icon: 'fa fa-copy'
+                  icon: 'fas fa-copy'
                 },{
                   text: '<?=_("Delete Sub-domain")?>',
                   command: deleteSubDomain,
-                  icon: 'fa fa-trash',
+                  icon: 'fas fa-trash',
                   notext: true
                 }]"
     ></bbns-column>

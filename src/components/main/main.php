@@ -1,6 +1,6 @@
 <div class="appui-server-main bbn-full-screen">
   <bbn-tabnav class="appui-server"
-              :autoload="true"
+              :autoload="false"
               :scrollable="true"
               ref="serverTabNav"
   >
@@ -8,7 +8,7 @@
              :static="true"
              :load="false"
              :source="source"
-             icon="fa fa-home"
+             icon="fas fa-home"
              bcolor="#8EA28F"
              :title="'<?=_("Home")?>'"
              component="appui-server-server-tab-dashboard"
@@ -17,7 +17,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-tab-domains"
-             icon="fa fa-align-justify"
+             icon="fas fa-align-justify"
              :source="source"
              :title="'<?=_("Domains")?>'"
     ></bbns-tab>
@@ -25,7 +25,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-tab-commands"
-             icon="fa fa-cogs"
+             icon="fas fa-cogs"
              :source="source"
              :title="'<?=_("Commands")?>'"
     ></bbns-tab>
@@ -33,7 +33,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-tab-info"
-             icon="fa fa-info"
+             icon="fas fa-info"
              :source="source"
              :title="'<?=_("Information")?>'"
     ></bbns-tab>

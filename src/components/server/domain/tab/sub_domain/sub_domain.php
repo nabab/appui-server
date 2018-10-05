@@ -8,7 +8,7 @@
              :load="false"
              :static="true"
              component="appui-server-sub_domain-tab-info"
-             icon="fa fa-info"
+             icon="fas fa-info"
              :source="source"
              :title="'<?=_("info")?>'"
     ></bbns-tab>
@@ -16,7 +16,7 @@
              :load="false"
              :static="true"
              component="appui-server-sub_domain-tab-commands"
-             icon="fa fa-cogs"
+             icon="fas fa-cogs"
              :source="source"
              :title="'<?=_("Commands")?>'"
     ></bbns-tab>

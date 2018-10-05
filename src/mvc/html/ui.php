@@ -6,7 +6,7 @@
     <bbns-tab url="home"
              :static="true"
              :load="true"
-             :title="'<i class=\'fa fa-home\'> </i>&nbsp;<?=_("Dashboard")?>'"
+             :title="'<i class=\'fas fa-home\'> </i>&nbsp;<?=_("Dashboard")?>'"
     ></bbns-tab>
   </bbn-tabnav>
 </div>

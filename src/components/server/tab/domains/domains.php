@@ -32,16 +32,16 @@
                 text: '<?=_("Edit Domain")?>',
                 command: editDomain,
                 notext: true,
-                icon: 'fa fa-edit'
+                icon: 'fas fa-edit'
               },{
                 text: '<?=_("Clone Domain")?>',
                 command: cloneDomain,
                 notext: true,
-                icon: 'fa fa-copy'
+                icon: 'fas fa-copy'
               },{
                 text: '<?=_("Delete Domain")?>',
                 command: deleteDomain,
-                icon: 'fa fa-trash',
+                icon: 'fas fa-trash',
                 notext: true
               }]"
   ></bbns-column>

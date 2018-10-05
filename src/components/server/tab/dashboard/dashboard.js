@@ -7,9 +7,10 @@
     },
     data(){
       return {
-        all: [],
         domains: [],
+        topLevel: [],
         admins: [],
+        infos: []
       }
     },
     created(){
@@ -36,9 +37,10 @@
         server: this.source.server
       }, d => {
         if ( d.success ){
-          this.all = d.all;
-          this.domains = d.domains;
-          this.admins = d.list_admins;
+          this.domains = d.list_domains;
+          this.topLevel = d.top_level;
+          this.admins = d.top_level.list_admins;
+          this.infos = d.info_server;
         }
       });
     }

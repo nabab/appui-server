@@ -8,7 +8,7 @@
              :static="true"
              :load="false"
              :source="source"
-             icon="fa fa-home"
+             icon="fas fa-home"
              bcolor="#8EA28F"
              :title="'<?=_("Home")?>'"
              component="appui-server-server-domain-tab-dashboard"
@@ -17,7 +17,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-sub_domains"
-             icon="fa fa-align-justify"
+             icon="fas fa-align-justify"
              :source="source"
              :title="'<?=_("Sub_domains")?>'"
     ></bbns-tab>
@@ -25,7 +25,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-users"
-             icon="fa fa-users"
+             icon="fas fa-users"
              :source="source"
              :title="'<?=_("Users")?>'"
     ></bbns-tab>
@@ -33,7 +33,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-information"
-             icon="fa fa-info"
+             icon="fas fa-info"
              :source="source"
              :title="'<?=_("Information")?>'"
     ></bbns-tab>
@@ -41,7 +41,7 @@
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-commands"
-             icon="fa fa-cogs"
+             icon="fas fa-cogs"
              :source="source"
              :title="'<?=_("Commands")?>'"
     ></bbns-tab>
