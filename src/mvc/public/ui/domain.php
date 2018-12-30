@@ -10,7 +10,7 @@
 
 if ( isset($ctrl->post['server'], $ctrl->post['domain']) ){
 
-  echo $ctrl->add_data([
+  $ctrl->add_data([
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->post['server'],
     'domain' => $ctrl->post['domain']

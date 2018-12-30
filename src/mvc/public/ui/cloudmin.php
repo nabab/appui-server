@@ -7,7 +7,7 @@
  */
 
 if ( !empty($ctrl->arguments[0]) ){
-  echo $ctrl->add_data([
+  $ctrl->add_data([
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->arguments[0],
   ])->combo($ctrl->arguments[0], true);

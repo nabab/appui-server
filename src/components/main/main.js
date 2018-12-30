@@ -4,7 +4,7 @@
  * Date: 21/11/17
  * Time: 13.39
  */
-/* jshint esversion: 6 */
+/* jshint esversion: 6*/
 (() => {
   return {
     props: {

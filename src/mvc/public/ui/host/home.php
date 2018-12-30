@@ -5,7 +5,7 @@
   //   'server' => $ctrl->post['server'],
   // ])->combo(null, true);
   $ctrl->post['server'] = $ctrl->arguments[0];
-  echo $ctrl->add_data([
+  $ctrl->add_data([
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->post['server'],
     'domain' => $ctrl->post['domain'],

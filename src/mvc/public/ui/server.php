@@ -70,7 +70,7 @@ if ( $ctrl->baseURL === APPUI_SERVER_ROOT.'ui/' ){
 
   //case for main server
   if ( ($ctrl->arguments[0] !== 'cloudmin.lan') && (empty($ctrl->arguments[1]))){
-    echo $ctrl->add_data([
+    $ctrl->add_data([
       'root' => APPUI_SERVER_ROOT,
       'server' => $ctrl->arguments[0],
       'root_server' => APPUI_SERVER_ROOT.'ui/server/'.$ctrl->arguments[0]
