@@ -5,18 +5,18 @@
     methods:{
       renderDisabled(row){
         if( row.disabled === "Yes"){
-          return  '<div class="bbn-c"><i style="color: red" class="fas fa-user-times"></i></div>'
+          return  '<div class="bbn-c"><i style="color: red" class="nf nf-fa-user_times"></i></div>'
         }
         else{
-            return  '<div class="bbn-c"><i style="color: green" class="fas fa-user"></i></div>'
+            return  '<div class="bbn-c"><i style="color: green" class="nf nf-fa-user"></i></div>'
         }
       },
       renderFtp(row){
         if( row.ftp_user === "Yes"){
-          return  '<div class="bbn-c"><i style="color: green" class="fas fa-chevron-down"></i></div>'
+          return  '<div class="bbn-c"><i style="color: green" class="nf nf-fa-chevron_down"></i></div>'
         }
         else{
-            return  '<div class="bbn-c"><i style="color: red" class="fas fa-ban"></i></div>'
+            return  '<div class="bbn-c"><i style="color: red" class="nf nf-fa-ban"></i></div>'
         }
       },
       renderQuota(row){
@@ -47,10 +47,10 @@
           (row.autoreply_start.length) &&
           (row.autoreply_end.length)
         ){
-          return `<i  class="fas fa-chevron-down" style="color: green"></i>`
+          return `<i  class="nf nf-fa-chevron_down" style="color: green"></i>`
         }
         else{
-          return `<i class="fas fa-ban" style="color: red"></i>`
+          return `<i class="nf nf-fa-ban" style="color: red"></i>`
         }
       },
       //TODO
@@ -66,7 +66,7 @@
             command: (row)=>{this.autoreply_config(row)},
             notext: true,
             class:"bbn-green",
-            icon: 'fas fa-calculatorfa-send',
+            icon: 'nf nf-fa-calculatorfa_send',
           }];
         }
         else{
@@ -75,7 +75,7 @@
             command: (row)=>{this.autoreply_config(row)},
             notext: true,
             class:"bbn-red",
-            icon:'fas fa-pencil-square',
+            icon:'nf nf-fa-pencil_square',
           }];
         }
       },*/
@@ -134,9 +134,9 @@
       bbn.vue.addComponent('popup/domains/user/autoreply', mixins);
       bbn.vue.unsetComponentRule();*/
       //for add in menu of the tab delete cache
-      bbn.vue.closest(this, "bbns-tab").addMenu({
+      bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Delete cache"),
-        icon: "far fa-trash-alt-alt",
+        icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
           bbn.fn.post(this.source.root + 'actions/domains/delete_cache',{
             server: this.source.server,
@@ -153,7 +153,7 @@
     },
     components: {
       'newUser':{
-        template:`<bbn-button @click="addUser" :title="title" icon="fas fa-user-plus"></bbn-button>`,
+        template:`<bbn-button @click="addUser" :title="title" icon="nf nf-fa-user_plus"></bbn-button>`,
         data(){
           return {
             title : bbn._('new user')

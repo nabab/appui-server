@@ -4,46 +4,46 @@
               :autoload="true"
               ref="domainTabNav"
   >
-    <bbns-tab url="home"
+    <bbns-container url="home"
              :static="true"
              :load="false"
              :source="source"
-             icon="fas fa-home"
+             icon="nf nf-fa-home"
              bcolor="#8EA28F"
              :title="'<?=_("Home")?>'"
              component="appui-server-server-domain-tab-dashboard"
-    ></bbns-tab>
-    <bbns-tab url="subdomains"
+    ></bbns-container>
+    <bbns-container url="subdomains"
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-sub_domains"
-             icon="fas fa-align-justify"
+             icon="nf nf-fa-align_justify"
              :source="source"
              :title="'<?=_("Sub_domains")?>'"
-    ></bbns-tab>
-    <bbns-tab url="users"
+    ></bbns-container>
+    <bbns-container url="users"
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-users"
-             icon="fas fa-users"
+             icon="nf nf-fa-users"
              :source="source"
              :title="'<?=_("Users")?>'"
-    ></bbns-tab>
-    <bbns-tab url="information"
+    ></bbns-container>
+    <bbns-container url="information"
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-information"
-             icon="fas fa-info"
+             icon="nf nf-fa-info"
              :source="source"
              :title="'<?=_("Information")?>'"
-    ></bbns-tab>
-    <bbns-tab url="commands"
+    ></bbns-container>
+    <bbns-container url="commands"
              :load="false"
              :static="true"
              component="appui-server-server-domain-tab-commands"
-             icon="fas fa-cogs"
+             icon="nf nf-fa-cogs"
              :source="source"
              :title="'<?=_("Commands")?>'"
-    ></bbns-tab>
+    ></bbns-container>
   </bbn-tabnav>
 </div>

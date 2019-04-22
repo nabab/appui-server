@@ -3,11 +3,16 @@
               :scrollable="true"
               :autoload="true"
   >
-    <bbns-tab url="home"
+     <bbns-container url="home"
              :static="true"
              :load="true"
-             :title="'<i class=\'fas fa-home\'> </i>&nbsp;<?=_("Dashboard")?>'"
-    ></bbns-tab>
+             :title="'<i class=\'nf nf-fa-home\'> </i>&nbsp;<?=_("Dashboard")?>'"
+    ></bbns-container>
+    <bbns-container url="cloudmin"
+              :static="true"
+              :load="true"
+              bcolor="#4cf0ce"
+              :title="'<i class=\'nf nf-fa-cogs\'> </i>&nbsp;<?=_("Cloudmin")?>'"
+    ></bbns-container>
   </bbn-tabnav>
 </div>
-<!--<script v-for="temp in source.templates" :id="temp.id" type="text/x-template" v-html="temp.html"></script>-->

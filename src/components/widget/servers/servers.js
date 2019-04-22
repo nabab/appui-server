@@ -7,7 +7,9 @@
 (() => {
   return {
     data(){
-      return bbn.vue.closest(this, 'appui-server-main').source
+      return{
+        root: appui.plugins['appui-server']
+      }
     }
-  };
+  }
 })();

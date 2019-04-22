@@ -6,22 +6,40 @@
  * Time: 15.23
  */
 
-$tot = 0;
-$all = [];
 
-if ( !empty($model->inc->vm) ){
-  $cmd = $model->inc->vm->list_commands(['short' => 1]);
-  foreach($cmd as $val){
-    array_push($all, [
-      'command' => $val['name'],
-      'category' => $val['values']['category'][0],
-      'description' => $val['values']['description'][0],
-      'total_info' => $val['values']  
-    ]);
-    $tot = $tot + 1;
+$backup = BBN_DATA_PATH . 'plugins/appui-server/into.text';
+
+$text = file_get_contents($backup);
+
+$cred = explode(',', $text);
+if ( is_array($cred) ){
+  $conf = [
+    'user' => $cred[0],
+    'pass' => $cred[1],
+    'host' => $cred[2],
+    'mode' => $cred[3]
+  ];
+
+  $backup_command = BBN_DATA_PATH . 'plugins/appui-server/servers/'.$conf['mode'].'/'.$conf['host'].'.json';
+
+  //die(\bbn\x::hdump($backup_command));
+  if ( !is_file($backup_command) ){
+    $vm = new \bbn\api\virtualmin($conf);
+    $list_commands = $vm->list_commands(['short' => 1]);
+    $get_commands = [];
+
+    foreach($list_commands as $cmd ){
+      $get_commands[$cmd['name']] = $vm->get_command($cmd['name']);
+    }
+
+    file_put_contents($backup_command, json_encode($get_commands));
   }
+  else{
+    $get_commands = json_decode(file_get_contents($backup_command), true);
+  }
+  return [
+    'commands' => $get_commands
+  ];
 }
-return [
-  'data' => $all,
-  'tot' => $tot
-];
+
+return [];

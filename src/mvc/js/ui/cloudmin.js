@@ -5,8 +5,7 @@
  * Time: 10.38
  */
 
-(()=>{
-  let cloudmin;
+(()=>{  
   return {
     data(){
       return this.source

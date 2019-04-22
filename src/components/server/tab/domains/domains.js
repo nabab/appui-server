@@ -9,7 +9,8 @@
   return {
     methods:{
       renderDomain(row){
-        return '<a href="'+ this.source.root+ 'ui/server/' + this.source.server + '/domain/' + row.domain + '"><span>' + row.domain + '</span></a>';
+        bbn.fn.log( this.source.root+ 'ui/server/' + this.source.server + '/domains/' + row.domain )
+        return '<a href="'+ this.source.root+ 'ui/server/' + this.source.server + '/domains/' + row.domain + '">' + row.domain + '</a>';
       },
       stateButtonDomain(row){
         if( row.disabled === true ){
@@ -18,7 +19,7 @@
             class:'enableBtn',
             command: this.enableDomain,
             notext: true,
-            icon: 'fas fa-play',
+            icon: 'nf nf-fa-play',
           }];
         }
         else{
@@ -27,7 +28,7 @@
             command: this.disableDomain,
             notext: true,
             class:"disableBtn",
-            icon: 'fas fa-power-off',
+            icon: 'nf nf-fa-power_off',
           }];
         }
       },
@@ -104,9 +105,9 @@
     },
     created(){
       //for add in menu of the tab delete cache
-      bbn.vue.closest(this, "bbns-tab").addMenu({
+      bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Delete cache"),
-        icon: "far fa-trash-alt-alt",
+        icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
           let domains = this.$refs.domainsListTable.currentData.slice();
           bbn.fn.post(this.source.root + 'actions/servers/delete_cache',{
@@ -121,11 +122,10 @@
           });
         }
       });
-
     },
     components: {
       'newDomain':{
-        template:`<bbn-button :title="title_button" @click="addDomain" icon="fas fa-plus"></bbn-button>`,
+        template:`<bbn-button :title="title_button" @click="addDomain" icon="nf nf-fa-plus"></bbn-button>`,
         data(){
           return {
             title_button: bbn._('New domain')

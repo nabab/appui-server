@@ -56,11 +56,11 @@
                     text: '<?=_("Edit")?>',
                     command: editUser,
                     notext: true,
-                    icon: 'fas fa-edit'
+                    icon: 'nf nf-fa-edit'
                   },{
                     text: '<?=_("Delete User")?>',
                     command: deleteUser,
-                    icon: 'fas fa-trash',
+                    icon: 'nf nf-fa-trash',
                     notext: true
                   }]"
       ></bbns-column>

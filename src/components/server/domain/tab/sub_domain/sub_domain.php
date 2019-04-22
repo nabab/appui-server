@@ -4,22 +4,22 @@
               :autoload="true"
               ref="subDomainTabNav"
   >
-    <bbns-tab url="info"
+    <bbns-container url="info"
              :load="false"
              :static="true"
              component="appui-server-sub_domain-tab-info"
-             icon="fas fa-info"
+             icon="nf nf-fa-info"
              :source="source"
              :title="'<?=_("info")?>'"
-    ></bbns-tab>
-    <bbns-tab url="command"
+    ></bbns-container>
+    <bbns-container url="command"
              :load="false"
              :static="true"
              component="appui-server-sub_domain-tab-commands"
-             icon="fas fa-cogs"
+             icon="nf nf-fa-cogs"
              :source="source"
              :title="'<?=_("Commands")?>'"
-    ></bbns-tab>
+    ></bbns-container>
 
   </bbn-tabnav>
 </div>

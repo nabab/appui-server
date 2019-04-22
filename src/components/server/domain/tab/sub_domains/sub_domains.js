@@ -8,7 +8,7 @@
             class:'enableBtn',
             command: this.enableSubDomain,
             notext: true,
-            icon: 'fas fa-play',
+            icon: 'nf nf-fa-play',
           }];
         }
         else{
@@ -17,7 +17,7 @@
             command: this.disableSubDomain,
             notext: true,
             class:"disableBtn",
-            icon: 'fas fa-power-off',
+            icon: 'nf nf-fa-power_off',
           }];
         }
       },
@@ -62,9 +62,9 @@
     },
     created(){
       //for add in menu of the tab delete cache
-      bbn.vue.closest(this, "bbns-tab").addMenu({
+      bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Delete cache"),
-        icon: "far fa-trash-alt-alt",
+        icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
           bbn.fn.post(this.source.root + 'actions/domains/delete_cache',{
             server: this.source.server,
@@ -81,7 +81,7 @@
     },
     components: {
       'newSubDomain':{
-        template:`<bbn-button @click="addSubDomain" icon="fas fa-plus"></bbn-button>`,
+        template:`<bbn-button @click="addSubDomain" icon="nf nf-fa-plus"></bbn-button>`,
         methods:{
           addSubDomain(){
             alert("new SubDomain");

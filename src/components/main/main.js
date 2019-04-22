@@ -15,22 +15,22 @@
         type: String
       }
     },
-    created(){
-      //for add menu in tab of the host
-      bbn.vue.closest(this, "bbns-tab").addMenu({
-        text: bbn._("Delete cache"),
-        icon: "far fa-trash-alt-alt",
-        command:()=>{
-          bbn.fn.post(this.source.root +'actions/servers/delete_cache',{
-            toplevel: true,
-            server: this.source.server
-          }, d => {
-            if ( d.success ){
-              appui.success(bbn._("Delete"));
-            }
-          });
-        }
-      })
-    }
+    // created(){
+    //   // //for add menu in tab of the host
+    //   // bbn.vue.closest(this, "bbn-container").addMenu({
+    //   //   text: bbn._("Delete cache"),
+    //   //   icon: "nf nf-fa-trash_alt_alt",
+    //   //   command:()=>{
+    //   //     bbn.fn.post(this.source.root +'actions/servers/delete_cache',{
+    //   //       toplevel: true,
+    //   //       server: this.source.server
+    //   //     }, d => {
+    //   //       if ( d.success ){
+    //   //         appui.success(bbn._("Delete"));
+    //   //       }
+    //   //     });
+    //   //   }
+    //   // })
+    // }
   };
 })();

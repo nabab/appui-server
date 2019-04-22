@@ -8,9 +8,9 @@
  return {
    created(){
      //for add in menu of the tab delete cache
-     bbn.vue.closest(this, "bbns-tab").addMenu({
+     bbn.vue.closest(this, "bbn-container").addMenu({
        text: bbn._("Delete cache"),
-       icon: "far fa-trash-alt-alt",
+       icon: "nf nf-fa-trash_alt_alt",
        command:()=>{
          bbn.fn.post(this.source.root + 'actions/domains/delete_cache',{
            server: this.source.server,

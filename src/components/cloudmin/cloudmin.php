@@ -1,32 +1,25 @@
 <div class="appui-server-cloudmin bbn-full-screen">
   <bbn-tabnav class="appui-cloudmin"
               :scrollable="true"
-              :autoload="false"
+              :autoload="true"
               ref="cloudminTabNav"
   >
-    <bbns-tab url="hosts"
-             :load="false"
+    <bbns-container url="systems"
              :static="true"
-             component="appui-server-server-cloudmin-tab-hosts"
-             icon="fas fa-server"
-             :source="source"
-             :title="'<?=_("Hosts")?>'"
-    ></bbns-tab>
-    <bbns-tab url="commands"
              :load="false"
-             :static="true"
-             component="appui-server-server-cloudmin-tab-commands"
-             icon="fas fa-cogs"
-             :source="source"
-             :title="'<?=_("Commands")?>'"
-    ></bbns-tab>
-    <bbns-tab url="information"
-             :load="false"
-             :static="true"
-             component="appui-server-server-cloudmin-tab-informations"
-             icon="fas fa-info"
-             :source="source"
-             :title="'<?=_("Information")?>'"
-    ></bbns-tab>
+             :source="source.systems"
+             icon="nf nf-fa-laptop"
+             bcolor="#fdcd04"
+             :title="'<?=_("Systems")?>'"
+             component="appui-server-cloudmin-tab-systems"
+    ></bbns-container>
+    <bbns-container url="commands"
+              :load="false"
+              :static="true"
+              component="appui-server-cloudmin-tab-commands"
+              icon="nf nf-fa-cogs"
+              :source="source"
+              :title="'<?=_("Commands")?>'"
+    ></bbns-container>    
   </bbn-tabnav>
 </div>
