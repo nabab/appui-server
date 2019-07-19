@@ -1,4 +1,4 @@
-<bbn-form class="bbn-full-screen"
+<bbn-form
          :action="actionPost"
          :source="source"
          ref="form_modify_user"

@@ -1,4 +1,4 @@
-<div class="bbn-full-screen">
+<div class="bbn-overlay">
   <bbn-dashboard v-if="show">
     <bbns-widget title="<?=_("Quota")?>"
                 component="appui-server-server-widget-quota"

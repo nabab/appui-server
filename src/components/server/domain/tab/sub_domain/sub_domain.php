@@ -1,4 +1,4 @@
-<div class="appui-sub-domain bbn-full-screen">
+<div class="appui-sub-domain bbn-overlay">
   <bbn-tabnav class="appui-sub-domain"
               :scrollable="true"
               :autoload="true"

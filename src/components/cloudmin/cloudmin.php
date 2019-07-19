@@ -1,4 +1,4 @@
-<div class="appui-server-cloudmin bbn-full-screen">
+<div class="appui-server-cloudmin bbn-overlay">
   <bbn-tabnav class="appui-cloudmin"
               :scrollable="true"
               :autoload="true"

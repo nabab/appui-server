@@ -1,4 +1,4 @@
-<bbn-form class="bbn-full-screen"
+<bbn-form
           :action="actionPost"
           :source="source"
           :data="complementaryData"
@@ -6,7 +6,7 @@
           confirm-leave="<?=_("Are you sure you want to close?")?>"
           :prefilled="true"
 >
-  <div class="bbn-padded bbn-full-screen bbn-grid-fields">
+  <div class="bbn-padded bbn-overlay bbn-grid-fields">
     <label class="bbn-r">
       <?=_("Domain")?>
     </label>

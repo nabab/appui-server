@@ -6,16 +6,23 @@ $text = file_get_contents($backup_lan);
 
 $cred = explode(',', $text);
 if ( is_array($cred) ){
-  $conf = [
+  /*$conf = [
     'user' => BBN_DB_USER,
     'pass' => $cred[0],
     'host' => $cred[1],
     'mode' => $cred[2]
+  ];*/
+  $conf = [
+    'user' => $cred[0],
+    'pass' => $cred[1],
+    'host' => $cred[2],
+    'mode' => $cred[3]
   ];
-
   $vm = new \bbn\api\virtualmin($conf);
 // liste systems
   $systems = $vm->list_systems();
+
+
   if ( !empty($systems) ){
     foreach($systems as $k => $system){
       // get list domains, updates and list backup

@@ -1,4 +1,4 @@
-<div class="bbn-full-screen">
+<div class="bbn-overlay">
   <bbn-dashboard>
     <bbns-widget title="<?=_("Servers:")?>"
                  item-component="appui-server-widget-servers"

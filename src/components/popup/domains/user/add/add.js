@@ -18,7 +18,8 @@
     },
     computed:{
       complementaryData(){
-        if ( !$.isEmptyObject(this.dataForm) ){
+        //if ( !$.isEmptyObject(this.dataForm) ){
+        if ( Object.entries(this.dataForm).length ){  
           return {
             user: this.dataForm.new_user,
             pass: this.dataForm.password,

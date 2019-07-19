@@ -13,7 +13,7 @@
           }
         },
         data(){
-          return $.extend(data, {server: null});
+          return bbn.fn.extend(data, {server: null});
         },
         created(){
           this.server = this.getServer().server;

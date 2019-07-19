@@ -40,7 +40,7 @@
     },
     methods:{
       renderDescription(row){
-        let info = $.extend({}, row.description);
+        let info = bbn.fn.extend({}, row.description);
 
         if ( info.value !== undefined  ){
            return info.value;

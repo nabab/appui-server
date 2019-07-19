@@ -1,4 +1,4 @@
-<div class="bbn-full-screen">
+<div class="bbn-overlay">
 Add Domain
 </div>
 
