@@ -9,7 +9,7 @@ if( !empty($model->inc->vm) &&
   $server = $model->inc->options->option($model->inc->options->from_code($model->data['server'], 'servers', 'server', BBN_APPUI));
   //delete all cache files of server (click tab server)
   if ( !empty($model->data['toplevel']) ){
-    $folder = BBN_DATA_PATH."bbn_cache/bbn/api/virtualmin/";
+    $folder = $model->cache_path()."bbn/api/virtualmin/";
     $content_cache = array_diff(scandir($folder), ['..', '.']);
     foreach( $content_cache as $ele ){
       if ( strpos($ele, $model->data['server']) !== false ){
