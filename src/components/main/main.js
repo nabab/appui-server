@@ -21,7 +21,7 @@
     //   //   text: bbn._("Delete cache"),
     //   //   icon: "nf nf-fa-trash_alt_alt",
     //   //   command:()=>{
-    //   //     bbn.fn.post(this.source.root +'actions/servers/delete_cache',{
+    //   //     this.post(this.source.root +'actions/servers/delete_cache',{
     //   //       toplevel: true,
     //   //       server: this.source.server
     //   //     }, d => {

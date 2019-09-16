@@ -104,7 +104,7 @@
       },
       deleteUser(row){
         this.confirm(bbn._("Are you sure you want to delete the user") + " " + row.user  + " " + bbn._("?"), ()=>{
-          bbn.fn.post(this.source.root + 'actions/domains/tab_users/delete_user', {
+          this.post(this.source.root + 'actions/domains/tab_users/delete_user', {
               server: this.source.server,
               domain: this.source.domain,
               user: row.user
@@ -138,7 +138,7 @@
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
-          bbn.fn.post(this.source.root + 'actions/domains/delete_cache',{
+          this.post(this.source.root + 'actions/domains/delete_cache',{
             server: this.source.server,
             domain: this.source.domain,
             tab: "users"

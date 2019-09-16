@@ -6,7 +6,7 @@
         text: bbn._("Cache delete list commands"),
         icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
-          bbn.fn.post(this.source.root + 'actions/delete_cache',{
+          this.post(this.source.root + 'actions/delete_cache',{
             server: this.source.server
           }, d => {
             if ( d.success ){

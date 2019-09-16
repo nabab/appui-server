@@ -62,7 +62,7 @@
     //     text: bbn._('Delete cache'),
     //     icon: "nf nf-fa-trash_alt_alt",
     //     command:()=>{
-    //       bbn.fn.post(this.source.root + 'actions/delete_cache',{
+    //       this.post(this.source.root + 'actions/delete_cache',{
     //         system: this.source.system
     //       }, d => {
     //         if ( d.success ){

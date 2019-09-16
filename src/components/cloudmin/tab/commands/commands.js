@@ -1,7 +1,7 @@
 (()=>{
   return{
     created(){
-      bbn.fn.post('server/data/cloudmin/commands',{}, d =>{
+      this.post('server/data/cloudmin/commands',{}, d =>{
         let cmds = [],
             obj = {};
         if ( d.commands !== undefined ){

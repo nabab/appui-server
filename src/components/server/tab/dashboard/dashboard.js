@@ -20,7 +20,7 @@
     //     text: bbn._("Delete cache"),
     //     icon: "nf nf-fa-trash_alt_alt",
     //     command:()=>{
-    //       bbn.fn.post(this.source.root + 'actions/servers/delete_cache',{
+    //       this.post(this.source.root + 'actions/servers/delete_cache',{
     //         server: this.source.server,
     //         tab:"dashboard",
     //         data_domains: this.domains
@@ -34,7 +34,7 @@
     // },
     created(){
       //for dasboard
-      bbn.fn.post(this.source.root + 'data/server/home',{
+      this.post(this.source.root + 'data/server/home',{
         server: this.source.server
       }, d => {
         if ( d.success ){

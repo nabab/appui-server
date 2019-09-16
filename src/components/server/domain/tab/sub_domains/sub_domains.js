@@ -35,7 +35,7 @@
       },
       disableSubDomain(row){
         appui.confirm(bbn._("Are you sure you want to disabled domain") + " " + row.sub_domains + " ?", ()=>{
-          bbn.fn.post(this.root + 'actions/domains/tab_sub_domains/state_sub_domain', {
+          this.post(this.root + 'actions/domains/tab_sub_domains/state_sub_domain', {
             server: this.server,
             state: "disable",
             domain: row.sub_domains
@@ -48,7 +48,7 @@
       },
       enableSubDomain(row){
         appui.confirm(bbn._("Are you sure you want to enabled domain") + " " + row.sub_domains + " ?", ()=>{
-          bbn.fn.post(this.root + 'actions/domains/tab_sub_domains/state_sub_domain', {
+          this.post(this.root + 'actions/domains/tab_sub_domains/state_sub_domain', {
             server: this.server,
             state: "enable",
             domain: row.sub_domains
@@ -66,7 +66,7 @@
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
-          bbn.fn.post(this.source.root + 'actions/domains/delete_cache',{
+          this.post(this.source.root + 'actions/domains/delete_cache',{
             server: this.source.server,
             domain: this.source.domain,
             tab:"sub-domains"

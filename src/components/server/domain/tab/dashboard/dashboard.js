@@ -18,7 +18,7 @@
         text: bbn._("Cache delete dashboard"),
         icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
-          bbn.fn.post(this.source.root + 'actions/delete_cache',{
+          this.post(this.source.root + 'actions/delete_cache',{
             server: this.source.server
           }, d => {
             if ( d.success ){
@@ -35,7 +35,7 @@
      },
     // mounted(){
     //   //for dasboard
-    //   bbn.fn.post(this.source.root + 'data/server/home',{
+    //   this.post(this.source.root + 'data/server/home',{
     //     server: this.source.server
     //   }, d => {
     //     if ( d.success ){

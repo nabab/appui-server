@@ -12,7 +12,7 @@
        text: bbn._("Delete cache"),
        icon: "nf nf-fa-trash_alt_alt",
        command:()=>{
-         bbn.fn.post(this.source.root + 'actions/domains/delete_cache',{
+         this.post(this.source.root + 'actions/domains/delete_cache',{
            server: this.source.server,
            domain: thiss.source.domain,
            tab: "informations"

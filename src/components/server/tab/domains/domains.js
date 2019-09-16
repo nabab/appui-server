@@ -34,7 +34,7 @@
       },
       disableDomain(row){
         appui.confirm(bbn._("Are you sure you want to disabled domain") + " " + row.domain + " ?", ()=>{
-          bbn.fn.post(this.root + 'actions/servers/tab_domains/state_domain', {
+          this.post(this.root + 'actions/servers/tab_domains/state_domain', {
             server: this.source.server,
             state: "disable",
             domain: row.domain
@@ -48,7 +48,7 @@
       },
       enableDomain(row){
         appui.confirm(bbn._("Are you sure you want to enabled domain") + " " + row.domain + " ?", ()=>{
-          bbn.fn.post(this.root + 'actions/servers/tab_domains/state_domain', {
+          this.post(this.root + 'actions/servers/tab_domains/state_domain', {
             server: this.source.server,
             state: "enable",
             domain: row.domain
@@ -88,7 +88,7 @@
       },
       deleteDomain(row){
         this.confirm(bbn._("Are you sure you want to delete the domain") + " " + row.domain  + " " + bbn._("?"), ()=>{
-          bbn.fn.post(this.source.root + 'actions/servers/tab_domains/delete_domain', {
+          this.post(this.source.root + 'actions/servers/tab_domains/delete_domain', {
               server: this.source.server,
               domain: row.domain,
             }, d => {
@@ -110,7 +110,7 @@
         icon: "nf nf-fa-trash_alt_alt",
         command:()=>{
           let domains = this.$refs.domainsListTable.currentData.slice();
-          bbn.fn.post(this.source.root + 'actions/servers/delete_cache',{
+          this.post(this.source.root + 'actions/servers/delete_cache',{
             server: this.source.server,
             tab:"domains",
             data_domains: domains
