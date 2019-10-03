@@ -1,0 +1,514 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: info@bbn.so\n"
+"last-Translator: BBN Solutions <support@bbn.solutions>\n"
+"Language-Team: FR <FR@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-10-02 16:53+0200\n"
+"POT-Revision-Date: 2019-10-02 16:53+0200\n"
+"Language: fr\n"
+"X-Domain: appui-server4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/cloudmin.php
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Systems"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/cloudmin.php
+#: /home/appui/vendor/bbn/appui-server/src/components/main/main.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domain/sub_domain.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Commands"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/system.php
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/domain/domain.php
+#: /home/appui/vendor/bbn/appui-server/src/components/main/main.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Home"
+msgstr "Accueil"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/domain/tab/dashboard/dashboard.js
+msgid "General domain informations"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/domain/tab/dashboard/dashboard.js
+msgid "List users"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "Real memory"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "Disk quota"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "Status"
+msgstr "Statut"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "General informations"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "CPUs"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+#: /home/appui/vendor/bbn/appui-server/src/components/main/main.php
+msgid "Domains"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "List backups"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.php
+msgid "Commands:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.php
+msgid "Description:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Type"
+msgstr "Type"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "OS"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Ip"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "MAC Address"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "RAM"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Disk space"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Backups"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Updates"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/main/main.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/info/info.php
+msgid "Information"
+msgstr "Information"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/server/domain/duplicate/duplicate.php
+msgid "Are you sure you want to close?"
+msgstr "Êtes-vous sûr de vouloir fermer?"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "New user"
+msgstr "Nouvel utilisateur"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Password"
+msgstr "Mot de passe"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/users/users.php
+msgid "Quota"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Unlimited"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Limited"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "FTP"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+msgid "NO EMAIL"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Extra email"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+msgid "Data start"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+msgid "Data end"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+msgid "Message"
+msgstr "Message"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.js
+msgid "success"
+msgstr "Succès"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Error"
+msgstr "Erreur"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "State"
+msgstr "État"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Enable"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Disabled"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "EMAIL"
+msgstr "eMail"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/popup/server/domain/duplicate/duplicate.php
+msgid "New Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.js
+msgid "Cache delete list commands"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/dashboard/dashboard.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/info/info.js
+msgid "Delete"
+msgstr "Supprimer"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.php
+msgid "Category commands:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.js
+msgid "Cache delete info"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/info/info.php
+msgid "Value"
+msgstr "Valeur"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/info/info.js
+msgid "Delete cache"
+msgstr "Supprimer le cache"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/dashboard/dashboard.js
+msgid "Cache delete dashboard"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domain/sub_domain.php
+msgid "info"
+msgstr "Info"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+msgid "Enable Sub-domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+msgid "Disable Sub-domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Are you sure you want to disabled domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "disabled"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Are you sure you want to enabled domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "enable"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/users/users.php
+msgid "Active"
+msgstr "Actif"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Sub-domains"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/domains/domains.php
+msgid "Created"
+msgstr "Créé"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Edit Sub-domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Clone Sub-domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Delete Sub-domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "Modify user"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "?"
+msgstr "?"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Deleted"
+msgstr "Supprimé"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "new user"
+msgstr "Nouvel utilisateur"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "Add new user"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/users/users.php
+msgid "User"
+msgstr "Utilisateur"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Ftp"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Email"
+msgstr "eMail"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Auto_Reply"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Extra Adresses"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Last logins"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Edit"
+msgstr "Modifier"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Delete User"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Domains:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "List Admins:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Logs:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Ip address"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Cpu"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Kernel"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "info_server/fcount"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "info_server/host"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "top_level/informations"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Loading..."
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Sub_domains"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Enable Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Disable Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Modify domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Are you sure you want to delete the domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "New domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Add new domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Edit Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Clone Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Delete Domain"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/widget/logs/logs.php
+msgid "Access:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/server/widget/logs/logs.php
+msgid "Error:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/domains/domains.php
+msgid "Name"
+msgstr "Nom"
+
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/quota/quota.js
+msgid "occupated "
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/components/widget/quota/quota.js
+msgid "free"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/mvc/html/ui.php
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: /home/appui/vendor/bbn/appui-server/src/mvc/html/ui.php
+msgid "Cloudmin"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/mvc/html/ui/home.php
+msgid "Servers:"
+msgstr ""
+
+#: /home/appui/vendor/bbn/appui-server/src/mvc/public/ui.php
+msgid "Servers"
+msgstr ""

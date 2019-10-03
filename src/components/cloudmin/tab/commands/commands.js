@@ -68,11 +68,11 @@
                        :order="[{field: 'parameter', dir: 'ASC'}]"
                        :scrollable="false"
             >
-              <bbns-column title="${bbn._('Parameter')}"
+              <bbns-column title="` + bbn._('Parameter') + `"
                            field='name'
                            cls='bbn-b bbn-c'
               ></bbns-column>
-              <bbns-column title="${bbn._('Values')}"
+              <bbns-column title="` + bbn._('Values') + `"
                            field='values'
               ></bbns-column>
             </bbn-table>
@@ -95,7 +95,7 @@
             <div style="float: right">
               <i class="nf nf-fa-search" style="margin: 0 5px"></i>
               <bbn-input style="width: 300px"
-                         placeholder="${bbn._('Search command')}"
+                         placeholder="` + bbn._('Search command') + `"
                          v-model="searchCommand"
               ></bbn-input>
             </div>
