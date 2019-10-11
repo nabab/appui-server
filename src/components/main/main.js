@@ -20,7 +20,7 @@
     //   // bbn.vue.closest(this, "bbn-container").addMenu({
     //   //   text: bbn._("Delete cache"),
     //   //   icon: "nf nf-fa-trash_alt_alt",
-    //   //   command:()=>{
+    //   //   action:()=>{
     //   //     this.post(this.source.root +'actions/servers/delete_cache',{
     //   //       toplevel: true,
     //   //       server: this.source.server

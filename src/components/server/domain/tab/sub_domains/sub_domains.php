@@ -25,17 +25,17 @@
                 cls="bbn-c"
                 :buttons="[{
                   text: '<?=_("Edit Sub-domain")?>',
-                  command: editSubDomain,
+                  action: editSubDomain,
                   notext: true,
                   icon: 'nf nf-fa-edit'
                 },{
                   text: '<?=_("Clone Sub-domain")?>',
-                  command: cloneSubDomain,
+                  action: cloneSubDomain,
                   notext: true,
                   icon: 'nf nf-fa-copy'
                 },{
                   text: '<?=_("Delete Sub-domain")?>',
-                  command: deleteSubDomain,
+                  action: deleteSubDomain,
                   icon: 'nf nf-fa-trash',
                   notext: true
                 }]"

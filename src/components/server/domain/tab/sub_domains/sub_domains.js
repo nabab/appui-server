@@ -6,7 +6,7 @@
           return [{
             text: bbn._("Enable Sub-domain"),
             class:'enableBtn',
-            command: this.enableSubDomain,
+            action: this.enableSubDomain,
             notext: true,
             icon: 'nf nf-fa-play',
           }];
@@ -14,7 +14,7 @@
         else{
           return [{
             text: bbn._("Disable Sub-domain"),
-            command: this.disableSubDomain,
+            action: this.disableSubDomain,
             notext: true,
             class:"disableBtn",
             icon: 'nf nf-fa-power_off',
@@ -65,7 +65,7 @@
       bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
-        command:()=>{
+        action:()=>{
           this.post(this.source.root + 'actions/domains/delete_cache',{
             server: this.source.server,
             domain: this.source.domain,

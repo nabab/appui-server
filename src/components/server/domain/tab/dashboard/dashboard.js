@@ -17,7 +17,7 @@
       bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Cache delete dashboard"),
         icon: "nf nf-fa-trash_alt_alt",
-        command:()=>{
+        action:()=>{
           this.post(this.source.root + 'actions/delete_cache',{
             server: this.source.server
           }, d => {

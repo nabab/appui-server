@@ -17,7 +17,7 @@
           return [{
             text: bbn._("Enable Domain"),
             class:'enableBtn',
-            command: this.enableDomain,
+            action: this.enableDomain,
             notext: true,
             icon: 'nf nf-fa-play',
           }];
@@ -25,7 +25,7 @@
         else{
           return [{
             text: bbn._("Disable Domain"),
-            command: this.disableDomain,
+            action: this.disableDomain,
             notext: true,
             class:"disableBtn",
             icon: 'nf nf-fa-power_off',
@@ -108,7 +108,7 @@
       bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
-        command:()=>{
+        action:()=>{
           let domains = this.$refs.domainsListTable.currentData.slice();
           this.post(this.source.root + 'actions/servers/delete_cache',{
             server: this.source.server,

@@ -63,7 +63,7 @@
         ){
           return [{
             text: bbn._("Auto reply"),
-            command: (row)=>{this.autoreply_config(row)},
+            action: (row)=>{this.autoreply_config(row)},
             notext: true,
             class:"bbn-green",
             icon: 'nf nf-fa-calculatorfa_send',
@@ -72,7 +72,7 @@
         else{
            return [{
             text: bbn._("Write auto reply"),
-            command: (row)=>{this.autoreply_config(row)},
+            action: (row)=>{this.autoreply_config(row)},
             notext: true,
             class:"bbn-red",
             icon:'nf nf-fa-pencil_square',
@@ -137,7 +137,7 @@
       bbn.vue.closest(this, "bbn-container").addMenu({
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
-        command:()=>{
+        action:()=>{
           this.post(this.source.root + 'actions/domains/delete_cache',{
             server: this.source.server,
             domain: this.source.domain,

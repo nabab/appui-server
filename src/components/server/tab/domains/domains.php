@@ -30,17 +30,17 @@
               cls="bbn-c"
               :buttons="[{
                 text: '<?=_("Edit Domain")?>',
-                command: editDomain,
+                action: editDomain,
                 notext: true,
                 icon: 'nf nf-fa-edit'
               },{
                 text: '<?=_("Clone Domain")?>',
-                command: cloneDomain,
+                action: cloneDomain,
                 notext: true,
                 icon: 'nf nf-fa-copy'
               },{
                 text: '<?=_("Delete Domain")?>',
-                command: deleteDomain,
+                action: deleteDomain,
                 icon: 'nf nf-fa-trash',
                 notext: true
               }]"

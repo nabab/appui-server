@@ -54,12 +54,12 @@
                   cls="bbn-c"
                   :buttons="[{
                     text: '<?=_("Edit")?>',
-                    command: editUser,
+                    action: editUser,
                     notext: true,
                     icon: 'nf nf-fa-edit'
                   },{
                     text: '<?=_("Delete User")?>',
-                    command: deleteUser,
+                    action: deleteUser,
                     icon: 'nf nf-fa-trash',
                     notext: true
                   }]"
