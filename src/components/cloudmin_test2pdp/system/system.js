@@ -1,8 +1,8 @@
-( () =>{
-  return {
+(()=>{
+  return{
     props: {
       source: {
-        type: Array
+        type: Object
       }
     }
   }
