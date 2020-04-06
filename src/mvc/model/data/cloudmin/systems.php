@@ -1,10 +1,17 @@
 <?php
 $backup = BBN_DATA_PATH . 'plugins/appui-server/into.text';
-$backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
+//$backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
 
-$text = file_get_contents($backup_lan);
 
-$cred = explode(',', $text);
+$backup_lan_id = $model->inc->options->from_code('cloudmin', 'server', BBN_APPUI);
+$cred = $model->inc->options->option($backup_lan_id);
+
+$psw =  new \bbn\appui\passwords($model->db);
+
+
+//$text = file_get_contents($backup_lan);
+
+//$cred = explode(',', $text);
 if ( is_array($cred) ){
   /*$conf = [
     'user' => BBN_DB_USER,
@@ -13,15 +20,16 @@ if ( is_array($cred) ){
     'mode' => $cred[2]
   ];*/
   $conf = [
-    'user' => $cred[0],
-    'pass' => $cred[1],
-    'host' => $cred[2],
-    'mode' => $cred[3]
+    'user' => $cred['user'],
+    'pass' => $psw->get($backup_lan_id),
+    'host' => $cred['host'],
+    'mode' => $cred['mode']
   ];
+  
   $vm = new \bbn\api\virtualmin($conf);
 // liste systems
-  $systems = $vm->list_systems();
 
+  $systems = $vm->list_systems();
 
   if ( !empty($systems) ){
     foreach($systems as $k => $system){

@@ -1,7 +1,8 @@
 <div class="appui-server bbn-overlay">
-  <bbn-tabnav class="appui_server"
+  <bbn-router class="appui_server"
               :scrollable="true"
               :autoload="true"
+              :nav="true"
   >
      <bbns-container url="home"
              :static="true"
@@ -14,5 +15,5 @@
               bcolor="#4cf0ce"
               :title="'<i class=\'nf nf-fa-cogs\'> </i>&nbsp;<?=_("Cloudmin")?>'"
     ></bbns-container>
-  </bbn-tabnav>
+  </bbn-router>
 </div>

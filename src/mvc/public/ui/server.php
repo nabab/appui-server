@@ -14,6 +14,7 @@
 if ( $ctrl->baseURL === APPUI_SERVER_ROOT.'ui/' ){
   //case for main server
   if ( empty($ctrl->arguments[1]) ){
+ 
     $ctrl->add_data([
       'root' => APPUI_SERVER_ROOT,
       'server' => $ctrl->arguments[0],
@@ -24,6 +25,7 @@ if ( $ctrl->baseURL === APPUI_SERVER_ROOT.'ui/' ){
 
   //case go domain
   else if( !empty($ctrl->arguments[1]) && empty($ctrl->arguments[4]) ){
+    \bbn\x::log($ctrl->arguments, 'vito');
   //  die(\bbn\x::dump($ctrl->arguments));
     $ar = [
       'server' => $ctrl->arguments[0],

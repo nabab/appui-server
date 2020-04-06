@@ -14,7 +14,7 @@ if ( !empty($name_server) &&
   $server = $ctrl->inc->options->option($id_option);
   $ctrl->add_inc('vm', new \bbn\api\virtualmin([
     'user' => $server['user'],
-    'pass' => $server['pass'],
+    'pass' => $ctrl->inc->psw->get($id_option),
     'host' => $server['text'],
     'mode' => empty($server['cloudmin']) ? 'virtualmin' : 'cloudmin'
   ]));

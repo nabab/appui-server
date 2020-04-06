@@ -1,8 +1,9 @@
 <div class="appui-domain bbn-overlay">
-  <bbn-tabnav class="appui-domain"
+  <bbn-router class="appui-domain"
               :scrollable="true"
               :autoload="true"
               ref="domainTabNav"
+              :nav="true"
   >
     <bbns-container url="home"
              :static="true"
@@ -45,5 +46,5 @@
              :source="source"
              :title="'<?=_("Commands")?>'"
     ></bbns-container>
-  </bbn-tabnav>
+  </bbn-router>
 </div>

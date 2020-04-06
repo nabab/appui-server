@@ -1,2 +1,2 @@
 <?php
-  $ctrl->combo();
+  $ctrl->combo('true');

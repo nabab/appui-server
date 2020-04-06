@@ -1,8 +1,9 @@
 <div class="appui-server-cloudmin bbn-overlay">
-  <bbn-tabnav class="appui-cloudmin"
+  <bbn-router class="appui-cloudmin"
               :scrollable="true"
               :autoload="true"
               ref="cloudminTabNav"
+              :nav="true"
   >
     <bbns-container url="systems"
              :static="true"
@@ -20,6 +21,6 @@
               icon="nf nf-fa-cogs"
               :source="source"
               :title="'<?=_("Commands")?>'"
-    ></bbns-container>    
-  </bbn-tabnav>
+    ></bbns-container>
+  </bbn-router>
 </div>

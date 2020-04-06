@@ -7,24 +7,23 @@ $all = [];
 if( !empty($model->inc->vm) ){
 
   $infos_server = $model->inc->vm->info(['host' => $model->data["server"]]);
-
-    foreach( $model->inc->vm->list_domains(['domain' => $server['text']]) as $v){
-      if ( !empty($v['values']['server_block_quota']) ){
-        if( $v['values']['server_block_quota'][0] !== "Unlimited" ){
-          $rap_quota = ($v['values']['server_block_quota_used'][0] * 100) / $v['values']['server_block_quota'][0];
-          $rap_quota = number_format($rap_quota, 2)."%";
-        }
-        else{
-          $rap_quota = "unlimited";
-        }
+  foreach( $model->inc->vm->list_domains(['domain' => $model->data['server']]) as $v){
+    if ( !empty($v['values']['server_block_quota']) ){
+      if( $v['values']['server_block_quota'][0] !== "Unlimited" ){
+        $rap_quota = ($v['values']['server_block_quota_used'][0] * 100) / $v['values']['server_block_quota'][0];
+        $rap_quota = number_format($rap_quota, 2)."%";
       }
       else{
-       $rap_quota = "undefined"  ;
+        $rap_quota = "unlimited";
       }
-      array_push($list_domains , [
-        'name' => $v['name'],
-        'rapport_quota' => $rap_quota
-      ]);
+    }
+    else{
+      $rap_quota = "undefined"  ;
+    }
+    array_push($list_domains , [
+      'name' => $v['name'],
+      'rapport_quota' => $rap_quota
+    ]);
   };
   $delimiters = [
     [
@@ -149,40 +148,42 @@ if( !empty($model->inc->vm) ){
     }
   }
   //top--level
-//die(\bbn\x::dump($model->inc->vm->list_domains(['toplevel' => 1])));
-  foreach ( $model->inc->vm->list_domains(['toplevel' => 1]) as $i => $v ){
-    //for items in bbns-widget
-    if( $v['values']['server_block_quota'][0] !== "Unlimited" ){
-      $rap_quota = ($v['values']['server_block_quota_used'][0] * 100) / $v['values']['server_block_quota'][0];
-      $rap_quota = number_format($rap_quota, 2)."%";
+  $domains_top_level = $model->inc->vm->list_domains(['toplevel' => 1]);
+  if ( is_array($domains_top_level) && (count($domains_top_level) > 0) ){
+    foreach ( $domains_top_level as $i => $v ){
+      //for items in bbns-widget
+      if( $v['values']['server_block_quota'][0] !== "Unlimited" ){
+        $rap_quota = ($v['values']['server_block_quota_used'][0] * 100) / $v['values']['server_block_quota'][0];
+        $rap_quota = number_format($rap_quota, 2)."%";
+      }
+      else{
+        $rap_quota = "unlimited";
+      }
+
+      array_push($admins, [
+        'name' => $v['name'],
+        'list_admins' => $model->inc->vm->list_admins(['domain' => $v['name']]),
+      ]);
+
+      $top_level = [
+        'name' => $v['name'],
+        'total_quota' => $v['values']['server_block_quota'][0],
+        'quota_used' => $v['values']['server_block_quota_used'][0],
+        'server_quota' => $v['values']['server_quota'][0],
+        'serverquota_used' => $v['values']['server_quota_used'][0],
+        'alert_quota' => (is_numeric($rap_quota) && ($rap_quota > 90)) ? true : false,
+        'log' =>[
+          'access_log' => $v['values']['access_log'][0],
+          'error_log' => $v['values']['error_log'][0],
+        ],
+        'informations' => $v['values'],
+        'list_admins' => $admins,
+        'rapport_quota' => $rap_quota
+      ];
     }
-    else{
-      $rap_quota = "unlimited";
-    }
-
-
-    array_push($admins, [
-      'name' => $v['name'],
-      'list_admins' => $model->inc->vm->list_admins(['domain' => $v['name']]),
-    ]);
-
-    $top_level = [
-      'name' => $v['name'],
-      'total_quota' => $v['values']['server_block_quota'][0],
-      'quota_used' => $v['values']['server_block_quota_used'][0],
-      'server_quota' => $v['values']['server_quota'][0],
-      'serverquota_used' => $v['values']['server_quota_used'][0],
-      'alert_quota' => (is_numeric($rap_quota) && ($rap_quota > 90)) ? true : false,
-      'log' =>[
-        'access_log' => $v['values']['access_log'][0],
-        'error_log' => $v['values']['error_log'][0],
-      ],
-      'informations' => $v['values'],
-      'list_admins' => $admins,
-      'rapport_quota' => $rap_quota
-    ];
   }
 
+  \bbn\x::log(['dentro', $model->data['server']], 'vito' );
   //return
   if ( !empty($list_domains) || !empty($top_level) || !empty($informations) ){
     return [
@@ -192,7 +193,6 @@ if( !empty($model->inc->vm) ){
       'success' => true
     ];
   }
-
 }
 return [
   'success' => false

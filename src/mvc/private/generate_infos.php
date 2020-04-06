@@ -9,7 +9,7 @@ $backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
 $infos_file = BBN_DATA_PATH . 'plugins/appui-server/infos/';
 $text = file_get_contents($backup_lan);
 
-$cred = explode(',', $text);
+$cred = explode(',',$text);
 
 if ( is_array($cred) ){
   $conf = [

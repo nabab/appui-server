@@ -1,3 +1,3 @@
 <?php
 
-$ctrl->obj = $ctrl->get_cached_model([], 400);
+$ctrl->obj = $ctrl->get_cached_model([], 0);
