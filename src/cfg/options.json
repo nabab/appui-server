@@ -1,0 +1,21 @@
+{
+  "text": "Server",
+  "code": "server",
+  "icon": "nf nf-fa-server",
+  "cfg": {
+      "show_code": 1,
+      "show_value": 1,
+      "sortable": 1
+  },
+  "items": [
+      {
+          "text": "Servers",
+          "code": "servers",
+          "cfg": {
+              "show_code": 1,
+              "show_value": 1,
+              "sortable": 1
+          }
+      }
+  ]
+}
