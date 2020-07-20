@@ -1,0 +1,9 @@
+{
+  "text": "Server",
+  "icon": "nf nf-fa-server",
+  "items": [{
+    "text": "Home",
+    "icon": "nf nf-fa-server",
+    "link": "ui"
+  }]
+}
