@@ -1,21 +1,22 @@
 {
   "text": "Server",
   "code": "server",
+  "id_parent": "appui",
   "icon": "nf nf-fa-server",
   "cfg": {
-      "show_code": 1,
-      "show_value": 1,
-      "sortable": 1
+    "show_code": 1,
+    "show_value": 1,
+    "sortable": 1
   },
   "items": [
-      {
-          "text": "Servers",
-          "code": "servers",
-          "cfg": {
-              "show_code": 1,
-              "show_value": 1,
-              "sortable": 1
-          }
+    {
+      "text": "Servers",
+      "code": "servers",
+      "cfg": {
+        "show_code": 1,
+        "show_value": 1,
+        "sortable": 1
       }
+    }
   ]
 }
