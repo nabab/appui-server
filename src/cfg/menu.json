@@ -1,9 +1,19 @@
 {
   "text": "Server",
+  "num": 18,
   "icon": "nf nf-fa-server",
-  "items": [{
-    "text": "Home",
-    "icon": "nf nf-fa-server",
-    "link": "ui"
-  }]
+  "items": [
+    {
+      "text": "Home",
+      "num": 1,
+      "icon": "nf nf-fa-cogs",
+      "link": "ui"
+    },
+    {
+      "text": "Static list",
+      "num": 2,
+      "icon": "nf nf-fa-list",
+      "link": "list_domains"
+    }
+  ]
 }
