@@ -5,7 +5,7 @@
  * Date: 24/03/17
  * Time: 19.58
  *
- * @var $ctrl \bbn\mvc\controller
+ * @var $ctrl \bbn\Mvc\Controller
  */
 
 if( !empty($model->inc->vm) &&
@@ -18,7 +18,7 @@ if( !empty($model->inc->vm) &&
     'user' => $model->data['user'],
   ];
 
-  $model->inc->vm->delete_user($params);
+  $model->inc->vm->deleteUser($params);
   if ( !$model->inc->vm->error ){
     return ['success' => true];
   }

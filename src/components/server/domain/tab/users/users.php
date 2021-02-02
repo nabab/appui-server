@@ -5,7 +5,7 @@
                :source="source.root + 'data/domain/users/' + source.server + '/' + source.domain"
                ref="usersTable"
                :editable="true"
-               :order="[{field: 'user', dir: 'DESC'}]"
+               :order="[{field: 'user', Dir: 'DESC'}]"
                editor="appui-server-popup-domains-user-edit"
     >
       <bbns-column title="<?=_("Active")?>"

@@ -7,10 +7,10 @@
  */
 
 
-//die(\bbn\x::dump($ctrl->post, $ctrl->arguments));
+//die(\bbn\X::dump($ctrl->post, $ctrl->arguments));
 if ( isset($ctrl->post['server'], $ctrl->post['domain']) ){
 
-  $ctrl->add_data([
+  $ctrl->addData([
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->post['server'],
     'domain' => $ctrl->post['domain']

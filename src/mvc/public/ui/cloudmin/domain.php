@@ -2,7 +2,7 @@
 
 if ( !empty($ctrl->post['domain']) ){
   $ctrl->obj->bcolor = "#babfbb";
-  $ctrl->add_data([
+  $ctrl->addData([
     'root' => APPUI_SERVER_ROOT,
     'system' => $ctrl->post['system'],    
   ])->combo($ctrl->post['domain'], true);

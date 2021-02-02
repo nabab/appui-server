@@ -11,7 +11,7 @@
 if ( !empty($ctrl->arguments[0]) ){
   if ( $ctrl->baseURL === 'server/ui/cloudmin/' ){
     $ctrl->obj->bcolor = "#afffcc";
-    $ctrl->add_data([
+    $ctrl->addData([
       'root' => APPUI_SERVER_ROOT,
       'system' => $ctrl->arguments[0],
       ])->combo($ctrl->arguments[0], true);

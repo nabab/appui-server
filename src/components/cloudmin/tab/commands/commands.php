@@ -1,5 +1,5 @@
 <div class="appui-server-cloudmin-tab-commands">
-  <bbn-table :order="[{field: 'command', dir: 'ASC'}]"
+  <bbn-table :order="[{field: 'command', Dir: 'ASC'}]"
              v-if="commands.length"  
              :sortable="true"
              ref="table"

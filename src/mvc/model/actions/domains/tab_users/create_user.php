@@ -6,7 +6,7 @@
  * Date: 24/03/17
  * Time: 11.28
  *
- * @var $ctrl \bbn\mvc\controller
+ * @var $ctrl \bbn\Mvc\Controller
  */
 
 
@@ -15,7 +15,7 @@ if( !empty($model->inc->vm) &&
   !empty($model->data['user']) &&
   !empty($model->data['pass'])
 ){
-  $server = $model->inc->options->option($model->inc->options->from_code($model->data['server'], 'servers', 'server', BBN_APPUI));
+  $server = $model->inc->options->option($model->inc->options->fromCode($model->data['server'], 'servers', 'server', BBN_APPUI));
 
 
   $list = [
@@ -48,7 +48,7 @@ if( !empty($model->inc->vm) &&
   $users = $model->inc->vm->list_users($list);
 
   if ( empty(array_search($model->data['user'], $users)) ){
-    $model->inc->vm->create_user($params);
+    $model->inc->vm->createUser($params);
     if( !$model->inc->vm->error ){
       return [
         'success' => true,

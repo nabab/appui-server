@@ -6,7 +6,7 @@
  * Time: 18.49
  */
 
-$ctrl->add_data([
+$ctrl->addData([
   'root' => APPUI_SERVER_ROOT,
 ])->combo('Cloudmin', true);
 

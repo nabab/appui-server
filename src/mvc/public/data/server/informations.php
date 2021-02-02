@@ -9,12 +9,12 @@
 if( !empty($ctrl->arguments[0]) &&
   !empty($ctrl->inc->vm)
 ){
-  $id_option = $ctrl->inc->options->from_code($ctrl->arguments[0], 'servers', 'server', BBN_APPUI);
+  $id_option = $ctrl->inc->options->fromCode($ctrl->arguments[0], 'servers', 'server', BBN_APPUI);
   if ( !empty($id_option) ){
-    $ctrl->obj = $ctrl->get_object_model([
+    $ctrl->obj = $ctrl->getObjectModel([
       'id' => $id_option,
       'domain' => $ctrl->arguments[0]  
     ]);
   }
 }
- // $ctrl->obj = $ctrl->get_cached_model(['domain' => $ctrl->arguments[0]], 1500);
+ // $ctrl->obj = $ctrl->getCachedModel(['domain' => $ctrl->arguments[0]], 1500);

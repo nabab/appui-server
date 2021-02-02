@@ -15,7 +15,7 @@ if ( !empty($model->data['server']) ){
   ];
 
 
-  $vm = new \bbn\api\virtualmin($conf);
+  $vm = new \bbn\Api\Virtualmin($conf);
   $domains = $vm->list_domains();
 
 
@@ -40,7 +40,7 @@ if ( !empty($model->data['server']) ){
       foreach ( $all_users as $j => $val ){
         $users .= $val['name']. "  ";
       }
-      $users = substr($users, 0, strlen($users)-1);
+      $users = substr($users, 0, Strlen($users)-1);
     }
     else{
       $users = "";
@@ -55,7 +55,7 @@ if ( !empty($model->data['server']) ){
     $tot = $tot + 1;
   }
 
-  //die(\bbn\x::hdump($all_users));
+  //die(\bbn\X::hdump($all_users));
 
   return [
     'data' => $all,

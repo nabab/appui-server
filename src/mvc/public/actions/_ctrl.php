@@ -5,7 +5,7 @@
  * Date: 24/03/17
  * Time: 11.18
  *
- * @var $ctrl \bbn\mvc\controller
+ * @var $ctrl \bbn\Mvc\Controller
  */
 
 
@@ -13,10 +13,10 @@
  //configuration object virtualmin or cloudmin
  if ( !empty($ctrl->post) &&
      !empty($ctrl->post['server']) &&
-     !empty($id_option = $ctrl->inc->options->from_code($ctrl->post['server'], 'servers', 'server', BBN_APPUI))
+     !empty($id_option = $ctrl->inc->options->fromCode($ctrl->post['server'], 'servers', 'server', BBN_APPUI))
  ){
    $server = $ctrl->inc->options->option($id_option);
-   $ctrl->add_inc('vm', new \bbn\api\virtualmin([
+   $ctrl->addInc('vm', new \bbn\Api\Virtualmin([
      'user' => $server['user'],
      'pass' => $server['pass'],
      'host' => $server['text'],

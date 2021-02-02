@@ -130,7 +130,7 @@ if( !empty($model->inc->vm) ){
           foreach($fields as $y => $field){
             if ( ($pos = strpos($field, ":")) !== false ){
               $idx = str_replace(" ", "", substr($field, 0, $pos));
-              $value = substr($field, $pos, strlen($field) - $pos);
+              $value = substr($field, $pos, Strlen($field) - $pos);
               $value = str_replace(": ", "", $value);
               if( count($fields) > 1 ){
                 $informations[$d['name']][$idx] = $value;
@@ -183,7 +183,7 @@ if( !empty($model->inc->vm) ){
     }
   }
 
-  \bbn\x::log(['dentro', $model->data['server']], 'vito' );
+  \bbn\X::log(['dentro', $model->data['server']], 'vito' );
   //return
   if ( !empty($list_domains) || !empty($top_level) || !empty($informations) ){
     return [

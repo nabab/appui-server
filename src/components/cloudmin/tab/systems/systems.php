@@ -1,5 +1,5 @@
 <div class="appui-server-cloudmin-tab-systems">
-  <bbn-table :order="[{field: 'name', dir: 'ASC'}]"
+  <bbn-table :order="[{field: 'name', Dir: 'ASC'}]"
              :sortable="true"
              ref="table"
              :source="root+'/data/cloudmin/systems'"

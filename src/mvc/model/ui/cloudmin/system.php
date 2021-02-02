@@ -7,7 +7,7 @@ if ( !empty($model->data['system']) ){
     return json_decode(file_get_contents($info_system), true);
   }
   else{
-    $res = $model->get_model('./../../actions/generate_cache', ['system' => $model->data['system']]);    
+    $res = $model->getModel('./../../actions/generate_cache', ['system' => $model->data['system']]);    
     if ( ($res['success'] === true) && is_file($info_system) ){
       return json_decode(file_get_contents($info_system), true);
     }

@@ -7,11 +7,11 @@
  */
 
  //for list server
-  $id_servers = $ctrl->inc->options->from_code('servers', 'server', BBN_APPUI);
-  $ctrl->add_data([
+  $id_servers = $ctrl->inc->options->fromCode('servers', 'server', BBN_APPUI);
+  $ctrl->addData([
     'root' => APPUI_SERVER_ROOT,
     'root_dashboard' => APPUI_SERVER_ROOT.'ui/home/',
     'servers' => array_map(function($ele){
       return ['name' => $ele['text'] ];
-    },$ctrl->inc->options->full_options($id_servers))
+    },$ctrl->inc->options->fullOptions($id_servers))
   ])->combo(null, true);

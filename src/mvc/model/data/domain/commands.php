@@ -10,7 +10,7 @@ $tot = 0;
 $all = [];
 
 if ( !empty($model->inc->vm) ){
-  $cmd = $model->inc->vm->list_commands(['short' => 1]);
+  $cmd = $model->inc->vm->listCommands(['short' => 1]);
   foreach($cmd as $val){
     array_push($all, [
       'command' => $val['name'],

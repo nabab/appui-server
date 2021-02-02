@@ -5,7 +5,7 @@
                ref="table"
                :source="source"
                :pageble="true"
-               :order="[{field: 'name', dir: 'DESC'}]"
+               :order="[{field: 'name', Dir: 'DESC'}]"
                v-if="ready === true"
     >
       <bbns-column title="<?=_("Active")?>"

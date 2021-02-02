@@ -4,12 +4,12 @@
  *
  **/
 
-/** @var $this \bbn\mvc\controller */
+/** @var $this \bbn\Mvc\Controller */
 
 if( !empty($ctrl->arguments[0]) ){
-  $id_option = $ctrl->inc->options->from_code($ctrl->arguments[0], 'servers', 'server', BBN_APPUI);
+  $id_option = $ctrl->inc->options->fromCode($ctrl->arguments[0], 'servers', 'server', BBN_APPUI);
   if ( !empty($id_option) ){
-    $ctrl->obj = $ctrl->get_object_model(['id' => $id_option]);
-    //$ctrl->obj = $ctrl->get_cached_model(['id' => $id_option], 400);
+    $ctrl->obj = $ctrl->getObjectModel(['id' => $id_option]);
+    //$ctrl->obj = $ctrl->getCachedModel(['id' => $id_option], 400);
   }
 }

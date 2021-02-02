@@ -1,11 +1,11 @@
 <?php
 // if ( !empty($ctrl->arguments[0]) ){
-  // echo $ctrl->add_data([
+  // echo $ctrl->addData([
   //   'root' => APPUI_SERVER_ROOT,
   //   'server' => $ctrl->post['server'],
   // ])->combo(null, true);
   $ctrl->post['server'] = $ctrl->arguments[0];
-  $ctrl->add_data([
+  $ctrl->addData([
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->post['server'],
     'domain' => $ctrl->post['domain'],

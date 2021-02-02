@@ -1,7 +1,7 @@
 <bbn-table :source="source.root + 'data/server/domains/' + source.server"
            :sortable="true"
            ref="domainsListTable"
-           :order="[{field: 'domain', dir: 'DESC'}]"
+           :order="[{field: 'domain', Dir: 'DESC'}]"
            :editable="true"
            editor="appui-server-popup-server-domain-edit"
 >

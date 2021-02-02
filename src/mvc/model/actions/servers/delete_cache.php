@@ -6,16 +6,16 @@ if( !empty($model->inc->vm) &&
   (!empty($model->data['tab']) || !empty($model->data['toplevel']))
 ){
 
-  $server = $model->inc->options->option($model->inc->options->from_code($model->data['server'], 'servers', 'server', BBN_APPUI));
+  $server = $model->inc->options->option($model->inc->options->fromCode($model->data['server'], 'servers', 'server', BBN_APPUI));
   //delete all cache files of server (click tab server)
   if ( !empty($model->data['toplevel']) ){
-    $folder = $model->cache_path()."bbn/api/virtualmin/";
+    $folder = $model->cachePath()."bbn/api/virtualmin/";
     $content_cache = array_diff(scandir($folder), ['..', '.']);
     foreach( $content_cache as $ele ){
       if ( strpos($ele, $model->data['server']) !== false ){
         if ( is_dir($folder.$ele) ){
-          // \bbn\x::log($folder, 'cache_delete');
-          \bbn\file\dir::delete($folder.$ele);
+          // \bbn\X::log($folder, 'cache_delete');
+          \bbn\File\Dir::delete($folder.$ele);
         }
       }
     }
@@ -32,11 +32,11 @@ if( !empty($model->inc->vm) &&
       ];
       foreach ($methods as $method => $args){
         if ( $method !== 'list_admins' ){
-          $model->inc->vm->delete_cache($method, [$args]);
+          $model->inc->vm->deleteCache($method, [$args]);
         }//case list_admins
         else{
           foreach ($model->data['data_domains'] as $i => $domain){
-            $model->inc->vm->delete_cache('list_admins', [['domain' => $domain['name']]]);
+            $model->inc->vm->deleteCache('list_admins', [['domain' => $domain['name']]]);
           }
         }
       }
@@ -49,12 +49,12 @@ if( !empty($model->inc->vm) &&
       ];
       foreach ($methods as $method => $args){
         if ( $method !== 'list_users' ){
-          $model->inc->vm->delete_cache($method, [$args]);
+          $model->inc->vm->deleteCache($method, [$args]);
         }//case list_admins
         else{
           foreach ($model->data['data_domains'] as $i => $ele){
-            //\bbn\x::log([$server['user'],$ele['domain'], $method], 'cache_delete');
-            $model->inc->vm->delete_cache($method,[
+            //\bbn\X::log([$server['user'],$ele['domain'], $method], 'cache_delete');
+            $model->inc->vm->deleteCache($method,[
               [
                 'all-domains' => 1,
                 'domain' => $ele['domain'],
@@ -72,11 +72,11 @@ if( !empty($model->inc->vm) &&
     }
     //case delete cache list command in  server (tab Commands)
     if ( $model->data['tab'] === "commands" ){
-      $model->inc->vm->delete_cache('list_commands');
+      $model->inc->vm->deleteCache('list_commands');
     }
     //case delete cache informations in  server (tab information)
     if ( $model->data['tab'] === "informations" ){
-      $model->inc->vm->delete_cache('list_domains', [['toplevel' => 1]]);
+      $model->inc->vm->deleteCache('list_domains', [['toplevel' => 1]]);
     }
 
   }

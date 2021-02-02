@@ -8,7 +8,7 @@
 
 /*
 if( !empty($ctrl->arguments[0]) ){
-  $ctrl->obj = $ctrl->get_object_model(['server' => $ctrl->arguments[0]]);
- // $ctrl->obj = $ctrl->get_cached_model(['server' => $ctrl->arguments[0]], 400);
+  $ctrl->obj = $ctrl->getObjectModel(['server' => $ctrl->arguments[0]]);
+ // $ctrl->obj = $ctrl->getCachedModel(['server' => $ctrl->arguments[0]], 400);
 }
 */

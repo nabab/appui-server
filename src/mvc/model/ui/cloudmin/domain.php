@@ -1,6 +1,6 @@
 <?php
 
-  $vm = new \bbn\api\virtualmin([
+  $vm = new \bbn\Api\Virtualmin([
     'user' => BBN_DB_USER,
     'pass' => BBN_DB_PASS,
     'host' => $model->data['system'],

@@ -1,7 +1,7 @@
 <?php
 
 if( !empty($ctrl->inc->vm) ){
-  $ctrl->obj = $ctrl->get_object_model([
+  $ctrl->obj = $ctrl->getObjectModel([
     'server' => $ctrl->post['server']
   ]);
 }

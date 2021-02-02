@@ -4,7 +4,7 @@
  *
  **/
 
-/** @var $this \bbn\mvc\controller */
+/** @var $this \bbn\Mvc\Controller */
 $backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
 $infos_file = BBN_DATA_PATH . 'plugins/appui-server/infos/';
 $text = file_get_contents($backup_lan);
@@ -20,11 +20,11 @@ if ( is_array($cred) ){
   ];
 }
 
-$vm = new \bbn\api\virtualmin($conf);
+$vm = new \bbn\Api\Virtualmin($conf);
 
 $systems = array_map(function($v){
   return $v['name'];
-},$vm->list_systems());
+},$vm->listSystems());
 
 $backup_command = BBN_DATA_PATH . 'plugins/appui-server/servers/cloudmin/cloudmin.bbn.io.json';
 
@@ -54,7 +54,7 @@ $commands = array_filter($commands, function($val, $key){
 
 
 
-$all_systems = $vm->list_systems();
+$all_systems = $vm->listSystems();
 
 
 
@@ -123,7 +123,7 @@ foreach( $all_systems as $k => $system ){
         'list_scalegroups' => $vm->list_scalegroups(),
         'list_ssh_keys' => $vm->list_ssh_keys(),
         'list_system_locks' => $vm->list_system_locks(),
-        'list_systems' => $vm->list_systems()
+        'list_systems' => $vm->listSystems()
       ]);
     }
     foreach( $infos as $key => $val ){
@@ -139,10 +139,10 @@ foreach( $all_systems as $k => $system ){
      // },ARRAY_FILTER_USE_BOTH);
 
      $file = $infos_file.$system['name'].'.json';
-     file_put_contents($file, json_encode($infos));
+     file_put_contents($file, Json_encode($infos));
 
 }
 
 
 
-die(\bbn\x::dump($infos));
+die(\bbn\X::dump($infos));

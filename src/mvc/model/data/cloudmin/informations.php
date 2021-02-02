@@ -14,10 +14,10 @@
 //     'host' => $server['text'],
 //     'mode' => 'cloudmin'
 //   ];
-//   $vm = new \bbn\api\virtualmin($conf);
+//   $vm = new \bbn\Api\Virtualmin($conf);
 //
-//   //$domains = $vm->list_commands();
-//   $domains = $vm->list_systems();
+//   //$domains = $vm->listCommands();
+//   $domains = $vm->listSystems();
 //
 //
 //   //

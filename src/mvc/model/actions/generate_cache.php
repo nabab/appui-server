@@ -6,7 +6,7 @@ if ( !empty($model->data['system']) ){
   $info_system_temp = BBN_DATA_PATH . 'plugins/appui-server/infos/'.$name_system.'.temp.json';
 
 
-  $generate_cache = function(string $cache, string $name_system){
+  $generate_cache = function(string $cache, String $name_system){
 
     if ( !is_file($cache) ){
 
@@ -24,9 +24,9 @@ if ( !empty($model->data['system']) ){
         ];
       }
 
-      $vm = new \bbn\api\virtualmin($conf);
+      $vm = new \bbn\Api\Virtualmin($conf);
 
-      foreach( $vm->list_systems() as $val){
+      foreach( $vm->listSystems() as $val){
         if ( $val['name'] === $name_system ){
           $system = $val;
           break;
@@ -94,7 +94,7 @@ if ( !empty($model->data['system']) ){
           'list_scalegroups' => $vm->list_scalegroups(),
           'list_ssh_keys' => $vm->list_ssh_keys(),
           'list_system_locks' => $vm->list_system_locks(),
-          'list_systems' => $vm->list_systems()
+          'list_systems' => $vm->listSystems()
         ]);
       }
 
@@ -105,7 +105,7 @@ if ( !empty($model->data['system']) ){
         }
       }
 
-      if ( (file_put_contents($cache, json_encode($infos)) !== false) ){
+      if ( (file_put_contents($cache, Json_encode($infos)) !== false) ){
         return true;
       }
     }

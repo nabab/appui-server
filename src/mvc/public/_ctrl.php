@@ -4,11 +4,11 @@
  *
  **/
 
-/** @var $this \bbn\mvc\controller */
+/** @var $this \bbn\Mvc\Controller */
 
 if ( !\defined('APPUI_SERVER_ROOT') ){
-  define('APPUI_SERVER_ROOT', $ctrl->plugin_url('appui-server').'/');
-  $ctrl->add_inc("psw", new \bbn\appui\passwords($ctrl->db));
+  define('APPUI_SERVER_ROOT', $ctrl->pluginUrl('appui-server').'/');
+  $ctrl->addInc("psw", new \bbn\Appui\Passwords($ctrl->db));
 }
 
 return 1;
