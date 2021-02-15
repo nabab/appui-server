@@ -1,4 +1,4 @@
-<bbn-table :order="[{field: 'name', Dir: 'ASC'}]"
+<bbn-table :order="[{field: 'name', dir: 'ASC'}]"
            :sortable="false"
            :scrollable="false"
            ref="table"

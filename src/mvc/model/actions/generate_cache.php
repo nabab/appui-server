@@ -6,7 +6,7 @@ if ( !empty($model->data['system']) ){
   $info_system_temp = BBN_DATA_PATH . 'plugins/appui-server/infos/'.$name_system.'.temp.json';
 
 
-  $generate_cache = function(string $cache, String $name_system){
+  $generate_cache = function(string $cache, string $name_system){
 
     if ( !is_file($cache) ){
 

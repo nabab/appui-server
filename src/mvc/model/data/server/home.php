@@ -130,7 +130,7 @@ if( !empty($model->inc->vm) ){
           foreach($fields as $y => $field){
             if ( ($pos = strpos($field, ":")) !== false ){
               $idx = str_replace(" ", "", substr($field, 0, $pos));
-              $value = substr($field, $pos, Strlen($field) - $pos);
+              $value = substr($field, $pos, strlen($field) - $pos);
               $value = str_replace(": ", "", $value);
               if( count($fields) > 1 ){
                 $informations[$d['name']][$idx] = $value;

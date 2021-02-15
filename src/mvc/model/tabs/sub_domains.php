@@ -40,7 +40,7 @@ if ( !empty($model->data['server']) ){
       foreach ( $all_users as $j => $val ){
         $users .= $val['name']. "  ";
       }
-      $users = substr($users, 0, Strlen($users)-1);
+      $users = substr($users, 0, strlen($users)-1);
     }
     else{
       $users = "";

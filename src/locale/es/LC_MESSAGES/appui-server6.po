@@ -1,0 +1,526 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: info@bbn.so\n"
+"last-Translator: BBN Solutions <support@bbn.solutions>\n"
+"Language-Team: ES <ES@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-02-15 01:10+0100\n"
+"POT-Revision-Date: 2021-02-15 01:10+0100\n"
+"Language: es\n"
+"X-Domain: appui-server\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/cloudmin.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Systems"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/cloudmin.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/main/main.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domain/sub_domain.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Commands"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/system.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/domain/domain.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/main/main.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Home"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/domain/tab/dashboard/dashboard.js
+msgid "General domain informations"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/domain/tab/dashboard/dashboard.js
+msgid "List users"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "Real memory"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "Disk quota"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "Status"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "General informations"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "CPUs"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/main/main.php
+msgid "Domains"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/system/tab/dashboard/dashboard.js
+msgid "List backups"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.js
+msgid "Parameter"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.js
+msgid "Values"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.js
+msgid "Search command"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.php
+msgid "Commands:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.php
+msgid "Description:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Type"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "OS"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Ip"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "MAC Address"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "RAM"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Disk space"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Backups"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/cloudmin/tab/systems/systems.php
+msgid "Updates"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/main/main.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/info/info.php
+msgid "Information"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/server/domain/duplicate/duplicate.php
+msgid "Are you sure you want to close?"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "New user"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Password"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/users/users.php
+msgid "Quota"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Unlimited"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Limited"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "FTP"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+msgid "NO EMAIL"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/add/add.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Extra email"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+msgid "Data start"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+msgid "Data end"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/autoreply/autoreply.php
+msgid "Message"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.js
+msgid "success"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Error"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "State"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Enable"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "Disabled"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/domains/user/edit/edit.php
+msgid "EMAIL"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/popup/server/domain/duplicate/duplicate.php
+msgid "New Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.js
+msgid "Cache delete list commands"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/dashboard/dashboard.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/info/info.js
+msgid "Delete"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.php
+msgid "Category commands:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.js
+msgid "Cache delete info"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/sub_domain/tab/info/info.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/info/info.php
+msgid "Value"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/commands/commands.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/information/information.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/commands/commands.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/info/info.js
+msgid "Delete cache"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/dashboard/dashboard.js
+msgid "Cache delete dashboard"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domain/sub_domain.php
+msgid "info"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+msgid "Enable Sub-domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+msgid "Disable Sub-domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Are you sure you want to disabled domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "disabled"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Are you sure you want to enabled domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "enable"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/users/users.php
+msgid "Active"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Sub-domains"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/domains/domains.php
+msgid "Created"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Edit Sub-domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Clone Sub-domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/sub_domains/sub_domains.php
+msgid "Delete Sub-domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "Modify user"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "?"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Deleted"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "new user"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.js
+msgid "Add new user"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/users/users.php
+msgid "User"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Ftp"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Email"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Auto_Reply"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Extra Adresses"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Last logins"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Edit"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/domain/tab/users/users.php
+msgid "Delete User"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Domains:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "List Admins:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Logs:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Ip address"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Cpu"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Kernel"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "info_server/fcount"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "info_server/host"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "top_level/informations"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/dashboard/dashboard.php
+msgid "Loading..."
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Sub_domains"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domain/domain.php
+msgid "Users"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Enable Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Disable Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Modify domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Duplicate"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Are you sure you want to delete the domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "New domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.js
+msgid "Add new domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Edit Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Clone Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/tab/domains/domains.php
+msgid "Delete Domain"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/widget/logs/logs.php
+msgid "Access:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/server/widget/logs/logs.php
+msgid "Error:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/domains/domains.php
+msgid "Name"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/quota/quota.js
+msgid "occupated "
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/components/widget/quota/quota.js
+msgid "free"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/mvc/html/ui.php
+msgid "Dashboard"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/mvc/html/ui.php
+msgid "Cloudmin"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/mvc/html/ui/home.php
+msgid "Servers:"
+msgstr ""
+
+#: /home/thomas/domains/apstapp.thomas.lan/_appui/vendor/bbn/appui-server/src/mvc/public/ui.php
+msgid "Servers"
+msgstr ""
