@@ -1,9 +1,9 @@
 {
-    "components\/cloudmin\/system\/domain\/tab\/dashboard\/dashboard": {
+    "components\/cloudmin\/system\/domain\/tab\/dashboard": {
         "General domain informations": "",
         "List users": ""
     },
-    "components\/cloudmin\/system\/tab\/dashboard\/dashboard": {
+    "components\/cloudmin\/system\/tab\/dashboard": {
         "Real memory": "",
         "Disk quota": "",
         "Status": "",
@@ -12,16 +12,16 @@
         "Domains": "",
         "List backups": ""
     },
-    "components\/cloudmin\/tab\/commands\/commands": {
+    "components\/cloudmin\/tab\/commands": {
         "Parameter": "",
         "Values": "",
         "Search command": ""
     },
-    "components\/popup\/domains\/user\/edit\/edit": {
+    "components\/popup\/domains\/user\/edit": {
         "success": "",
         "Error": ""
     },
-    "components\/server\/domain\/tab\/users\/users": {
+    "components\/server\/domain\/tab\/users": {
         "Error": "",
         "Delete": "",
         "Delete cache": "",
@@ -32,7 +32,7 @@
         "new user": "",
         "Add new user": ""
     },
-    "components\/server\/tab\/domains\/domains": {
+    "components\/server\/tab\/domains": {
         "Error": "",
         "Delete": "",
         "Delete cache": "",
@@ -50,27 +50,27 @@
         "New domain": "",
         "Add new domain": ""
     },
-    "components\/server\/domain\/sub_domain\/tab\/commands\/commands": {
+    "components\/server\/domain\/sub_domain\/tab\/commands": {
         "Cache delete list commands": "",
         "Delete": ""
     },
-    "components\/server\/domain\/sub_domain\/tab\/info\/info": {
+    "components\/server\/domain\/sub_domain\/tab\/info": {
         "Delete": "",
         "Cache delete info": ""
     },
-    "components\/server\/domain\/tab\/commands\/commands": {
+    "components\/server\/domain\/tab\/commands": {
         "Delete": "",
         "Delete cache": ""
     },
-    "components\/server\/domain\/tab\/dashboard\/dashboard": {
+    "components\/server\/domain\/tab\/dashboard": {
         "Delete": "",
         "Cache delete dashboard": ""
     },
-    "components\/server\/domain\/tab\/information\/information": {
+    "components\/server\/domain\/tab\/information": {
         "Delete": "",
         "Delete cache": ""
     },
-    "components\/server\/domain\/tab\/sub_domains\/sub_domains": {
+    "components\/server\/domain\/tab\/sub_domains": {
         "Delete": "",
         "Delete cache": "",
         "Enable Sub-domain": "",
@@ -80,15 +80,15 @@
         "Are you sure you want to enabled domain": "",
         "enable": ""
     },
-    "components\/server\/tab\/commands\/commands": {
+    "components\/server\/tab\/commands": {
         "Delete": "",
         "Delete cache": ""
     },
-    "components\/server\/tab\/info\/info": {
+    "components\/server\/tab\/info": {
         "Delete": "",
         "Delete cache": ""
     },
-    "components\/widget\/quota\/quota": {
+    "components\/widget\/quota": {
         "occupated ": "",
         "free": ""
     }

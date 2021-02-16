@@ -1,9 +1,9 @@
 {
-    "components\/cloudmin\/system\/domain\/tab\/dashboard\/dashboard": {
+    "components\/cloudmin\/system\/domain\/tab\/dashboard": {
         "General domain informations": "",
         "List users": ""
     },
-    "components\/cloudmin\/system\/tab\/dashboard\/dashboard": {
+    "components\/cloudmin\/system\/tab\/dashboard": {
         "Real memory": "",
         "Disk quota": "",
         "Status": "Statut",
@@ -12,16 +12,16 @@
         "Domains": "",
         "List backups": ""
     },
-    "components\/cloudmin\/tab\/commands\/commands": {
+    "components\/cloudmin\/tab\/commands": {
         "Parameter": "",
         "Values": "Valeurs",
         "Search command": ""
     },
-    "components\/popup\/domains\/user\/edit\/edit": {
+    "components\/popup\/domains\/user\/edit": {
         "success": "Succ\u00e8s",
         "Error": "Erreur"
     },
-    "components\/server\/domain\/tab\/users\/users": {
+    "components\/server\/domain\/tab\/users": {
         "Error": "Erreur",
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache",
@@ -32,7 +32,7 @@
         "new user": "Nouvel utilisateur",
         "Add new user": ""
     },
-    "components\/server\/tab\/domains\/domains": {
+    "components\/server\/tab\/domains": {
         "Error": "Erreur",
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache",
@@ -50,27 +50,27 @@
         "New domain": "",
         "Add new domain": ""
     },
-    "components\/server\/domain\/sub_domain\/tab\/commands\/commands": {
+    "components\/server\/domain\/sub_domain\/tab\/commands": {
         "Cache delete list commands": "",
         "Delete": "Supprimer"
     },
-    "components\/server\/domain\/sub_domain\/tab\/info\/info": {
+    "components\/server\/domain\/sub_domain\/tab\/info": {
         "Delete": "Supprimer",
         "Cache delete info": ""
     },
-    "components\/server\/domain\/tab\/commands\/commands": {
+    "components\/server\/domain\/tab\/commands": {
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache"
     },
-    "components\/server\/domain\/tab\/dashboard\/dashboard": {
+    "components\/server\/domain\/tab\/dashboard": {
         "Delete": "Supprimer",
         "Cache delete dashboard": ""
     },
-    "components\/server\/domain\/tab\/information\/information": {
+    "components\/server\/domain\/tab\/information": {
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache"
     },
-    "components\/server\/domain\/tab\/sub_domains\/sub_domains": {
+    "components\/server\/domain\/tab\/sub_domains": {
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache",
         "Enable Sub-domain": "",
@@ -80,15 +80,15 @@
         "Are you sure you want to enabled domain": "",
         "enable": ""
     },
-    "components\/server\/tab\/commands\/commands": {
+    "components\/server\/tab\/commands": {
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache"
     },
-    "components\/server\/tab\/info\/info": {
+    "components\/server\/tab\/info": {
         "Delete": "Supprimer",
         "Delete cache": "Supprimer le cache"
     },
-    "components\/widget\/quota\/quota": {
+    "components\/widget\/quota": {
         "occupated ": "",
         "free": ""
     }
