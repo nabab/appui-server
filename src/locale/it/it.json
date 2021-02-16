@@ -1,1 +1,95 @@
-{"":{"General domain informations":"","List users":"","Real memory":"","Disk quota":"","Status":"stato","General informations":"","CPUs":"","Domains":"","List backups":"","Parameter":"","Values":"","Search command":"","success":"","Error":"Errore","Cache delete list commands":"","Delete":"","Cache delete info":"","Delete cache":"","Cache delete dashboard":"","Enable Sub-domain":"","Disable Sub-domain":"","Are you sure you want to disabled domain":"","disabled":"","Are you sure you want to enabled domain":"","enable":"","Modify user":"","Are you sure you want to delete the user":"","?":"","Deleted":"","new user":"","Add new user":"","Enable Domain":"","Disable Domain":"","Modify domain":"","Duplicate":"","Are you sure you want to delete the domain":"","New domain":"","Add new domain":"","occupated ":"","free":""}}
+{
+    "components\/cloudmin\/system\/domain\/tab\/dashboard\/dashboard": {
+        "General domain informations": "",
+        "List users": ""
+    },
+    "components\/cloudmin\/system\/tab\/dashboard\/dashboard": {
+        "Real memory": "",
+        "Disk quota": "",
+        "Status": "stato",
+        "General informations": "",
+        "CPUs": "",
+        "Domains": "",
+        "List backups": ""
+    },
+    "components\/cloudmin\/tab\/commands\/commands": {
+        "Parameter": "",
+        "Values": "",
+        "Search command": ""
+    },
+    "components\/popup\/domains\/user\/edit\/edit": {
+        "success": "",
+        "Error": "Errore"
+    },
+    "components\/server\/domain\/tab\/users\/users": {
+        "Error": "Errore",
+        "Delete": "",
+        "Delete cache": "",
+        "Modify user": "",
+        "Are you sure you want to delete the user": "",
+        "?": "",
+        "Deleted": "",
+        "new user": "",
+        "Add new user": ""
+    },
+    "components\/server\/tab\/domains\/domains": {
+        "Error": "Errore",
+        "Delete": "",
+        "Delete cache": "",
+        "Are you sure you want to disabled domain": "",
+        "disabled": "",
+        "Are you sure you want to enabled domain": "",
+        "enable": "",
+        "?": "",
+        "Deleted": "",
+        "Enable Domain": "",
+        "Disable Domain": "",
+        "Modify domain": "",
+        "Duplicate": "",
+        "Are you sure you want to delete the domain": "",
+        "New domain": "",
+        "Add new domain": ""
+    },
+    "components\/server\/domain\/sub_domain\/tab\/commands\/commands": {
+        "Cache delete list commands": "",
+        "Delete": ""
+    },
+    "components\/server\/domain\/sub_domain\/tab\/info\/info": {
+        "Delete": "",
+        "Cache delete info": ""
+    },
+    "components\/server\/domain\/tab\/commands\/commands": {
+        "Delete": "",
+        "Delete cache": ""
+    },
+    "components\/server\/domain\/tab\/dashboard\/dashboard": {
+        "Delete": "",
+        "Cache delete dashboard": ""
+    },
+    "components\/server\/domain\/tab\/information\/information": {
+        "Delete": "",
+        "Delete cache": ""
+    },
+    "components\/server\/domain\/tab\/sub_domains\/sub_domains": {
+        "Delete": "",
+        "Delete cache": "",
+        "Enable Sub-domain": "",
+        "Disable Sub-domain": "",
+        "Are you sure you want to disabled domain": "",
+        "disabled": "",
+        "Are you sure you want to enabled domain": "",
+        "enable": ""
+    },
+    "components\/server\/tab\/commands\/commands": {
+        "Delete": "",
+        "Delete cache": ""
+    },
+    "components\/server\/tab\/info\/info": {
+        "Delete": "",
+        "Delete cache": ""
+    },
+    "components\/widget\/quota\/quota": {
+        "occupated ": "",
+        "free": ""
+    }
+}

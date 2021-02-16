@@ -1,1 +1,95 @@
-{"":{"General domain informations":"","List users":"","Real memory":"","Disk quota":"","Status":"Statut","General informations":"","CPUs":"","Domains":"","List backups":"","Parameter":"","Values":"Valeurs","Search command":"","success":"Succ\u00e8s","Error":"Erreur","Cache delete list commands":"","Delete":"Supprimer","Cache delete info":"","Delete cache":"Supprimer le cache","Cache delete dashboard":"","Enable Sub-domain":"","Disable Sub-domain":"","Are you sure you want to disabled domain":"","disabled":"","Are you sure you want to enabled domain":"","enable":"","Modify user":"","Are you sure you want to delete the user":"","?":"?","Deleted":"Supprim\u00e9","new user":"Nouvel utilisateur","Add new user":"","Enable Domain":"","Disable Domain":"","Modify domain":"","Duplicate":"Dupliquer","Are you sure you want to delete the domain":"","New domain":"","Add new domain":"","occupated ":"","free":""}}
+{
+    "components\/cloudmin\/system\/domain\/tab\/dashboard\/dashboard": {
+        "General domain informations": "",
+        "List users": ""
+    },
+    "components\/cloudmin\/system\/tab\/dashboard\/dashboard": {
+        "Real memory": "",
+        "Disk quota": "",
+        "Status": "Statut",
+        "General informations": "",
+        "CPUs": "",
+        "Domains": "",
+        "List backups": ""
+    },
+    "components\/cloudmin\/tab\/commands\/commands": {
+        "Parameter": "",
+        "Values": "Valeurs",
+        "Search command": ""
+    },
+    "components\/popup\/domains\/user\/edit\/edit": {
+        "success": "Succ\u00e8s",
+        "Error": "Erreur"
+    },
+    "components\/server\/domain\/tab\/users\/users": {
+        "Error": "Erreur",
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache",
+        "Modify user": "",
+        "Are you sure you want to delete the user": "",
+        "?": "?",
+        "Deleted": "Supprim\u00e9",
+        "new user": "Nouvel utilisateur",
+        "Add new user": ""
+    },
+    "components\/server\/tab\/domains\/domains": {
+        "Error": "Erreur",
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache",
+        "Are you sure you want to disabled domain": "",
+        "disabled": "",
+        "Are you sure you want to enabled domain": "",
+        "enable": "",
+        "?": "?",
+        "Deleted": "Supprim\u00e9",
+        "Enable Domain": "",
+        "Disable Domain": "",
+        "Modify domain": "",
+        "Duplicate": "Dupliquer",
+        "Are you sure you want to delete the domain": "",
+        "New domain": "",
+        "Add new domain": ""
+    },
+    "components\/server\/domain\/sub_domain\/tab\/commands\/commands": {
+        "Cache delete list commands": "",
+        "Delete": "Supprimer"
+    },
+    "components\/server\/domain\/sub_domain\/tab\/info\/info": {
+        "Delete": "Supprimer",
+        "Cache delete info": ""
+    },
+    "components\/server\/domain\/tab\/commands\/commands": {
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache"
+    },
+    "components\/server\/domain\/tab\/dashboard\/dashboard": {
+        "Delete": "Supprimer",
+        "Cache delete dashboard": ""
+    },
+    "components\/server\/domain\/tab\/information\/information": {
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache"
+    },
+    "components\/server\/domain\/tab\/sub_domains\/sub_domains": {
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache",
+        "Enable Sub-domain": "",
+        "Disable Sub-domain": "",
+        "Are you sure you want to disabled domain": "",
+        "disabled": "",
+        "Are you sure you want to enabled domain": "",
+        "enable": ""
+    },
+    "components\/server\/tab\/commands\/commands": {
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache"
+    },
+    "components\/server\/tab\/info\/info": {
+        "Delete": "Supprimer",
+        "Delete cache": "Supprimer le cache"
+    },
+    "components\/widget\/quota\/quota": {
+        "occupated ": "",
+        "free": ""
+    }
+}
