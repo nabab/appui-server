@@ -5,8 +5,7 @@
  * Time: 10.25
  */
 /* jshint esversion: 6 */
-(()=>{
-  let ui;
+(() => {
   return {
     mixins: [bbn.vue.localStorageComponent],
     data(){
@@ -14,6 +13,6 @@
         cfg: {},
         root: this.source.root
       };
-    },  
+    }  
   };
 })();

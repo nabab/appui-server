@@ -4,7 +4,7 @@
  * Date: 21/11/17
  * Time: 12.53
  */
-/* jshint esversion: 6 */
-(()=>{
-  return {}
+
+(() => {
+  return {};
 })();

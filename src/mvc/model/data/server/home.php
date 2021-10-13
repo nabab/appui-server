@@ -4,7 +4,7 @@ $top_level = [];
 $admins = [];
 $all = [];
 
-if( !empty($model->inc->vm) ){
+if (!empty($model->inc->vm)) {
 
   $infos_server = $model->inc->vm->info(['host' => $model->data["server"]]);
   foreach( $model->inc->vm->list_domains(['domain' => $model->data['server']]) as $v){

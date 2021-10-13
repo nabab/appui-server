@@ -1,1 +1,47 @@
-<appui-server-main :source="source" :server="server"></appui-server-main>
+<div class="bbn-overlay">
+  <bbn-router :autoload="true"
+              :scrollable="true"
+              ref="router"
+              :nav="true">
+    <bbns-container url="home"
+                    :static="true"
+                    :load="false"
+                    :source="source"
+                    icon="nf nf-fa-home"
+                    bcolor="teal"
+                    fcolor="white"
+                    title="<?=_("Home")?>"
+                    component="appui-server-dashboard"
+                    :notext="true"/>
+    <bbns-container url="domains"
+                    :load="false"
+                    :static="true"
+                    component="appui-server-domains"
+                    icon="nf nf-fa-th_list"
+                    bcolor="sandybrown"
+                    fcolor="white"
+                    :source="source"
+                    title="<?=_("Domains")?>"
+                    :notext="true"/>
+    <bbns-container url="commands"
+                    :load="false"
+                    :static="true"
+                    component="appui-server-commands"
+                    icon="nf nf-mdi-function"
+                    bcolor="yellowgreen"
+                    fcolor="white"
+                    :source="source"
+                    title="<?=_("Commands")?>"
+                    :notext="true"/>
+    <bbns-container url="info"
+                    :load="false"
+                    :static="true"
+                    component="appui-server-info"
+                    icon="nf nf-fa-info"
+                    bcolor="skyblue"
+                    fcolor="white"
+                    :source="source"
+                    title="<?=_("Information")?>"
+                    :notext="true"/>
+  </bbn-router>
+</div>
