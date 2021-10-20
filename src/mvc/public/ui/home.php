@@ -6,9 +6,4 @@
  * Time: 12.49
  */
 
-$ctrl->addData([
-  'root' => APPUI_SERVER_ROOT,
-  'servers' => array_map(function($ele){
-    return ['name' => $ele['text']];
-  }, $ctrl->inc->options->fullOptions('servers', 'server', BBN_APPUI))
-])->combo(null, true);
+$ctrl->combo(null, true);

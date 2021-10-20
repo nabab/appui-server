@@ -2,7 +2,7 @@
   <div class="appui-server-tab-info">
     <bbn-table :order="[{parts: 'DESC'}]"
                :sortable="true"
-               :source="source.root + 'data/sub_domain/informations/' + source.server + '/' + source.domain + '/' + source.sub_domain"
+               :source="source.root + 'data/subdomain/informations/' + source.server + '/' + source.domain + '/' + source.sub_domain"
     >
       <bbns-column title="<?=_("Information")?>"
                   field="info"

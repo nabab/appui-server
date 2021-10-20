@@ -9,7 +9,8 @@ $grid = new \bbn\Appui\Grid($model->db, $model->data, [
   'fields' => [
     $opt_cfg['arch']['options']['id'],
     'name' => $opt_cfg['arch']['options']['text'],
-    $opt_cfg['arch']['options']['code']
+    $opt_cfg['arch']['options']['code'],
+    'cloudmin' => 'JSON_UNQUOTE(JSON_EXTRACT(' . $opt_cfg['arch']['options']['value'] . ', "$.cloudmin"))'
   ],
   'filters' => [
     'conditions' => [[

@@ -6,39 +6,38 @@
  * Time: 15.23
  */
 
+$backup_lan_id = $model->inc->options->fromCode('cloudmin.lan', 'servers', 'server', BBN_APPUI);
+$cred = $model->inc->options->option($backup_lan_id);
 
-$backup = BBN_DATA_PATH . 'plugins/appui-server/into.text';
+$psw =  new \bbn\Appui\Passwords($model->db);
 
-$text = file_get_contents($backup);
-
-$cred = explode(',', $text);
-if ( is_array($cred) ){
+if (is_array($cred)) {
   $conf = [
-    'user' => $cred[0],
-    'pass' => $cred[1],
-    'host' => $cred[2],
-    'mode' => $cred[3]
+    'user' => $cred['user'],
+    'pass' => $psw->get($backup_lan_id),
+    'host' => $cred['code'],
+    'mode' => 'cloudmin'
   ];
-
-  $backup_command = BBN_DATA_PATH . 'plugins/appui-server/servers/'.$conf['mode'].'/'.$conf['host'].'.json';
-
-  //die(\bbn\X::hdump($backup_command));
-  if ( !is_file($backup_command) ){
-    $vm = new \bbn\Api\Virtualmin($conf);
-    $list_commands = $vm->listCommands(['short' => 1]);
-    $get_commands = [];
-
-    foreach($list_commands as $cmd ){
-      $get_commands[$cmd['name']] = $vm->getCommand($cmd['name']);
-    }
-
-    file_put_contents($backup_command, Json_encode($get_commands));
+  $jsonFile = $model->pluginDataPath() . 'servers/'.$conf['mode'].'/'.$conf['host'].'.json';
+  $commands = [];
+  if (is_file($jsonFile)) {
+    $commands = json_decode(file_get_contents($jsonFile), true);
   }
-  else{
-    $get_commands = json_decode(file_get_contents($backup_command), true);
+  if (empty($commands)) {
+    $vm = new \bbn\Api\Virtualmin($conf);
+    $listCommands = $vm->listCommands(['short' => 1]);
+    $commands = [];
+    if (!empty($listCommands) && is_array($listCommands)) {
+      foreach($listCommands as $cmd ){
+        $commands[$cmd['name']] = $vm->getCommand($cmd['name']);
+      }
+      if (\bbn\File\Dir::createPath(\bbn\X::dirname($jsonFile))) {
+        file_put_contents($jsonFile, json_encode($commands));
+      }
+    }
   }
   return [
-    'commands' => $get_commands
+    'commands' => $commands
   ];
 }
 

@@ -9,10 +9,10 @@
  $tot = 0;
  $all = [];
  $infos = "";
- if (!empty($model->inc->vm) &&
-  !empty($model->data['server']) &&
-  !empty($model->data['domain']) &&
-  !empty($model->data['sub_domain'])
+ if (!empty($model->inc->vm)
+  && !empty($model->data['server'])
+  && !empty($model->data['domain'])
+  && !empty($model->data['sub_domain'])
  ){
   $selected_info = [
     'created_by',
@@ -38,21 +38,22 @@
     'multiline' => 1
   ]);
 
-
-  foreach($domains as $key => $val){
-    if( $val['name'] === $model->data['sub_domain'] ){
-      foreach( $val['values'] as $j => $v ){
-        foreach($selected_info as $value){
-          if( $j === $value ){
-            array_push($all, [
-              'info' => $j,
-              'value' => $v[0],
-            ]);
-            $tot = $tot + 1;
+  if (is_array($domains)) {
+    foreach ($domains as $key => $val) {
+      if ($val['name'] === $model->data['sub_domain']) {
+        foreach ( $val['values'] as $j => $v ) {
+          foreach ($selected_info as $value) {
+            if ( $j === $value ) {
+              array_push($all, [
+                'info' => $j,
+                'value' => $v[0],
+              ]);
+              $tot++;
+            }
           }
         }
+        $infos = $val['values'];
       }
-      $infos = $val['values'];
     }
   }
 }

@@ -4,7 +4,7 @@
              :groupable="true"
              :server-grouping="false"
              :group-by="1"
-             :source="source.root + 'data/sub_domain/commands/'+ source.server + '/' + source.domain + '/' + source.sub_domain"
+             :source="source.root + 'data/subdomain/commands/'+ source.server + '/' + source.domain + '/' + source.sub_domain"
   >
     <bbns-column title="<?=_("Commands:")?>"
                 field="command"

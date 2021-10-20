@@ -11,8 +11,7 @@ if (!empty($ctrl->arguments[0])) {
     $ctrl
       ->addData([
         'root' => APPUI_SERVER_ROOT,
-        'server' => $ctrl->arguments[0],
-        'root_server' => APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0]
+        'server' => $ctrl->arguments[0]
       ])
       ->setUrl(APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0])
       ->combo($ctrl->arguments[0], true);

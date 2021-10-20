@@ -3,7 +3,7 @@
              :sortable="true"
              class="bbn-100"
              ref="listSubDomainsTable"
-             :source="source.root + 'data/domain/sub_domains/' + source.server + '/' + source.domain">
+             :source="source.root + 'data/domain/subdomains/' + source.server + '/' + source.domain">
     <bbns-column title="<?=_("Active")?>"
                  cls="bbn-c"
                  :width= "50"

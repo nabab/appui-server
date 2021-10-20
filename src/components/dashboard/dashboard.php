@@ -1,14 +1,27 @@
 <div class="bbn-overlay">
-  <bbn-dashboard v-if="ready">
-    <bbns-widget title="<?=_("Quota")?>"
-                component="appui-server-widget-server-quota"
-                :source="infos"
-                v-if="infos !== undefined"/>
-    <bbns-widget title="<?=_("Domains")?>"
-                item-component="appui-server-widget-server-domains"
-                :items="domains"
-                v-if="domains.length"/>
-    <bbns-widget title="<?=_("List Admins")?>"
+  <bbn-dashboard :order="!!source.widgets ? source.widgets.order : []">
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.cpu"
+                 :title="source.widgets.list.cpu.text"
+                 v-bind="source.widgets.list.cpu"
+                 :data="widgetData"
+                 :uid="source.widgets.list.cpu.key"/>
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.memory"
+                 :title="source.widgets.list.memory.text"
+                 v-bind="source.widgets.list.memory"
+                 :data="widgetData"
+                 :uid="source.widgets.list.memory.key"/>
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.fs"
+                 :title="source.widgets.list.fs.text"
+                 v-bind="source.widgets.list.fs"
+                 :data="widgetData"
+                 :uid="source.widgets.list.fs.key"/>
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.domains"
+                 :title="source.widgets.list.domains.text"
+                 v-bind="source.widgets.list.domains"
+                 :data="widgetData"
+                 :uid="source.widgets.list.domains.key"/>
+    
+    <!-- <bbns-widget title="<?=_("List Admins")?>"
                 item-component="appui-server-widget-server-admin"
                 :items="admins"
                 v-if="admins.length"/>
@@ -20,10 +33,8 @@
                 item-component="appui-server-widget-server-ip"
                 :items="topLevel.informations.ip_address"
                 v-if="topLevel.length"/>
-    <bbns-widget title="<?=_("CPU")?>"
-                component="appui-server-widget-server-cpus"
-                :source="infos"
-                v-if="infos.cpu.length"/>
+    
+    
     <bbns-widget title="<?=_("Kernel")?>"
                 component="appui-server-widget-server-kernel"
                 :source="infos.kernel"
@@ -49,9 +60,6 @@
                    {php_version: topLevel.informations.php_version},
                    {server_block_quota_used: topLevel.informations.server_block_quota_used},
                  ]"
-                 v-if="topLevel.length"/>
+                 v-if="topLevel.length"/> -->
   </bbn-dashboard>
-  <div v-else class="bbn-100 bbn-middle">
-    <span class="bbn-xxxl bbn-b"><?=_("Loading...")?></span>
-  </div>
 </div>

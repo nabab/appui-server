@@ -6,5 +6,14 @@
  */
 
 (() => {
-  return {};
+  return {
+    computed: {
+      servers(){
+        return bbn.fn.filter(this.source.servers, s => !s.cloudmin);
+      },
+      cloudmins(){
+        return bbn.fn.filter(this.source.servers, s => !!s.cloudmin);
+      }
+    }
+  };
 })();

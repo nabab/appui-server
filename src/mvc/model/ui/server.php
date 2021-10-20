@@ -6,9 +6,14 @@
  * Time: 18.28
  */
 
+if (($dashboard = new \bbn\Appui\Dashboard('appui-server-server'))) {
+  $widgets = $dashboard->getUserWidgetsCode($model->pluginUrl('appui-dashboard').'/data/');
+  $widgets = [
+    'list' => $widgets,
+    'order' => $dashboard->getOrder($widgets)
+  ];
+}
 return [
-  'site_url' => BBN_URL,
-  'static_path' => BBN_STATIC_PATH,
-  'shared_path' => BBN_SHARED_PATH,
+  'widgets' => @$widgets,
   'server' => $model->data['server']
 ];

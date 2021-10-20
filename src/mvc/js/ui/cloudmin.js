@@ -5,7 +5,7 @@
  * Time: 10.38
  */
 
-(()=>{  
+(() => {  
   return {
     data(){
       return this.source

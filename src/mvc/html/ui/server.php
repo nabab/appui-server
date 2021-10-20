@@ -13,6 +13,17 @@
                     title="<?=_("Home")?>"
                     component="appui-server-dashboard"
                     :notext="true"/>
+    <bbns-container url="cloudmin"
+                    :load="false"
+                    :static="true"
+                    component="appui-server-cloudmin"
+                    icon="nf nf-fae-cloud"
+                    bcolor="dodgerblue"
+                    fcolor="white"
+                    :source="source"
+                    title="<?=_("Cloudmin")?>"
+                    :notext="true"
+                    v-if="!!source.cloudmin"/>
     <bbns-container url="domains"
                     :load="false"
                     :static="true"
