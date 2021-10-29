@@ -1,4 +1,5 @@
 <?php
+return 1;
 //configuration object virtualmin or cloudmin
 if(!empty($ctrl->post) && !empty($ctrl->post['server'])) {
   $serverName = $ctrl->post['server'];

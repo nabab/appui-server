@@ -1,7 +1,11 @@
-<bbn-table :source="root + 'data/server/domains/' + source.server"
+<bbn-table :source="root + 'data/server/domains'"
+           :data="{
+             server: source.server
+           }"
            :sortable="true"
-           ref="domainsListTable"
-           :order="[{field: 'domain', dir: 'DESC'}]"
+           :server-sorting="false"
+           ref="table"
+           :order="[{field: 'name', dir: 'ASC'}]"
            :editable="true"
            editor="appui-server-popup-server-domain-edit">
   <bbns-column title="<?=_("Active")?>"
@@ -9,17 +13,23 @@
                :width= "50"
                :buttons="stateButtonDomain"
                field="disabled"/>
-  <bbns-column title="<?=_("Domain")?>"
-               field="domain"
+  <bbns-column title="<?=_("Name")?>"
+               field="name"
                cls="bbn-c"
                :width="300"
                :render="renderDomain"/>
+  <bbns-column title="<?=_("Parent")?>"
+               field="parent"
+               cls="bbn-c"
+               :width="300"
+               :render="renderParent"/>
   <bbns-column title="<?=_("Created")?>"
                cls="bbn-c"
                :width="250"
                field="created"/>
   <bbns-column title="<?=_("User")?>"
-               field="users"/>
+               field="users"
+               :render="renderUsers"/>
   <bbns-column :tcomponent="$options.components.newDomain"
                :width="150"
                cls="bbn-c"

@@ -1,5 +1,10 @@
 <div class="bbn-overlay">
   <bbn-dashboard :order="!!source.widgets ? source.widgets.order : []">
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.info"
+                 :title="source.widgets.list.info.text"
+                 v-bind="source.widgets.list.info"
+                 :data="widgetData"
+                 :uid="source.widgets.list.info.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.cpu"
                  :title="source.widgets.list.cpu.text"
                  v-bind="source.widgets.list.cpu"
@@ -20,6 +25,16 @@
                  v-bind="source.widgets.list.domains"
                  :data="widgetData"
                  :uid="source.widgets.list.domains.key"/>
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.services"
+                 :title="source.widgets.list.services.text"
+                 v-bind="source.widgets.list.services"
+                 :data="widgetData"
+                 :uid="source.widgets.list.services.key"/>
+    <bbns-widget v-if="!!source.widgets && source.widgets.list.updates"
+                 :title="source.widgets.list.updates.text"
+                 v-bind="source.widgets.list.updates"
+                 :data="widgetData"
+                 :uid="source.widgets.list.updates.key"/>
     
     <!-- <bbns-widget title="<?=_("List Admins")?>"
                 item-component="appui-server-widget-server-admin"

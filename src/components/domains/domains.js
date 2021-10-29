@@ -14,7 +14,13 @@
     },
     methods:{
       renderDomain(row){
-        return '<a href="'+ this.root+ 'ui/server/' + this.source.server + '/domain/' + row.domain + '">' + row.domain + '</a>';
+        return `<a href="${this.root}ui/server/${this.source.server}/domain/${row.name}">${row.name}</a>`;
+      },
+      renderParent(row){
+        return !!row.parent ? `<a href="${this.root}ui/server/${this.source.server}/domain/${row.parent}">${row.parent}</a>` : '';
+      },
+      renderUsers(row){
+        return bbn.fn.map(row.users, user => user.name).join(', ');
       },
       stateButtonDomain(row){
         if( row.disabled === true ){
@@ -45,7 +51,7 @@
           }, (d)=>{
             if ( d.success ){
               appui.success(bbn._("disabled"));
-              this.$refs.domainsListTable.updateData();
+              this.getRef('table').updateData();
             }
           });
         });
@@ -59,18 +65,18 @@
           }, (d)=>{
             if ( d.success ){
               appui.success(bbn._("enable"));
-              this.$refs.domainsListTable.updateData();
+              this.getRef('table').updateData();
             }
           });
         });
       },
       editDomain(row, col, idx){
-        return this.$refs.domainsListTable.edit(row, {
+        return this.getRef('table').edit(row, {
           title: bbn._('Modify domain') + ' ' + row.doamin,
           height: '70%',
           width: '50%',
           // onClose: () =>{
-          //   this.$refs.domainsListTable.updateData();
+          //   this.getRef('table').updateData();
           // }
         }, idx);
       },
@@ -86,7 +92,7 @@
               domain: row.domain
             },
             onClose: () =>{
-              this.$refs.domainsListTable.updateData();
+              this.getRef('table').updateData();
             }
         });
       },
@@ -98,7 +104,7 @@
             }, d => {
             if ( d.success ){
               appui.success(bbn._('Deleted') + ' ' + row.domain );
-              this.$refs.domainsListTable.updateData();
+              this.getRef('table').updateData();
             }
             else {
               appui.error(bbn._("Error"));
@@ -113,7 +119,7 @@
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
         action:()=>{
-          let domains = this.$refs.domainsListTable.currentData.slice();
+          let domains = this.getRef('table').currentData.slice();
           this.post(this.root + 'actions/servers/delete_cache',{
             server: this.source.server,
             tab:"domains",
@@ -121,7 +127,7 @@
           }, d => {
             if ( d.success ){
               appui.success(bbn._("Delete"));
-              this.$refs.domainsListTable.updateData();
+              this.getRef('table').updateData();
             }
           });
         }

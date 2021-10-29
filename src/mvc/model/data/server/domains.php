@@ -1,52 +1,123 @@
 <?php
-/**
- * Created by BBN Solutions.
- * User: Vito Fava
- * Date: 23/11/17
- * Time: 14.38
- */
-$tot = 0;
-$all = [];
-if ( !empty($model->data['id']) &&  !empty($model->inc->vm) ){
-  $server = $model->inc->options->option($model->data['id']);
-  $domains = $model->inc->vm->list_domains(['domain' => $server['text']]);
-  foreach ( $domains as $i => $v ){
-    $users = "";
-    $parms_list =  [
-      'all-domains' => 1,
-      'domain' => $v['name'],
-      'domain-user' => $server['user'],
-      'email-only' => 1,
-      'include-owner' => 1,
-      'multiline' => 1,
-      'name-only' => 1,
-      'simple-aliases' => 1,
-    ];
-    $all_users = $model->inc->vm->list_users($parms_list);
-    if( !empty($all_users) ){
-      foreach ( $all_users as $val ){
-        if ( $val['values']['domain'][0] == $v['name'] ){
-          $users .= $val['name']. "  ";
+if ($model->hasData('server', true)) {
+  $cache = \bbn\Cache::getEngine();
+  $server = $model->data['server'];
+  $cacheName = 'bbn/Appui/Server/'.$server.'/';
+  if (!$cache->has($cacheName.'list_domains')
+      || $model->hasData('force', true)
+  ) {
+    $model->getModel(
+      $model->pluginUrl('appui-server').'/actions/cache',
+      [
+        'server' => $model->data['server'],
+        'mode' => 'list_domains'
+      ]
+    );
+  }
+
+  if ($data = $cache->get($cacheName.'list_domains')) {
+    $normalizeDomain = function($d) use($server, $cache, $cacheName, $model){
+      if (!$cache->has($cacheName.'domains/'.$d['name'].'/list_admins')
+          || $model->hasData('force', true)
+      ) {
+        $model->getModel(
+          $model->pluginUrl('appui-server').'/actions/cache',
+          [
+            'server' => $model->data['server'],
+            'mode' => 'list_admins',
+            'domain' => $d['name']
+          ]
+        );
+      }
+
+      if (!$cache->has($cacheName.'domains/'.$d['name'].'/list_users')
+          || $model->hasData('force', true)
+      ) {
+        $model->getModel(
+          $model->pluginUrl('appui-server').'/actions/cache',
+          [
+            'server' => $model->data['server'],
+            'mode' => 'list_users',
+            'domain' => $d['name']
+          ]
+        );
+      }
+
+      $res = [
+        'name' => $d['name'],
+        'server' => $server,
+        'info' => $d['values'],
+        'disabled' => isset($d['values']['disabled']),
+        'created' => $d['values']['created_on'][0],
+        'log' => [
+          'access_log' => !empty($d['values']['access_log']) ? $d['values']['access_log'][0] : '',
+          'error_log' => !empty($d['values']['error_log']) ? $d['values']['error_log'][0] : '',
+        ],
+        'admins' => $cache->get($cacheName.'domains/'.$d['name'].'/list_admins') ?: [],
+        'users' => $cache->get($cacheName.'domains/'.$d['name'].'/list_users') ?: []
+      ];
+
+      if (!empty($d['values']['parent_domain'])) {
+        $res['parent'] = $d['values']['parent_domain'][0];
+      }
+      else {
+        $blockQuotaUsed = $d['values']['server_block_quota_used'][0];
+        $blockQuota     = $d['values']['server_block_quota'][0];
+        $rapQuota       = '';
+        if ($blockQuota !== 'Unlimited') {
+          $rapQuota = ($blockQuotaUsed * 100) / $blockQuota;
+          $rapQuota = number_format($rapQuota, 2).'%';
+        }
+        else {
+          $rapQuota = _('Unlimited');
+        }
+
+        $res = array_merge(
+          $res,
+          [
+            'total_quota' => $blockQuota ?? _('Unlimited'),
+            'quota_used' => $blockQuotaUsed,
+            'server_quota' => $d['values']['server_quota'][0],
+            'serverquota_used' => $d['values']['server_quota_used'][0],
+            'alert_quota' => (is_numeric($rapQuota) && ($rapQuota > 90)) ? true : false,
+            'rapport_quota' => $rapQuota
+          ]
+        );
+      }
+
+      return $res;
+    };
+
+    $domains = [];
+    foreach ($data as $d) {
+      if (!empty($d['values']['parent_domain'])) {
+        if (!isset($domains[$d['values']['parent_domain'][0]])) {
+          $domains[$d['values']['parent_domain'][0]] = [
+            'subdomains' => []
+          ];
+        }
+
+        $domains[$d['values']['parent_domain'][0]]['subdomains'][] = $normalizeDomain($d);
+        \bbn\X::sortBy($domains[$d['values']['parent_domain'][0]]['subdomains'], 'name', 'asc');
+      }
+
+      if (!$model->hasData('onlyParent', true) || empty($d['values']['parent_domain'])) {
+        if (isset($domains[$d['name']])) {
+          $domains[$d['name']] = array_merge($domains[$d['name']], $normalizeDomain($d));
+        }
+        else {
+          $domains[$d['name']]               = $normalizeDomain($d);
+          $domains[$d['name']]['subdomains'] = [];
         }
       }
     }
-    else{
-      $users = " ";
-    }
 
-      array_push($all, [
-        'server' => $server['text'],
-        'domain' => $v['name'],
-        'disabled' => isset($v['values']['disabled']) ? true : false,
-        'users' => $users,
-        'created' => $v['values']['created_on'][0],
-        'total_info' => $v['values'],
-      ]);
-      $tot = $tot + 1;
-
+    ksort($domains);
+    return [
+      'data' => array_values($domains),
+      'total' => count($domains)
+    ];
   }
 }
-return [
-  'data' => $all,
-  'tot' => $tot
-];
+
+return [];

@@ -42,6 +42,14 @@
     methods: {
       legendRender(seriesName, opts) {
         return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex] + '%';
+      },
+      forceRefresh(){
+        let widget = this.closest('bbn-widget');
+        widget.data.force = true;
+        widget.$once('loaded', () => {
+          delete widget.data.force;
+        });
+        widget.reload();
       }
     },
     watch: {

@@ -8,7 +8,7 @@
  * @var $ctrl \bbn\Mvc\Controller
  */
 
-
+return 1;
  
  //configuration object virtualmin or cloudmin
  if ( !empty($ctrl->post) &&

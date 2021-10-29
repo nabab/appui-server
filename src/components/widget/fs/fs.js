@@ -1,5 +1,10 @@
 (() => {
   return {
+    data(){
+      return {
+        details: false
+      }
+    },
     computed: {
       chartData(){
         let labels = [],
@@ -10,6 +15,7 @@
             labels.push(it.device);
             series.push(this.getPerc(it.total, parseInt(it.total) - parseInt(it.free)));
             values.push({
+              device: it.device,
               size: this.getSize(it.total, parseInt(it.total) - parseInt(it.free)),
               fs: it.type,
               mount: it.dir
@@ -20,7 +26,7 @@
           labels: labels,
           series: series,
           values: values
-        }
+        };
       },
       chartCfg(){
         let t = 0,
@@ -64,10 +70,15 @@
           parseFloat(tot.substr(0, totIdx)).toFixed(2) + tot.substr(totIdx);
       },
       legendRender(seriesName, opts) {
-        return bbn._('Device:') + ' ' + seriesName + '<br>'
-          + bbn._('Space:') + ' ' + opts.w.globals.series[opts.seriesIndex] + '% (' + this.chartData.values[opts.seriesIndex].size + ')<br>'
-          + bbn._('Filesystem:') + ' ' + this.chartData.values[opts.seriesIndex].fs + '<br>'
-          + bbn._('Mount point:') + ' ' + this.chartData.values[opts.seriesIndex].mount;
+        return this.chartData.values[opts.seriesIndex].mount + ' - ' + opts.w.globals.series[opts.seriesIndex] + '% (' + this.chartData.values[opts.seriesIndex].size + ')';
+      },
+      forceRefresh(){
+        let widget = this.closest('bbn-widget');
+        widget.data.force = true;
+        widget.$once('loaded', () => {
+          delete widget.data.force;
+        });
+        widget.reload();
       }
     },
     watch: {
