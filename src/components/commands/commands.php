@@ -5,7 +5,10 @@
              :server-grouping="false"
              :group-by="1"
              ref="tableCommandServer"
-             :source="root + 'data/server/commands/' + source.server">
+             :source="root + 'data/server/commands'"
+             :data="{
+               server: source.server
+             }">
     <bbns-column title="<?=_("Commands:")?>"
                  field="command"
                  class="bbn-l"/>
