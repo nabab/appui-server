@@ -1,4 +1,5 @@
 <?php
+
 /** @var \bbn\Mvc\Model $model */
 $model->data['filters'] = [
   'conditions' => [[

@@ -11,5 +11,21 @@
                     fcolor="white"
                     title="<?=_("Dashboard")?>"
                     :notext="true"/>
+    <bbns-container url="domains"
+                    :static="true"
+                    :load="true"
+                    icon="nf nf-fa-th_list"
+                    bcolor="darkseagreen"
+                    fcolor="white"
+                    title="<?=_("Domains")?>"
+                    :notext="true"/>
+    <bbns-container url="scaleway"
+                    :static="true"
+                    :load="true"
+                    icon="nf nf-oct-server"
+                    bcolor="purple"
+                    fcolor="white"
+                    title="<?=_("Scaleway")?>"
+                    :notext="true"/>
   </bbn-router>
 </div>

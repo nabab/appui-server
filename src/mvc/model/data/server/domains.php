@@ -1,46 +1,39 @@
 <?php
+
 if ($model->hasData('server', true)) {
-  $cache = \bbn\Cache::getEngine();
-  $server = $model->data['server'];
-  $cacheName = 'bbn/Appui/Server/'.$server.'/';
-  if (!$cache->has($cacheName.'list_domains')
-      || $model->hasData('force', true)
+  $cache     = \bbn\Cache::getEngine();
+  $server    = $model->data['server'];
+  $cacheName = \bbn\Appui\Server::CACHE_NAME . "/$server/";
+  try {
+    $s = new \bbn\Appui\Server($server);
+  }
+  catch (Exception $e) {
+    $s = false;
+  }
+  if (
+      !empty($s)
+      && (!$cache->has($cacheName . 'list_domains')
+        || $model->hasData('force', true))
   ) {
-    $model->getModel(
-      $model->pluginUrl('appui-server').'/actions/cache',
-      [
-        'server' => $model->data['server'],
-        'mode' => 'list_domains'
-      ]
-    );
+    $s->makeCache('list_domains');
   }
 
-  if ($data = $cache->get($cacheName.'list_domains')) {
+  if ($data = $cache->get($cacheName . 'list_domains')) {
     $normalizeDomain = function($d) use($server, $cache, $cacheName, $model){
-      if (!$cache->has($cacheName.'domains/'.$d['name'].'/list_admins')
-          || $model->hasData('force', true)
+      if (
+          !empty($s)
+          && (!$cache->has($cacheName . 'domains/' . $d['name'] . '/list_admins')
+          || $model->hasData('force', true))
       ) {
-        $model->getModel(
-          $model->pluginUrl('appui-server').'/actions/cache',
-          [
-            'server' => $model->data['server'],
-            'mode' => 'list_admins',
-            'domain' => $d['name']
-          ]
-        );
+        $s->makeCache('list_admins', $d['name']);
       }
 
-      if (!$cache->has($cacheName.'domains/'.$d['name'].'/list_users')
-          || $model->hasData('force', true)
+      if (
+          !empty($s)
+          && (!$cache->has($cacheName . 'domains/' . $d['name'] . '/list_users')
+            || $model->hasData('force', true))
       ) {
-        $model->getModel(
-          $model->pluginUrl('appui-server').'/actions/cache',
-          [
-            'server' => $model->data['server'],
-            'mode' => 'list_users',
-            'domain' => $d['name']
-          ]
-        );
+        $s->makeCache('list_users', $d['name']);
       }
 
       $res = [
@@ -53,8 +46,8 @@ if ($model->hasData('server', true)) {
           'access_log' => !empty($d['values']['access_log']) ? $d['values']['access_log'][0] : '',
           'error_log' => !empty($d['values']['error_log']) ? $d['values']['error_log'][0] : '',
         ],
-        'admins' => $cache->get($cacheName.'domains/'.$d['name'].'/list_admins') ?: [],
-        'users' => $cache->get($cacheName.'domains/'.$d['name'].'/list_users') ?: []
+        'admins' => $cache->get($cacheName . 'domains/' . $d['name'] . '/list_admins') ?: [],
+        'users' => $cache->get($cacheName . 'domains/' . $d['name'] . '/list_users') ?: []
       ];
 
       if (!empty($d['values']['parent_domain'])) {

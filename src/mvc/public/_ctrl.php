@@ -28,8 +28,8 @@ $user     = @$ctrl->post['user'];
 if (\bbn\Str::isUid($serverId)) {
   $server = $ctrl->inc->options->code($serverId);
 }
-else {
-  $o        = $ctrl->inc->options->option($server, 'servers', 'server', BBN_APPUI);
+elseif (!empty($server)) {
+  $o        = $ctrl->inc->options->option($server, 'servers', 'server', 'appui');
   $server   = $o['code'];
   $serverId = $o['id'];
   $user     = $o['user'];

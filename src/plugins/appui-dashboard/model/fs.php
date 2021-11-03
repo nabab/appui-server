@@ -1,15 +1,16 @@
 <?php
+
 if ($model->hasData('server', true)) {
-  $cache = \bbn\Cache::getEngine();
-  $cacheName = 'bbn/Appui/Server/'.$model->data['server'].'/disk_fs';
+  $cache     = \bbn\Cache::getEngine();
+  $cacheName = \bbn\Appui\Server::CACHE_NAME . '/' . $model->data['server'] . '/disk_fs';
   if (!$cache->has($cacheName) || $model->hasData('force', true)) {
-    $model->getModel(
-      $model->pluginUrl('appui-server').'/actions/cache',
-      [
-        'server' => $model->data['server'],
-        'mode' => 'disk_fs'
-      ]
-    );
+    try {
+      $s = new \bbn\Appui\Server($model->data['server']);
+      $s->makeCache('disk_fs');
+    }
+    catch (Exception $e) {
+      return [];
+    }
   }
 
   if ($data = $cache->get($cacheName)) {

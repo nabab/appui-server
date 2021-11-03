@@ -8,7 +8,7 @@ if (!empty($model->inc->vm)) {
       'command' => $val['name'],
       'category' => $val['values']['category'][0],
       'description' => $val['values']['description'][0],
-      'total_info' => $val['values']  
+      'total_info' => $val['values']
     ];
   }
 

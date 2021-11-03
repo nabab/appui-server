@@ -1,15 +1,16 @@
 <?php
+
 if ($model->hasData('server', true)) {
-  $cache = \bbn\Cache::getEngine();
-  $cacheName = 'bbn/Appui/Server/'.$model->data['server'].'/poss';
+  $cache     = \bbn\Cache::getEngine();
+  $cacheName = \bbn\Appui\Server::CACHE_NAME . '/' . $model->data['server'] . '/poss';
   if (!$cache->has($cacheName) || $model->hasData('force', true)) {
-    $model->getModel(
-      $model->pluginUrl('appui-server').'/actions/cache',
-      [
-        'server' => $model->data['server'],
-        'mode' => 'poss'
-      ]
-    );
+    try {
+      $s = new \bbn\Appui\Server($model->data['server']);
+      $s->makeCache('poss');
+    }
+    catch (Exception $e) {
+      return [];
+    }
   }
 
   if ($data = $cache->get($cacheName)) {
