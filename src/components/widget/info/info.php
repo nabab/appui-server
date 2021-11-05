@@ -1,4 +1,5 @@
-<div class="appui-server-widget-info bbn-padded bbn-grid-fields">
+<div class="appui-server-widget-info bbn-padded bbn-grid-fields"
+     v-if="source.items">
   <label v-text="_('Hostname')"/>
   <div v-text="source.items.host.hostname"/>
   <label v-text="_('OS')"/>
@@ -20,4 +21,6 @@
   </template>
   <label v-text="_('Running processes')"/>
   <div v-text="source.items.procs"/>
+  <label v-text="_('Uptime')"/>
+  <div v-text="getUptime()"/>
 </div>

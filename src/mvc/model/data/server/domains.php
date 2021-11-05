@@ -1,44 +1,23 @@
 <?php
 
 if ($model->hasData('server', true)) {
-  $cache     = \bbn\Cache::getEngine();
-  $server    = $model->data['server'];
-  $cacheName = \bbn\Appui\Server::CACHE_NAME . "/$server/";
+  $serverName = $model->data['server'];
   try {
-    $s = new \bbn\Appui\Server($server);
+    $server = new \bbn\Appui\Server($serverName);
   }
   catch (Exception $e) {
-    $s = false;
-  }
-  if (
-      !empty($s)
-      && (!$cache->has($cacheName . 'list_domains')
-        || $model->hasData('force', true))
-  ) {
-    $s->makeCache('list_domains');
+    return [
+      'data' => [],
+      'total' => 0
+    ];
   }
 
-  if ($data = $cache->get($cacheName . 'list_domains')) {
-    $normalizeDomain = function($d) use($server, $cache, $cacheName, $model){
-      if (
-          !empty($s)
-          && (!$cache->has($cacheName . 'domains/' . $d['name'] . '/list_admins')
-          || $model->hasData('force', true))
-      ) {
-        $s->makeCache('list_admins', $d['name']);
-      }
 
-      if (
-          !empty($s)
-          && (!$cache->has($cacheName . 'domains/' . $d['name'] . '/list_users')
-            || $model->hasData('force', true))
-      ) {
-        $s->makeCache('list_users', $d['name']);
-      }
-
+  if ($data = $server->getCache('domains', $model->hasData('force', true))) {
+    $normalizeDomain = function ($d) use ($serverName, $server, $model) {
       $res = [
         'name' => $d['name'],
-        'server' => $server,
+        'server' => $serverName,
         'info' => $d['values'],
         'disabled' => isset($d['values']['disabled']),
         'created' => $d['values']['created_on'][0],
@@ -46,8 +25,8 @@ if ($model->hasData('server', true)) {
           'access_log' => !empty($d['values']['access_log']) ? $d['values']['access_log'][0] : '',
           'error_log' => !empty($d['values']['error_log']) ? $d['values']['error_log'][0] : '',
         ],
-        'admins' => $cache->get($cacheName . 'domains/' . $d['name'] . '/list_admins') ?: [],
-        'users' => $cache->get($cacheName . 'domains/' . $d['name'] . '/list_users') ?: []
+        'admins' => $server->getCache('admins', $model->hasData('force', true), $d['name']) ?: [],
+        'users' => $server->getCache('users', $model->hasData('force', true), $d['name']) ?: []
       ];
 
       if (!empty($d['values']['parent_domain'])) {
@@ -59,22 +38,22 @@ if ($model->hasData('server', true)) {
         $rapQuota       = '';
         if ($blockQuota !== 'Unlimited') {
           $rapQuota = ($blockQuotaUsed * 100) / $blockQuota;
-          $rapQuota = number_format($rapQuota, 2).'%';
+          $rapQuota = number_format($rapQuota, 2) . '%';
         }
         else {
           $rapQuota = _('Unlimited');
         }
 
         $res = array_merge(
-          $res,
-          [
-            'total_quota' => $blockQuota ?? _('Unlimited'),
-            'quota_used' => $blockQuotaUsed,
-            'server_quota' => $d['values']['server_quota'][0],
-            'serverquota_used' => $d['values']['server_quota_used'][0],
-            'alert_quota' => (is_numeric($rapQuota) && ($rapQuota > 90)) ? true : false,
-            'rapport_quota' => $rapQuota
-          ]
+            $res,
+            [
+              'total_quota' => $blockQuota ?? _('Unlimited'),
+              'quota_used' => $blockQuotaUsed,
+              'server_quota' => $d['values']['server_quota'][0],
+              'serverquota_used' => $d['values']['server_quota_used'][0],
+              'alert_quota' => (is_numeric($rapQuota) && ($rapQuota > 90)) ? true : false,
+              'rapport_quota' => $rapQuota
+            ]
         );
       }
 

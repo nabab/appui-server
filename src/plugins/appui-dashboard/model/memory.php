@@ -1,19 +1,14 @@
 <?php
 
 if ($model->hasData('server', true)) {
-  $cache     = \bbn\Cache::getEngine();
-  $cacheName = \bbn\Appui\Server::CACHE_NAME . '/' . $model->data['server'] . '/mem';
-  if (!$cache->has($cacheName) || $model->hasData('force', true)) {
-    try {
-      $s = new \bbn\Appui\Server($model->data['server']);
-      $s->makeCache('mem');
-    }
-    catch (Exception $e) {
-      return [];
-    }
+  try {
+    $server = new \bbn\Appui\Server($model->data['server']);
+  }
+  catch (Exception $e) {
+    return [];
   }
 
-  if ($data = $cache->get($cacheName)) {
+  if ($data = $server->getCache('mem', $model->hasData('force', true))) {
     foreach ($data as $i => $m) {
       switch ($i) {
         case 0:
