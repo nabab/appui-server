@@ -27,13 +27,17 @@
             }, {
               value: 'backups',
               text: _('Backups')
+            }, {
+              value: 'users',
+              text: _('Users')
             }]"
             :max-row-height="100">
   <bbns-column field="name"
                :title="_('Name')"
                :width="200"
                group="info"
-               :fixed="true"/>
+               :fixed="true"
+               :render="renderName"/>
   <bbns-column field="description"
                :title="_('Description')"
                :width="200"
@@ -44,6 +48,10 @@
                group="info"/>
   <bbns-column field="type"
                :title="_('Type')"
+               :width="100"
+               group="info"/>
+  <bbns-column field="disabled"
+               :title="_('Disabled')"
                :width="100"
                group="info"/>
   <bbns-column field="features"
@@ -87,7 +95,8 @@
                :ftitle="_('Parent domain')"
                :title="_('Domain')"
                :width="200"
-               group="parent"/>
+               group="parent"
+               :render="renderName"/>
   <bbns-column field="parent_dns_virtual_server"
                :ftitle="_('Parent DNS virtual server')"
                :title="_('DNS virtual server')"
@@ -204,4 +213,34 @@
                :width="400"
                :render="renderBackups"
                group="backups"/>
+  <bbns-column field="users"
+               :ftitle="_('Users name')"
+               :title="_('Name')"
+               :width="200"
+               :render="renderUsers"
+               group="users"/>
+  <bbns-column field="users"
+               :ftitle="_('Users quota')"
+               :title="_('Quota')"
+               :width="200"
+               :render="renderUsersQuota"
+               group="users"/>
+  <bbns-column field="users"
+               :ftitle="_('Users real name')"
+               :title="_('Real name')"
+               :width="200"
+               :render="renderUsersRealName"
+               group="users"/>
+  <bbns-column field="users"
+               :ftitle="_('Users disabled')"
+               :title="_('Disabled')"
+               :width="200"
+               :render="renderUsersDisabled"
+               group="users"/>
+  <bbns-column field="users"
+               :ftitle="_('Users FTP access')"
+               :title="_('FTP access')"
+               :width="200"
+               :render="renderUsersFTP"
+               group="users"/>
 </bbn-table>

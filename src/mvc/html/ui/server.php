@@ -44,15 +44,5 @@
                     :source="source"
                     title="<?=_("Commands")?>"
                     :notext="true"/>
-    <bbns-container url="info"
-                    :load="false"
-                    :static="true"
-                    component="appui-server-info"
-                    icon="nf nf-fa-info"
-                    bcolor="skyblue"
-                    fcolor="white"
-                    :source="source"
-                    title="<?=_("Information")?>"
-                    :notext="true"/>
   </bbn-router>
 </div>

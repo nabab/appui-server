@@ -22,49 +22,67 @@
       renderUsers(row){
         return bbn.fn.map(row.users, user => user.name).join(', ');
       },
-      stateButtonDomain(row){
-        if( row.disabled === true ){
-          return [{
-            text: bbn._("Enable Domain"),
-            class:'enableBtn',
+      buttons(row){
+        let buttons = [];
+        if (!!row.disabled) {
+          buttons.push({
+            text: bbn._('Enable'),
+            class:'bbn-bg-green bbn-white',
             action: this.enableDomain,
             notext: true,
             icon: 'nf nf-fa-play',
-          }];
+          });
         }
-        else{
-          return [{
-            text: bbn._("Disable Domain"),
+        else {
+          buttons.push({
+            text: bbn._('Disable'),
             action: this.disableDomain,
             notext: true,
-            class:"disableBtn",
+            class:"bbn-bg-red bbn-white",
             icon: 'nf nf-fa-power_off',
-          }];
+          });
         }
+        buttons.push({
+          text: bbn._('Edit'),
+          action: this.editDomain,
+          notext: true,
+          icon: 'nf nf-fa-edit'
+        },{
+          text: bbn._('Clone'),
+          action: this.cloneDomain,
+          notext: true,
+          icon: 'nf nf-fa-clone'
+        },{
+          text: bbn._('Delete'),
+          action: this.deleteDomain,
+          icon: 'nf nf-fa-trash',
+          notext: true
+        });
+        return buttons;
       },
       disableDomain(row){
-        appui.confirm(bbn._("Are you sure you want to disabled domain") + " " + row.domain + " ?", ()=>{
-          this.post(this.root + 'actions/servers/tab_domains/state_domain', {
+        this.confirm(bbn._('Are you sure you want to disable the domain %s?', row.name), () => {
+          this.post(this.root + 'actions/domain/state', {
             server: this.source.server,
-            state: "disable",
-            domain: row.domain
-          }, (d)=>{
-            if ( d.success ){
-              appui.success(bbn._("disabled"));
+            state: 'disabled',
+            domain: row.name
+          }, d => {
+            if (d.success) {
+              appui.success();
               this.getRef('table').updateData();
             }
           });
         });
       },
       enableDomain(row){
-        appui.confirm(bbn._("Are you sure you want to enabled domain") + " " + row.domain + " ?", ()=>{
-          this.post(this.root + 'actions/servers/tab_domains/state_domain', {
+        this.confirm(bbn._('Are you sure you want to enable the domain %s?', row.name), ()=>{
+          this.post(this.root + 'actions/domain/state', {
             server: this.source.server,
-            state: "enable",
-            domain: row.domain
-          }, (d)=>{
-            if ( d.success ){
-              appui.success(bbn._("enable"));
+            state: 'enabled',
+            domain: row.name
+          }, d => {
+            if (d.success) {
+              appui.success();
               this.getRef('table').updateData();
             }
           });
@@ -72,7 +90,7 @@
       },
       editDomain(row, col, idx){
         return this.getRef('table').edit(row, {
-          title: bbn._('Modify domain') + ' ' + row.doamin,
+          title: bbn._('Edit %s', row.name),
           height: '70%',
           width: '50%',
           // onClose: () =>{
@@ -82,32 +100,28 @@
       },
       cloneDomain(row){
         this.getPopup().open({
-            height: '20%',
-            width: '40%',
-            title: bbn._("Duplicate") + " " + row.domain,
-            component: 'appui-server-popup-server-domain-duplicate',
+            title: bbn._('Clone %s', row.name),
+            component: 'appui-server-form-domain-clone',
+            minWidth: 400,
             source:{
-              root: this.root,
-              server: this.server,
-              domain: row.domain
-            },
-            onClose: () =>{
-              this.getRef('table').updateData();
+              server: this.source.server,
+              domain: row.name,
+              newdomain: ''
             }
         });
       },
       deleteDomain(row){
-        this.confirm(bbn._("Are you sure you want to delete the domain") + " " + row.domain  + " " + bbn._("?"), ()=>{
-          this.post(this.root + 'actions/servers/tab_domains/delete_domain', {
+        this.confirm(bbn._('Are you sure you want to delete the domain %s?', row.name), () => {
+          this.post(this.root + 'actions/domain/delete', {
               server: this.source.server,
               domain: row.domain,
             }, d => {
             if ( d.success ){
-              appui.success(bbn._('Deleted') + ' ' + row.domain );
+              appui.success();
               this.getRef('table').updateData();
             }
             else {
-              appui.error(bbn._("Error"));
+              appui.error();
             }
           });
         });

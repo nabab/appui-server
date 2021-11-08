@@ -17,7 +17,7 @@
           }, d => {
             if ( d.success ){
               appui.success(bbn._("Delete"));
-              this.$refs.tableCommandServer.updateData();
+              this.getRef('table').updateData();
             }
           });
         }

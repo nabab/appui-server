@@ -1,20 +1,19 @@
 <div class="appui-server-commands">
-  <bbn-table :order="[{parts: 'DESC'}]"
-             :sortable="true"
+  <bbn-table :sortable="true"
              :groupable="true"
              :server-grouping="false"
              :group-by="1"
-             ref="tableCommandServer"
+             ref="table"
              :source="root + 'data/server/commands'"
              :data="{
                server: source.server
              }">
-    <bbns-column title="<?=_("Commands:")?>"
+    <bbns-column title="<?=_("Command")?>"
                  field="command"
                  class="bbn-l"/>
-    <bbns-column title="<?=_("Category commands:")?>"
+    <bbns-column title="<?=_("Category")?>"
                  field="category"/>
-    <bbns-column title="<?=_("Description:")?>"
+    <bbns-column title="<?=_("Description")?>"
                  field="description"/>
   </bbn-table>
 </div>

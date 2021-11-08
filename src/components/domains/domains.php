@@ -7,12 +7,7 @@
            ref="table"
            :order="[{field: 'name', dir: 'ASC'}]"
            :editable="true"
-           editor="appui-server-popup-server-domain-edit">
-  <bbns-column title="<?=_("Active")?>"
-               cls="bbn-c"
-               :width= "50"
-               :buttons="stateButtonDomain"
-               field="disabled"/>
+           editor="appui-server-form-domain-edit">
   <bbns-column title="<?=_("Name")?>"
                field="name"
                cls="bbn-c"
@@ -33,20 +28,5 @@
   <bbns-column :tcomponent="$options.components.newDomain"
                :width="150"
                cls="bbn-c"
-               :buttons="[{
-                 text: '<?=_("Edit Domain")?>',
-                 action: editDomain,
-                 notext: true,
-                 icon: 'nf nf-fa-edit'
-               },{
-                 text: '<?=_("Clone Domain")?>',
-                 action: cloneDomain,
-                 notext: true,
-                 icon: 'nf nf-fa-copy'
-               },{
-                 text: '<?=_("Delete Domain")?>',
-                 action: deleteDomain,
-                 icon: 'nf nf-fa-trash',
-                 notext: true
-               }]"/>
+               :buttons="buttons"/>
 </bbn-table>

@@ -1,19 +1,27 @@
 <?php
 
-$all = [];
-if (!empty($model->inc->vm)) {
-  $cmd = $model->inc->vm->listCommands();
-  foreach ($cmd as $val) {
-    $all[] = [
-      'command' => $val['name'],
-      'category' => $val['values']['category'][0],
-      'description' => $val['values']['description'][0],
-      'total_info' => $val['values']
-    ];
+if (!empty($model->data['data']['server'])) {
+  try {
+    $server = new \bbn\Appui\Server($model->data['data']['server']);
+  }
+  catch (Exception $e) {
+    return [];
   }
 
-  return [
-    'data' => $all,
-    'tot' => count($all)
-  ];
+  if ($cmds = $server->getVirtualmin()->listCommands()) {
+    foreach ($cmds as $i => $d) {
+      $cmds[$i] = [
+        'command' => $d['name'],
+        'category' => $d['values']['category'][0],
+        'description' => $d['values']['description'][0]
+      ];
+    }
+
+    return [
+      'data' => $cmds,
+      'total' => count($cmds)
+    ];
+  }
 }
+
+return [];

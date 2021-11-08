@@ -19,6 +19,7 @@
     <bbns-column :tcomponent="$options.components.newSubDomain"
                  :width="150"
                  cls="bbn-c"
+                 fixed="right"
                  :buttons="[{
                    text: '<?=_("Edit Sub-domain")?>',
                    action: editSubDomain,
