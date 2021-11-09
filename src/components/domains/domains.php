@@ -28,5 +28,6 @@
   <bbns-column :tcomponent="$options.components.newDomain"
                :width="150"
                cls="bbn-c"
-               :buttons="buttons"/>
+               :buttons="buttons"
+               :options="{server: source.server}"/>
 </bbn-table>

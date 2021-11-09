@@ -32,10 +32,10 @@ if ($model->hasData('server', true)) {
         $res['parent'] = $d['parent_domain'];
       }
       else {
-        $blockQuotaUsed = $d['server_block_quota_used'];
-        $blockQuota     = $d['server_block_quota'];
+        $blockQuotaUsed = $d['server_block_quota_used'] ?? 0;
+        $blockQuota     = $d['server_block_quota'] ?? 0;
         $rapQuota       = '';
-        if ($blockQuota !== 'Unlimited') {
+        if (!empty($blockQuota) && ($blockQuota !== 'Unlimited')) {
           $rapQuota = ($blockQuotaUsed * 100) / $blockQuota;
           $rapQuota = number_format($rapQuota, 2) . '%';
         }
@@ -46,10 +46,10 @@ if ($model->hasData('server', true)) {
         $res = array_merge(
             $res,
             [
-              'total_quota' => $blockQuota ?? _('Unlimited'),
+              'total_quota' => $blockQuota ?: _('Unlimited'),
               'quota_used' => $blockQuotaUsed,
-              'server_quota' => $d['server_quota'],
-              'serverquota_used' => $d['server_quota_used'],
+              'server_quota' => $d['server_quota'] ?? 0,
+              'serverquota_used' => $d['server_quota_used'] ?? 0,
               'alert_quota' => (is_numeric($rapQuota) && ($rapQuota > 90)) ? true : false,
               'rapport_quota' => $rapQuota
             ]

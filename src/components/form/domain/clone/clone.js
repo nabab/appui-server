@@ -3,7 +3,7 @@
     data(){
       return {
         root : appui.plugins['appui-server'] + '/'
-      }
+      };
     },
     methods: {
       onSuccess(d){
@@ -13,5 +13,5 @@
         }
       }
     }
-  }
+  };
 })();

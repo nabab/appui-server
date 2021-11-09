@@ -5,7 +5,6 @@
  * Time: 18.11
  */
 (() => {
-  let top_domains;
   return {
     data(){
       return {
@@ -114,7 +113,7 @@
         this.confirm(bbn._('Are you sure you want to delete the domain %s?', row.name), () => {
           this.post(this.root + 'actions/domain/delete', {
               server: this.source.server,
-              domain: row.domain,
+              domain: row.name,
             }, d => {
             if ( d.success ){
               appui.success();
@@ -149,23 +148,32 @@
     },
     components: {
       'newDomain':{
-        template:`<bbn-button :title="title_button" @click="addDomain" icon="nf nf-fa-plus"></bbn-button>`,
-        data(){
-          return {
-            title_button: bbn._('New domain')
+        template: `
+<bbn-button title="` + bbn._('New domain') + `"
+            @click="addDomain"
+            icon="nf nf-fa-plus"
+            :notext="true"/>
+        `,
+        props: {
+          source: {
+            type: Object,
+            required: true
           }
         },
         methods:{
           addDomain(){
             this.getPopup().open({
-              height: '70%',
-              width: '50%',
               title: bbn._("Add new domain"),
-              component: 'appui-server-popup-server-domain-add',
-              source:top_domains,
-              // onClose: () =>{
-              //   bbn.vue.closest(this,'bbn-table').updateData()
-              // }
+              component: 'appui-server-form-domain-add',
+              source: {
+                server: this.source.options.server,
+                type: 'top',
+                parent: '',
+                name: '',
+                description: '',
+                password: '',
+                features: {}
+              }
             });
           }
         }
