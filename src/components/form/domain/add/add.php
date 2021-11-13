@@ -43,7 +43,6 @@
       <bbn-input v-model="source.password"
                 :required="true"
                 :type="pswdType"
-                class="bbn-flex-fill bbn-right-sspace"
                 button-right="nf nf-mdi-key_plus"
                 :button-left="pswdIcon"
                 @clickLeftButton="pswdVisible = !pswdVisible"

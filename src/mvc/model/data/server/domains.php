@@ -14,9 +14,35 @@ if ($model->hasData('server', true)) {
 
   if ($data = $server->getCache('domains', $model->hasData('force', true))) {
     $normalizeDomain = function ($d) use ($serverName, $server, $model) {
-      $res = [
+      $features = [];
+      foreach (explode(' ', $d['features']) as $f) {
+        $features[$f] = 1;
+      }
+
+      $type = !empty($d['parent_domain']) ? 'sub' : (!empty($d['real_domain']) ? 'alias' : 'top');
+      $mf   = $model->getModel($model->pluginUrl('appui-server') . '/data/domain/features', [
+        'server' => $model->data['server'],
+        'type' => $type
+      ]);
+      if (!empty($mf['data'])) {
+        foreach ($mf['data'] as $f) {
+          if (
+              (strtolower($f['automatic']) === 'no')
+              && (strtolower($f['enabled']) === 'yes')
+              && !array_key_exists($f['name'], $features)
+          ) {
+            $features[$f['name']] = 0;
+          }
+        }
+      }
+      $res  = [
         'name' => $d['name'],
         'server' => $serverName,
+        'description' => $d['description'],
+        'features' => $features,
+        'availableFeatures' => $mf['data'] ?? [],
+        'type' => $type,
+        'password' => '',
         'info' => $d,
         'disabled' => isset($d['disabled']),
         'created' => $d['created_on'],
@@ -32,26 +58,38 @@ if ($model->hasData('server', true)) {
         $res['parent'] = $d['parent_domain'];
       }
       else {
-        $blockQuotaUsed = $d['server_block_quota_used'] ?? 0;
-        $blockQuota     = $d['server_block_quota'] ?? 0;
-        $rapQuota       = '';
-        if (!empty($blockQuota) && ($blockQuota !== 'Unlimited')) {
-          $rapQuota = ($blockQuotaUsed * 100) / $blockQuota;
-          $rapQuota = number_format($rapQuota, 2) . '%';
+        $serverQuotaUsed = !empty($d['server_block_quota_used']) && is_numeric($d['server_block_quota_used']) ? $d['server_block_quota_used'] * 1024 : 0;
+        $serverQuota     = !empty($d['server_block_quota']) && is_numeric($d['server_block_quota']) ? $d['server_block_quota'] * 1024 : 0;
+        $percServerQuota = '';
+        $userQuotaUsed   = !empty($d['user_block_quota_used']) && is_numeric($d['user_block_quota_used']) ? $d['user_block_quota_used'] * 1024 : 0;
+        $userQuota       = !empty($d['user_block_quota']) && is_numeric($d['user_block_quota']) ? $d['user_block_quota'] * 1024 : 0;
+        if (!empty($serverQuota)) {
+          $percServerQuota = ($serverQuotaUsed * 100) / $serverQuota;
+          $percServerQuota = number_format($percServerQuota, 2);
         }
         else {
-          $rapQuota = _('Unlimited');
+          $percServerQuota = 0;
+        }
+
+        if (!empty($userQuota)) {
+          $percUserQuota = ($userQuotaUsed * 100) / $userQuota;
+          $percUserQuota = number_format($percUserQuota, 2);
+        }
+        else {
+          $percUserQuota = 0;
         }
 
         $res = array_merge(
             $res,
             [
-              'total_quota' => $blockQuota ?: _('Unlimited'),
-              'quota_used' => $blockQuotaUsed,
-              'server_quota' => $d['server_quota'] ?? 0,
-              'serverquota_used' => $d['server_quota_used'] ?? 0,
-              'alert_quota' => (is_numeric($rapQuota) && ($rapQuota > 90)) ? true : false,
-              'rapport_quota' => $rapQuota
+              'userQuota' => $userQuota,
+              'userQuotaUsed' => $userQuotaUsed,
+              'userPercQuota' => $percUserQuota . '%',
+              'serverAlertQuota' => $percUserQuota > 90,
+              'serverQuota' => $serverQuota,
+              'serverQuotaUsed' => $serverQuotaUsed,
+              'serverPercQuota' => $percServerQuota . '%',
+              'serverAlertQuota' => $percServerQuota > 90
             ]
         );
       }

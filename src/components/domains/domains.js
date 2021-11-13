@@ -1,8 +1,6 @@
 /**
- * Created by BBN Solutions.
- * User: Vito Fava
- * Date: 21/11/17
- * Time: 18.11
+ * Created by Mirko Argentino
+ * Date: 08/11/21
  */
 (() => {
   return {
@@ -42,16 +40,21 @@
           });
         }
         buttons.push({
+          text: bbn._('Rename'),
+          action: this.renameDomain,
+          notext: true,
+          icon: 'nf nf-mdi-format_title'
+        }, {
           text: bbn._('Edit'),
           action: this.editDomain,
           notext: true,
           icon: 'nf nf-fa-edit'
-        },{
+        }, {
           text: bbn._('Clone'),
           action: this.cloneDomain,
           notext: true,
           icon: 'nf nf-fa-clone'
-        },{
+        }, {
           text: bbn._('Delete'),
           action: this.deleteDomain,
           icon: 'nf nf-fa-trash',
@@ -88,13 +91,9 @@
         });
       },
       editDomain(row, col, idx){
+        bbn.fn.log('edit', row);
         return this.getRef('table').edit(row, {
-          title: bbn._('Edit %s', row.name),
-          height: '70%',
-          width: '50%',
-          // onClose: () =>{
-          //   this.getRef('table').updateData();
-          // }
+          title: bbn._('Edit %s', row.name)
         }, idx);
       },
       cloneDomain(row){
@@ -123,6 +122,18 @@
               appui.error();
             }
           });
+        });
+      },
+      renameDomain(row){
+        this.getPopup().open({
+          title: bbn._('Rename %s', row.name),
+          component: 'appui-server-form-domain-rename',
+          minWidth: 400,
+          source:{
+            server: this.source.server,
+            domain: row.name,
+            newdomain: row.name
+          }
         });
       }
     },

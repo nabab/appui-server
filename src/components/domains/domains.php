@@ -26,7 +26,7 @@
                field="users"
                :render="renderUsers"/>
   <bbns-column :tcomponent="$options.components.newDomain"
-               :width="150"
+               :width="170"
                cls="bbn-c"
                :buttons="buttons"
                :options="{server: source.server}"/>
