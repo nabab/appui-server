@@ -1,30 +1,47 @@
 <?php
+$res = ['success' => false];
+if (($dashboard = new \bbn\Appui\Dashboard('appui-server-server'))) {
+  $widgets = $dashboard->getUserWidgetsCode($model->pluginUrl('appui-dashboard').'/data/');
+  $res['widgets'] = [
+    'list' => $widgets,
+    'order' => $dashboard->getOrder($widgets)
+  ];
+  $res['success'] = true;
+}
+return $res;
+
+
+
 $list_domains = [];
 $top_level = [];
 $admins = [];
 $all = [];
 
-if( !empty($model->inc->vm) ){
+if (!empty($model->inc->vm)) {
 
   $infos_server = $model->inc->vm->info(['host' => $model->data["server"]]);
-  foreach( $model->inc->vm->list_domains(['domain' => $model->data['server']]) as $v){
-    if ( !empty($v['values']['server_block_quota']) ){
-      if( $v['values']['server_block_quota'][0] !== "Unlimited" ){
-        $rap_quota = ($v['values']['server_block_quota_used'][0] * 100) / $v['values']['server_block_quota'][0];
-        $rap_quota = number_format($rap_quota, 2)."%";
+  if (($listDomains = $model->inc->vm->list_domains(['domain' => $model->data['server']]))
+    && is_array($listDomains)
+  ) {
+    foreach( $listDomains as $v){
+      if ( !empty($v['values']['server_block_quota']) ){
+        if( $v['values']['server_block_quota'][0] !== "Unlimited" ){
+          $rap_quota = ($v['values']['server_block_quota_used'][0] * 100) / $v['values']['server_block_quota'][0];
+          $rap_quota = number_format($rap_quota, 2)."%";
+        }
+        else{
+          $rap_quota = "unlimited";
+        }
       }
       else{
-        $rap_quota = "unlimited";
+        $rap_quota = "undefined"  ;
       }
-    }
-    else{
-      $rap_quota = "undefined"  ;
-    }
-    array_push($list_domains , [
-      'name' => $v['name'],
-      'rapport_quota' => $rap_quota
-    ]);
-  };
+      array_push($list_domains , [
+        'name' => $v['name'],
+        'rapport_quota' => $rap_quota
+      ]);
+    };
+  }
   $delimiters = [
     [
       'name' => 'cpu',
@@ -87,10 +104,10 @@ if( !empty($model->inc->vm) ){
   $informations = [];
 
   foreach ( $delimiters as $i => &$d ){
-    if (
-      (($pos = strpos($infos_server, ($i ? "\n" : '').$d['search'])) !== false) &&
-      (($pos2 = strpos($infos_server, "\n".$delimiters[$i+1]['search'])) !== false)
-    ){
+    if ((($pos = strpos($infos_server, ($i ? "\n" : '').$d['search'])) !== false)
+      && (isset($delimiters[$i+1])
+        && (($pos2 = strpos($infos_server, "\n".$delimiters[$i+1]['search'])) !== false))
+    ) {
       $d['st'] = substr($infos_server, $pos, $pos2 - $pos);
     }
     if ( strlen($d['st']) > 0 ){

@@ -6,10 +6,12 @@
 
 /** @var $this \bbn\Mvc\Controller */
 
-if( !empty($ctrl->arguments[0]) ){
-  $id_option = $ctrl->inc->options->fromCode($ctrl->arguments[0], 'servers', 'server', BBN_APPUI);
-  if ( !empty($id_option) ){
-    $ctrl->obj = $ctrl->getObjectModel(['id' => $id_option]);
-    //$ctrl->obj = $ctrl->getCachedModel(['id' => $id_option], 400);
+if (!empty($ctrl->post['data']['server'])) {
+  $server = \bbn\Str::isUid($ctrl->post['data']['server'])
+    ? $ctrl->inc->options->code($ctrl->post['data']['server'])
+    : $ctrl->post['data']['server'];
+  if (!empty($server)) {
+    $ctrl->addData(['server' => $server]);
+    $ctrl->action();
   }
 }

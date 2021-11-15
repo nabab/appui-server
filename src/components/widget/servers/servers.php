@@ -1,3 +1,2 @@
-<a :href="root+'/ui/server/' + source.name"
-   v-text="source.name"
-></a>
+<a :href="root + 'ui/server/' + source.code"
+   v-text="source.name"/>

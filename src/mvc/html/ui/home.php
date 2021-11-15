@@ -1,8 +1,6 @@
 <div class="bbn-overlay">
-  <bbn-dashboard>
-    <bbns-widget title="<?=_("Servers:")?>"
-                 item-component="appui-server-widget-servers"
-                 :items="source.servers"
-    ></bbns-widget>
+  <bbn-dashboard :source="source.widgets"
+                 :order="source.widgetsOrder"
+                 :sortable="false">
   </bbn-dashboard>
 </div>

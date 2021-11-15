@@ -1,18 +1,9 @@
-<bbn-table :order="[{field: 'name', dir: 'ASC'}]"
-           :sortable="false"
-           :scrollable="false"
-           ref="table"
-           :source="source.list"
-           :pageble="true"
-           v-if="isMounted"
->
-  <bbns-column title="<?=_("Name")?>"
-              field="name"
-              :render="nameDomain"
-              cls="bbn-b"
-  ></bbns-column>
-  <bbns-column title="<?=_("Created")?>"
-               :render="renderCreated"
-               cls="bbn-c"
-  ></bbns-column>
-</bbn-table>
+<div class="appui-server-widget-domains bbn-spadded">
+  <bbn-tree :source="source.items"
+            children="subdomains"
+            source-text="name"
+            source-value="name"
+            :scrollable="false"
+            :icons="false"
+            :component="$options.components.domain"/>
+</div>

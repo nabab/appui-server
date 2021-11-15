@@ -1,17 +1,14 @@
-<div class="appui-domain bbn-overlay">
-  <bbn-router class="appui-cloudmin-system"
-               :scrollable="true"
-               :autoload="true"
-               ref="systemTabNav"
-               :nav="true"
-  >
+<div class="appui-server-cloudmin-system bbn-overlay">
+  <bbn-router :scrollable="true"
+              :autoload="true"
+              ref="router"
+              :nav="true">
     <bbns-container url="home"
                     :static="true"
                     :load="false"
                     :source="source"
                     icon="nf nf-fa-home"
-                    :title="'<?=_("Home")?>'"
-                    component="appui-server-cloudmin-system-tab-dashboard"
-    ></bbns-container>
+                    title="<?=_("Home")?>"
+                    component="appui-server-cloudmin-system-tab-dashboard"/>
   </bbn-router>
 </div>
