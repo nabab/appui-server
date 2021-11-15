@@ -1,28 +1,27 @@
 <?php
-/**
- * Created by BBN Solutions.
- * User: Vito Fava
- * Date: 23/11/17
- * Time: 15.23
- */
 
-$tot = 0;
-$all = [];
-
-if ( !empty($model->inc->vm) ){
-  $cmd = $model->inc->vm->listCommands();
-  foreach($cmd as $val){
-    array_push($all, [
-      'command' => $val['name'],
-      'category' => $val['values']['category'][0],
-      'description' => $val['values']['description'][0],
-      'total_info' => $val['values']  
-    ]);
-    $tot = $tot + 1;
+if (!empty($model->data['data']['server'])) {
+  try {
+    $server = new \bbn\Appui\Server($model->data['data']['server']);
+  }
+  catch (Exception $e) {
+    return [];
   }
 
-  return [
-    'data' => $all,
-    'tot' => $tot
-  ];
+  if ($cmds = $server->getVirtualmin()->listCommands()) {
+    foreach ($cmds as $i => $d) {
+      $cmds[$i] = [
+        'command' => $d['name'],
+        'category' => $d['values']['category'][0],
+        'description' => $d['values']['description'][0]
+      ];
+    }
+
+    return [
+      'data' => $cmds,
+      'total' => count($cmds)
+    ];
+  }
 }
+
+return [];

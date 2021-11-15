@@ -6,17 +6,14 @@
  * Time: 18.28
  */
 
-
-
-$conf =[
-  'user' => BBN_DB_USER,
-  'pass' => BBN_DB_PASS,
-  'host' => $model->data['server'].'.lan'
-];
-
-return [
-    'site_url' => BBN_URL,
-    'static_path' => BBN_STATIC_PATH,
-    'shared_path' => BBN_SHARED_PATH,
-    'server' => $model->data['server']
+if (($dashboard = new \bbn\Appui\Dashboard('appui-server-server'))) {
+  $widgets = $dashboard->getUserWidgetsCode($model->pluginUrl('appui-dashboard').'/data/');
+  $widgets = [
+    'list' => $widgets,
+    'order' => $dashboard->getOrder($widgets)
   ];
+}
+return [
+  'widgets' => @$widgets,
+  'server' => $model->data['server']
+];

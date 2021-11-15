@@ -6,23 +6,30 @@
  * Time: 18.49
  */
 
-
-/*
- * center where the various tabnavs are placed
- */
-
-if ( $ctrl->baseURL === APPUI_SERVER_ROOT.'ui/' ){
-  //case for main server
-  if ( empty($ctrl->arguments[1]) ){
- 
-    $ctrl->addData([
-      'root' => APPUI_SERVER_ROOT,
-      'server' => $ctrl->arguments[0],
-      'root_server' => APPUI_SERVER_ROOT.'ui/server/'.$ctrl->arguments[0]
-    ])->combo($ctrl->arguments[0], true);
-    $ctrl->obj->url = 'server/'.$ctrl->arguments[0];
+if (!empty($ctrl->arguments[0])) {
+  if ($ctrl->baseURL === APPUI_SERVER_ROOT . 'ui/') {
+    $ctrl
+      ->addData([
+        'root' => APPUI_SERVER_ROOT,
+        'server' => $ctrl->arguments[0]
+      ])
+      ->setUrl(APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0])
+      ->combo($ctrl->arguments[0], true);
   }
-
+  else if ($ctrl->baseURL === APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0] . '/') {
+    $ctrl->reroute(APPUI_SERVER_ROOT.'ui/domain', [
+      'server' => $ctrl->arguments[0],
+      'domain' => $ctrl->arguments[2]
+    ], $ctrl->arguments);
+  }
+  else if ($ctrl->baseURL === APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0] . '/domain/' . $ctrl->arguments[2] . '/') {
+    $ctrl->reroute(APPUI_SERVER_ROOT.'ui/subdomain', [
+      'server' => $ctrl->arguments[0],
+      'domain' => $ctrl->arguments[2],
+      'subdomain' => $ctrl->arguments[4]
+    ], $ctrl->arguments);
+  }
+/*
   //case go domain
   else if( !empty($ctrl->arguments[1]) && empty($ctrl->arguments[4]) ){
     \bbn\X::log($ctrl->arguments, 'vito');
@@ -48,4 +55,5 @@ if ( $ctrl->baseURL === APPUI_SERVER_ROOT.'ui/' ){
       $ctrl->reroute(APPUI_SERVER_ROOT.'ui/sub_domain', $ar, $ctrl->arguments);
     }
   }
+  */
 }

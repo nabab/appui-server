@@ -1,3 +1,2 @@
 <?php
-
-$ctrl->obj = $ctrl->getCachedModel([], 0);
+$ctrl->obj = $ctrl->getCachedModel([], 20);

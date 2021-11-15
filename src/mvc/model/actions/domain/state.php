@@ -1,0 +1,20 @@
+<?php
+
+if ($model->hasData(['server', 'domain', 'state'], true)) {
+  try {
+    $server = new \bbn\Appui\Server($model->data['server']);
+  }
+  catch (Exception $e) {
+    return ['success' => false];
+  }
+
+  if ($server->setDomainState($model->data['domain'], $model->data['state'] === 'enabled')) {
+    return ['success' => true];
+  }
+  else {
+    return [
+      'success' => false,
+      'error' => $server->getVirtualmin()->error
+    ];
+  }
+}
