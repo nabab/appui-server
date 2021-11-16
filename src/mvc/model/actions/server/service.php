@@ -5,17 +5,19 @@ if ($model->hasData(['service', 'server', 'action'], true)
 ) {
   switch ($model->data['action']) {
     case 'start':
-      $res = $server->startService($model->data['service']);
+      $method = 'startService';
       break;
     case 'stop':
-      $res = $server->stopService($model->data['service']);
+      $method = 'stopService';
       break;
     case 'restart':
-      $res = $server->restartService($model->data['service']);
+      $method = 'restartService';
       break;
   }
 
-  return ['success' => $res];
+  return [
+    'success' => $server->addToQueue($method, [$model->data['service']])
+  ];
 }
 
 return ['success' => false];

@@ -40,11 +40,11 @@
           data.server = dash.source.server;
           this.post(this.root + 'actions/server/service', data, d => {
             if (d.success) {
-              appui.success();
-              this.forceRefresh();
+              appui.success(bbn._('The action was added to the queue'));
+              //this.forceRefresh();
             }
             else {
-              appui.error();
+              appui.error(bbn._('Unable to add action to queue or already present'));
             }
           });
         }
