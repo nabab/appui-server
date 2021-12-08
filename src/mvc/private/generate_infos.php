@@ -1,8 +1,4 @@
 <?php
-/*
- * Describe what it does!
- *
- **/
 
 /** @var $this \bbn\Mvc\Controller */
 $backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
