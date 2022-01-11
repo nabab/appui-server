@@ -6,4 +6,4 @@
  * Time: 12.49
  */
 
-$ctrl->combo(null, true);
+$ctrl->setIcon('nf nf-fa-home')->combo(null, true);

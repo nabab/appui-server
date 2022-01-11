@@ -31,7 +31,8 @@
               value: 'users',
               text: _('Users')
             }]"
-            :max-row-height="100">
+            :max-row-height="100"
+            ref="table">
   <bbns-column field="name"
                :title="_('Name')"
                :width="200"

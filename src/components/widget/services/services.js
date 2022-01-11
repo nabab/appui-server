@@ -41,7 +41,6 @@
           this.post(this.root + 'actions/server/service', data, d => {
             if (d.success) {
               appui.success(bbn._('The action was added to the queue'));
-              //this.forceRefresh();
             }
             else {
               appui.error(bbn._('Unable to add action to queue or already present'));

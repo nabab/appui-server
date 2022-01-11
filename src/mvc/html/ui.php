@@ -27,5 +27,14 @@
                     fcolor="white"
                     title="<?=_("Scaleway")?>"
                     :notext="true"/>
+    <bbns-container url="tasks"
+                    :load="false"
+                    :static="true"
+                    component="appui-server-tasks"
+                    icon="nf nf-oct-tasklist"
+                    bcolor="chocolate"
+                    fcolor="white"
+                    title="<?=_("Tasks")?>"
+                    :notext="true"/>
   </bbn-router>
 </div>
