@@ -1,3 +1,3 @@
 <?php
 
-$ctrl->combo();
+$ctrl->setIcon('nf nf-oct-server')->combo();

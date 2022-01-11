@@ -1,3 +1,3 @@
 <?php
 
-\bbn\Appui\Server::processQueue();
+\bbn\Appui\Server::processTasksQueue();

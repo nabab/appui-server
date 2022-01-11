@@ -8,8 +8,9 @@ if ($model->hasData(['server', 'type', 'name'], true)) {
     return ['success' => false];
   }
 
+  unset($model->data['res']);
   return [
-    'success' => $server->createDomain($model->data)
+    'success' => $server->addToTasksQueue('createDomain', [$model->data])
   ];
 }
 return ['success' => false];

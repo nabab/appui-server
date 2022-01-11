@@ -7,7 +7,7 @@ if ($model->hasData(['server', 'domain', 'newdomain'], true)) {
   catch (Exception $e) {
     return ['success' => false];
   }
-
+/*
   if ($server->cloneDomain($model->data['domain'], $model->data['newdomain'])) {
     return ['success' => true];
   }
@@ -17,4 +17,8 @@ if ($model->hasData(['server', 'domain', 'newdomain'], true)) {
       'error' => $server->getVirtualmin()->error
     ];
   }
+*/
+  return [
+    'success' => $server->addToTasksQueue('cloneDomain', [$model->data['domain'], $model->data['newdomain']])
+  ];
 }
