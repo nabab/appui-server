@@ -8,13 +8,7 @@ if ($model->hasData(['server', 'domain', 'state'], true)) {
     return ['success' => false];
   }
 
-  if ($server->setDomainState($model->data['domain'], $model->data['state'] === 'enabled')) {
-    return ['success' => true];
-  }
-  else {
-    return [
-      'success' => false,
-      'error' => $server->getVirtualmin()->error
-    ];
-  }
+  return [
+    'success' => !!$server->addToTasksQueue('setDomainState', [$model->data['domain'], $model->data['state'] === 'enabled'])
+  ];
 }
