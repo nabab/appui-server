@@ -16,7 +16,7 @@ if ($model->hasData(['service', 'server', 'action'], true)
   }
 
   return [
-    'success' => $server->addToTasksQueue($method, [$model->data['service']])
+    'success' => !!$server->addToTasksQueue($method, [$model->data['service']])
   ];
 }
 

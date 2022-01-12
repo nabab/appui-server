@@ -8,8 +8,9 @@ if ($model->hasData(['server', 'type'], true)) {
     return ['success' => false];
   }
 
+  unset($model->data['res']);
   return [
-    'success' => $server->editDomain($model->data)
+    'success' => !!$server->addToTasksQueue('editDomain', [$model->data])
   ];
 }
 return ['success' => false];

@@ -58,6 +58,7 @@
           <bbn-loadicon :size="25"/>
         </div>
       </div>
+      <div v-else-if="(source.type !== 'top') && !source.parent.length"><?=_('Select a parent server to see the list of features')?></div>
       <div v-else>
         <bbn-checkbox v-if="!!currentFeatures && currentFeatures.length"
                       v-for="(f, i) in currentFeatures"

@@ -19,7 +19,7 @@ if ($model->hasData(['server', 'type'], true)) {
       break;
     case 'alias':
       if (!empty($model->data['domain'])) {
-        $features = $server->getCache('features_template', false, $model->data['domain']);
+        $features = $server->getCache('features_template_alias', false, $model->data['domain']);
       }
       break;
   }

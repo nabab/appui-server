@@ -70,8 +70,10 @@
             domain: row.name
           }, d => {
             if (d.success) {
-              appui.success();
-              this.getRef('table').updateData();
+              appui.success(bbn._('The action was added to the queue'));
+            }
+            else {
+              appui.error(bbn._('Unable to add action to queue or already present'));
             }
           });
         });
@@ -84,8 +86,10 @@
             domain: row.name
           }, d => {
             if (d.success) {
-              appui.success();
-              this.getRef('table').updateData();
+              appui.success(bbn._('The action was added to the queue'));
+            }
+            else {
+              appui.error(bbn._('Unable to add action to queue or already present'));
             }
           });
         });
@@ -114,13 +118,12 @@
               server: this.source.server,
               domain: row.name,
             }, d => {
-            if ( d.success ){
-              appui.success();
-              this.getRef('table').updateData();
-            }
-            else {
-              appui.error();
-            }
+              if (d.success) {
+                appui.success(bbn._('The action was added to the queue'));
+              }
+              else {
+                appui.error(bbn._('Unable to add action to queue or already present'));
+              }
           });
         });
       },

@@ -8,8 +8,10 @@
     methods: {
       onSuccess(d){
         if (d.success) {
-          appui.success();
-          this.closest('bbn-container').find('appui-server-domains').getRef('table').updateData();
+          appui.success(bbn._('The action was added to the queue'));
+        }
+        else {
+          appui.error(bbn._('Unable to add action to queue or already present'));
         }
       },
       onValidation(d){

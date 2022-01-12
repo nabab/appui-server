@@ -9,7 +9,7 @@ if ($model->hasData(['server', 'domain'], true)) {
   }
 
   return [
-    'success' => $server->deleteDomain($model->data['domain'])
+    'success' => !!$server->addToTasksQueue('deleteDomain', [$model->data['domain']])
   ];
 }
 return ['success' => false];

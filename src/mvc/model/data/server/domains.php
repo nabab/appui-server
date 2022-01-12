@@ -22,7 +22,8 @@ if ($model->hasData('server', true)) {
       $type = !empty($d['parent_domain']) ? 'sub' : (!empty($d['real_domain']) ? 'alias' : 'top');
       $mf   = $model->getModel($model->pluginUrl('appui-server') . '/data/domain/features', [
         'server' => $model->data['server'],
-        'type' => $type
+        'type' => $type,
+        'domain' => $d['name']
       ]);
       if (!empty($mf['data'])) {
         foreach ($mf['data'] as $f) {

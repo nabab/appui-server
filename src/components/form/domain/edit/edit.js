@@ -45,11 +45,10 @@
       },
       onSuccess(d){
         if (d.success) {
-          appui.success();
-          this.cp.getRef('table').updateData();
+          appui.success(bbn._('The action was added to the queue'));
         }
         else {
-          appui.error();
+          appui.error(bbn._('Unable to add action to queue or already present'));
         }
       }
     },

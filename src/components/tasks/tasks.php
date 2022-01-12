@@ -6,7 +6,9 @@
                server: !!source && !!source.server ? source.server : false
              }"
              :tr-class="trCls"
-             ref="table">
+             ref="table"
+             :max-row-height="100"
+             :zoomable="true">
     <bbns-column field="id"
                  title="<?=_('ID')?>"
                  :width="80"/>

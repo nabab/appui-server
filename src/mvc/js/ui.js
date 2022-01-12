@@ -32,6 +32,10 @@
                     break;
                   case 'createDomain':
                   case 'cloneDomain':
+                  case 'editDomain':
+                  case 'renameDomain':
+                  case 'setDomainState':
+                  case 'deleteDomain':
                     if (bbn.fn.isVue(server)) {
                       let widget = server.find('appui-server-widget-domains');
                       if (bbn.fn.isVue(widget)) {
