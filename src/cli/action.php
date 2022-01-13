@@ -12,11 +12,11 @@ if (!empty($ctrl->post['id'])
   ) {
     $args = !empty($ctrl->post['args']) ? json_decode($ctrl->post['args'], true) : [];
     if (!$server->{$ctrl->post['method']}(...$args)) {
-      $server->setQueueTaskFailed($ctrl->post['id']);
+      $server->setQueueTaskFailed($ctrl->post['id'], $server->getLastError());
     }
     $server->setQueueTaskEnd($ctrl->post['id']);
   }
   else {
-    $server->setQueueTaskFailed($ctrl->post['id']);
+    $server->setQueueTaskFailed($ctrl->post['id'], _('Method not found or task already started'));
   }
 }

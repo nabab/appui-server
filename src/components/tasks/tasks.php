@@ -47,6 +47,8 @@
                  :render="renderFailed"
                  cls="bbn-c"
                  :width="70"/>
+    <bbns-column field="error"
+                 title="<?=_('Error Message')?>"/>
     <bbns-column cls="bbn-c"
                  :width="70"
                  :buttons="getButtons"/>
