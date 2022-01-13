@@ -11,6 +11,14 @@
                     fcolor="white"
                     title="<?=_("Dashboard")?>"
                     :notext="true"/>
+    <bbns-container url="servers"
+                    :static="true"
+                    :load="true"
+                    icon="nf nf-oct-server"
+                    bcolor="mediumseagreen"
+                    fcolor="white"
+                    title="<?=_("Servers")?>"
+                    :notext="true"/>
     <bbns-container url="domains"
                     :static="true"
                     :load="true"

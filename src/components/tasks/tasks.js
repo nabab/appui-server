@@ -16,7 +16,7 @@
         return !!val ? dayjs(val).format('DD/MM/YYYY HH:mm:ss') : '';
       },
       renderFailed(row){
-        return !!row.failed ? '<i class="nf nf-fa-check bbn-green"></i>' : '';
+        return !!row.failed ? '<i class="nf nf-fa-close bbn-red"></i>' : '';
       },
       renderServer(row){
         return !!row.server ? `<a href="${this.root}ui/server/${row.server}">${row.server}</a>` : '';
