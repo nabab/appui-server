@@ -6,7 +6,8 @@ $grid = new \bbn\Appui\Grid($model->db, $model->data, [
     $opt_cfg['arch']['options']['id'],
     'name' => $opt_cfg['arch']['options']['text'],
     $opt_cfg['arch']['options']['code'],
-    'cloudmin' => 'JSON_UNQUOTE(JSON_EXTRACT(' . $opt_cfg['arch']['options']['value'] . ', "$.cloudmin"))'
+    'cloudmin' => 'JSON_UNQUOTE(JSON_EXTRACT(' . $opt_cfg['arch']['options']['value'] . ', "$.cloudmin"))',
+    'user' => 'JSON_UNQUOTE(JSON_EXTRACT(' . $opt_cfg['arch']['options']['value'] . ', "$.user"))'
   ],
   'filters' => [
     'conditions' => [[
@@ -26,9 +27,23 @@ if ($grid->check()) {
     foreach ($data['data'] as $i => $d) {
       try {
         $server = new \bbn\Appui\Server($d['code']);
+        $server->setOffline();
         foreach ($caches as $c) {
-          $data['data'][$i][$c] = $server->getCache($c, false);
+          $cd = $server->getCache($c, false);
+          if (is_array($cd)) {
+            foreach ($cd as $k => $v) {
+              $nk = str_replace(' ', '_', strtolower($k));
+              unset($cd[$k]);
+              $cd[$nk] = $v;
+            }
+            $data['data'][$i] = \bbn\X::mergeArrays($data['data'][$i], $cd);
+          }
+          else {
+            $data['data'][$i][$c] = $cd;
+          }
         }
+        $domains = $server->getCache('domains', false);
+        $data['data'][$i]['domains'] = is_array($domains) ? count($domains) : 0;
       }
       catch (Exception $e) {}
     }
