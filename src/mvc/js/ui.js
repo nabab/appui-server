@@ -70,12 +70,6 @@
                     serverTasksTable.updateData();
                   }
                 }
-                let tasksContainer = this.findByKey('tasks', 'bbn-container'),
-                    tasksPage = bbn.fn.isVue(tasksContainer) ? tasksContainer.find('appui-server-tasks') : false,
-                    tasksTable = bbn.fn.isVue(tasksPage) ? tasksPage.getRef('table') : false;
-                if (bbn.fn.isVue(tasksTable)) {
-                  tasksTable.updateData();
-                }
               }
             });
           }
@@ -83,6 +77,16 @@
         }
         if (data.tasksQueue !== undefined) {
           this.tasksQueue.splice(0, this.tasksQueue.length, ...data.tasksQueue);
+        }
+        if ((data.tasksQueue !== undefined)
+          || (data.runningTasks !== undefined)
+        ) {
+          let tasksContainer = this.findByKey('tasks', 'bbn-container'),
+              tasksPage = bbn.fn.isVue(tasksContainer) ? tasksContainer.find('appui-server-tasks') : false,
+              tasksTable = bbn.fn.isVue(tasksPage) ? tasksPage.getRef('table') : false;
+          if (bbn.fn.isVue(tasksTable)) {
+            tasksTable.updateData();
+          }
         }
       });
       appui.poll({
