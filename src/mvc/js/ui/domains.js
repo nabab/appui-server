@@ -40,7 +40,7 @@
           bbn.fn.each(row[col.field], (d, i) => {
             ret += bbn._('Date') + `: ${d.started}<br>` +
               bbn._('File size') + `: ${bbn.fn.formatBytes(d.final_size || 0)}<br>` +
-              bbn._('Destination') + `: ${d.destination.substr(d.destination.indexOf('@') + 1)}` +
+              bbn._('Destination') + `: ${d.destination.substring(d.destination.indexOf('@') + 1)}` +
               (row[col.field][i + 1] !== undefined ? '<br><br>' : '');
           });
         }

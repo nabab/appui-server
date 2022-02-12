@@ -19,7 +19,7 @@
           case 'web':
             return 'apache2';
           case 'fpm':
-            return 'php' + item.id.substr(0, 3) + '-fpm';
+            return 'php' + item.id.substring(0, 3) + '-fpm';
           case 'dns':
             return 'bind9';
           case 'mail': 

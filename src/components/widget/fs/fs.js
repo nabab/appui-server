@@ -66,8 +66,8 @@
         tot = bbn.fn.formatBytes(tot, 3);
         let usedIdx = used.indexOf(' '),
             totIdx = tot.indexOf(' ');
-        return  parseFloat(used.substr(0, usedIdx)).toFixed(2) + used.substr(usedIdx) + ' / ' +
-          parseFloat(tot.substr(0, totIdx)).toFixed(2) + tot.substr(totIdx);
+        return  parseFloat(used.substring(0, usedIdx)).toFixed(2) + used.substring(usedIdx) + ' / ' +
+          parseFloat(tot.substring(0, totIdx)).toFixed(2) + tot.substring(totIdx);
       },
       legendRender(seriesName, opts) {
         return this.chartData.values[opts.seriesIndex].mount + ' - ' + opts.w.globals.series[opts.seriesIndex] + '% (' + this.chartData.values[opts.seriesIndex].size + ')';
