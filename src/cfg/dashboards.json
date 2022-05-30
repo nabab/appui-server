@@ -2,7 +2,6 @@
   {
     "text": "Plugins dashboard",
     "code": "plugins",
-    "id_option": ["list", "dashboard", "appui"],
     "items": [
       {
         "code": "servers",
@@ -13,7 +12,6 @@
   {
     "text": "Appui-Server",
     "code": "appui-server",
-    "id_option": ["list", "appui-dashboard", "plugins", "server", "appui"],
     "items": [
       {
         "code": "servers",
@@ -28,7 +26,6 @@
   {
     "text": "Appui-Server Server",
     "code": "appui-server-server",
-    "id_option": ["list", "appui-dashboard", "plugins", "server", "appui"],
     "items": [
       {
         "code": "cpu",
