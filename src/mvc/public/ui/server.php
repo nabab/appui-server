@@ -7,7 +7,7 @@
  */
 
 if (!empty($ctrl->arguments[0])) {
-  if ($ctrl->baseURL === APPUI_SERVER_ROOT . 'ui/') {
+  if (BBN_BASEURL === APPUI_SERVER_ROOT . 'ui/') {
     $ctrl
       ->addData([
         'root' => APPUI_SERVER_ROOT,
@@ -16,13 +16,13 @@ if (!empty($ctrl->arguments[0])) {
       ->setUrl(APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0])
       ->combo($ctrl->arguments[0], true);
   }
-  else if ($ctrl->baseURL === APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0] . '/') {
+  else if (BBN_BASEURL === APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0] . '/') {
     $ctrl->reroute(APPUI_SERVER_ROOT.'ui/domain', [
       'server' => $ctrl->arguments[0],
       'domain' => $ctrl->arguments[2]
     ], $ctrl->arguments);
   }
-  else if ($ctrl->baseURL === APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0] . '/domain/' . $ctrl->arguments[2] . '/') {
+  else if (BBN_BASEURL === APPUI_SERVER_ROOT . 'ui/server/' . $ctrl->arguments[0] . '/domain/' . $ctrl->arguments[2] . '/') {
     $ctrl->reroute(APPUI_SERVER_ROOT.'ui/subdomain', [
       'server' => $ctrl->arguments[0],
       'domain' => $ctrl->arguments[2],

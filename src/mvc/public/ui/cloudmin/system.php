@@ -9,7 +9,7 @@
 //case system
 
 if ( !empty($ctrl->arguments[0]) ){
-  if ( $ctrl->baseURL === 'server/ui/cloudmin/' ){
+  if ( BBN_BASEURL === 'server/ui/cloudmin/' ){
     $ctrl->obj->bcolor = "#afffcc";
     $ctrl->addData([
       'root' => APPUI_SERVER_ROOT,
