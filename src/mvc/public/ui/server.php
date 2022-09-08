@@ -6,7 +6,7 @@
  * Time: 18.49
  */
 
-if (!empty($ctrl->arguments[0])) {
+if (defined('BBN_BASEURL') && !empty($ctrl->arguments[0])) {
   if (BBN_BASEURL === APPUI_SERVER_ROOT . 'ui/') {
     $ctrl
       ->addData([

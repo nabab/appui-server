@@ -8,7 +8,7 @@
 
 //case system
 
-if ( !empty($ctrl->arguments[0]) ){
+if (defined('BBN_BASEURL') && !empty($ctrl->arguments[0])) {
   if ( BBN_BASEURL === 'server/ui/cloudmin/' ){
     $ctrl->obj->bcolor = "#afffcc";
     $ctrl->addData([
