@@ -2,7 +2,7 @@
   return {
     created(){
       //for add in menu of the tab delete cache
-      bbn.vue.closest(this, "bbns-container").addMenu({
+      this.closest("bbn-container").addMenu({
         text: bbn._("Cache delete list commands"),
         icon: "nf nf-fa-trash_alt_alt",
         command:()=>{

@@ -1,13 +1,16 @@
 <?php
 
-$backup = BBN_DATA_PATH . 'plugins/appui-server/into.text';
+use bbn\Appui\Passwords;
+use bbn\Api\Virtualmin;
+
+$backup = $model->tmpPath('appui-server') . 'into.text';
 //$backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
 
 
 $backup_lan_id = $model->inc->options->fromCode('cloudmin.lan', 'servers', 'server', BBN_APPUI);
 $cred = $model->inc->options->option($backup_lan_id);
 
-$psw =  new \bbn\Appui\Passwords($model->db);
+$psw =  new Passwords($model->db);
 
 
 //$text = file_get_contents($backup_lan);
@@ -27,7 +30,7 @@ if ( is_array($cred) ){
     'mode' => $cred['mode']
   ];
   
-  $vm = new \bbn\Api\Virtualmin($conf);
+  $vm = new Virtualmin($conf);
 // liste systems
 
   $systems = $vm->listSystems();

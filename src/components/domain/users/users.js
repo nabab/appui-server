@@ -128,13 +128,13 @@
           return dataUser.source;
         }
       }];
-      bbn.vue.setComponentRule(this.source.root + 'components', 'appui-server');
-      bbn.vue.addComponent('popup/domains/user/add');
-      bbn.vue.addComponent('popup/domains/user/edit');
-      bbn.vue.addComponent('popup/domains/user/autoreply', mixins);
-      bbn.vue.unsetComponentRule();*/
+      bbn.cp.setComponentRule(this.source.root + 'components', 'appui-server');
+      bbn.cp.addComponent('popup/domains/user/add');
+      bbn.cp.addComponent('popup/domains/user/edit');
+      bbn.cp.addComponent('popup/domains/user/autoreply', mixins);
+      bbn.cp.unsetComponentRule();*/
       //for add in menu of the tab delete cache
-      bbn.vue.closest(this, "bbn-container").addMenu({
+      this.closest("bbn-container").addMenu({
         text: bbn._("Delete cache"),
         icon: "nf nf-fa-trash_alt_alt",
         action:()=>{
@@ -168,7 +168,7 @@
               component: 'appui-server-popup-domains-user-add',
               source: users,
               onClose: () =>{
-                bbn.vue.closest(this,'bbn-table').updateData()
+                this.closest('bbn-table').updateData()
               }
             });
           }

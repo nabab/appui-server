@@ -14,7 +14,7 @@
     },
     created(){
       //for add in menu of the tab delete cache
-      bbn.vue.closest(this, "bbn-container").addMenu({
+      this.closest("bbn-container").addMenu({
         text: bbn._("Cache delete dashboard"),
         icon: "nf nf-fa-trash_alt_alt",
         action:()=>{
@@ -27,11 +27,11 @@
           });
         }
       });
-    //   bbn.vue.setComponentRule(this.source.root + 'components/server', 'appui-server');
-    //   bbn.vue.addComponent('widget/domains');
-    //   bbn.vue.addComponent('widget/admin');
-    //   bbn.vue.addComponent('widget/logs');
-    //   bbn.vue.unsetComponentRule();
+    //   bbn.cp.setComponentRule(this.source.root + 'components/server', 'appui-server');
+    //   bbn.cp.addComponent('widget/domains');
+    //   bbn.cp.addComponent('widget/admin');
+    //   bbn.cp.addComponent('widget/logs');
+    //   bbn.cp.unsetComponentRule();
      },
     // mounted(){
     //   //for dasboard

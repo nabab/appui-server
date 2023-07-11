@@ -5,8 +5,8 @@
  **/
 
 /** @var $this \bbn\Mvc\Controller */
-$backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
-$infos_file = BBN_DATA_PATH . 'plugins/appui-server/infos/';
+$backup_lan = $ctrl->tmpPath('appui-server') . 'into_lan.text';
+$infos_file = $ctrl->tmpPath('appui-server') . 'infos/';
 $text = file_get_contents($backup_lan);
 
 $cred = explode(',',$text);
@@ -26,7 +26,7 @@ $systems = array_map(function($v){
   return $v['name'];
 },$vm->listSystems());
 
-$backup_command = BBN_DATA_PATH . 'plugins/appui-server/servers/cloudmin/cloudmin.bbn.io.json';
+$backup_command = $ctrl->tmpPath('appui-server') . 'servers/cloudmin/cloudmin.bbn.io.json';
 
 $commands = json_decode(file_get_contents($backup_command), true);
 

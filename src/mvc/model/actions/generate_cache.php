@@ -1,36 +1,45 @@
 <?php
+
+use Exception;
+use bbn\X;
+use bbn\File\Dir;
+use bbn\Api\Virtualmin;
+
 if ( !empty($model->data['system']) ){
   $name_system = $model->data['system'];
 
-  $info_system = BBN_DATA_PATH . 'plugins/appui-server/infos/'.$name_system.'.json';
-  $info_system_temp = BBN_DATA_PATH . 'plugins/appui-server/infos/'.$name_system.'.temp.json';
+  $info_system = $model->tmpPath('appui-server') . 'infos/'.$name_system.'.json';
+  $info_system_temp = $model->tmpPath('appui-server') . 'infos/'.$name_system.'.temp.json';
 
 
-  $generate_cache = function(string $cache, string $name_system){
+  $generate_cache = function(string $cache, string $name_system) use ($model){
 
     if ( !is_file($cache) ){
 
-      $backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
+      $backup_lan = $model->tmpPath('appui-server') . 'into_lan.text';
 
       $text = file_get_contents($backup_lan);
       $cred = explode(',', $text);
 
       if ( is_array($cred) ){
         $conf = [
-          'user' => BBN_DB_USER,
+          'user' => constant('BBN_DB_USER'),
           'pass' => $cred[0],
           'host' => $cred[1],
           'mode' => $cred[2]
         ];
       }
 
-      $vm = new \bbn\Api\Virtualmin($conf);
+      $vm = new Virtualmin($conf);
 
       foreach( $vm->listSystems() as $val){
         if ( $val['name'] === $name_system ){
           $system = $val;
           break;
         }
+      }
+      if (empty($system)) {
+        throw new Exception(X::_('Impossible to find the system'));
       }
       $domains = $vm->list_domains(['host'=> $system['name']]);
       $check_dns = [];
@@ -120,7 +129,7 @@ if ( !empty($model->data['system']) ){
   else{
     if ( $generate_cache($info_system_temp, $name_system) ){
       if ( is_file($info_system_temp) ){
-        if ( \bbn\dir::move($info_system_temp, $info_system, true) ){
+        if ( Dir::move($info_system_temp, $info_system, true) ){
           return['success' => true];
         }
       }
