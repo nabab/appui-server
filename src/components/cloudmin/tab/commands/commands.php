@@ -7,12 +7,12 @@
              :toolbar="$options.components.search"
              :expander="$options.components.cmd"
   >
-    <bbns-column title="<?=_("Commands:")?>"
+    <bbns-column title="<?= _("Commands:") ?>"
                 field="command"
                 cls="bbn-b"
 
     ></bbns-column>
-    <bbns-column title="<?=_("Description:")?>"
+    <bbns-column title="<?= _("Description:") ?>"
                 field="description"
                 :render="renderDescription"
     ></bbns-column>

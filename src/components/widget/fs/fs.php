@@ -17,13 +17,13 @@
        :style="{
          borderColor: !!$refs.chart ? $refs.chart.color[i] + '!important' : ''
        }">
-    <label><?=_('Mount point')?></label>
+    <label><?= _('Mount point') ?></label>
     <div v-text="v.mount"/>
-    <label><?=_('Device')?></label>
+    <label><?= _('Device') ?></label>
     <div v-text="v.device"/>
-    <label><?=_('Filesystem')?></label>
+    <label><?= _('Filesystem') ?></label>
     <div v-text="v.fs"/>
-    <label><?=_('Used space')?></label>
+    <label><?= _('Used space') ?></label>
     <div v-text="v.size"/>
   </div>
 </div>

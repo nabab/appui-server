@@ -8,43 +8,43 @@
                :order="[{field: 'user', dir: 'DESC'}]"
                editor="appui-server-popup-domains-user-edit"
     >
-      <bbns-column title="<?=_("Active")?>"
+      <bbns-column title="<?= _("Active") ?>"
                   cls="bbn-c"
                   width="40"
                   :render="renderDisabled"
                   field="disabled"
       ></bbns-column>
-      <bbns-column title="<?=_("User")?>"
+      <bbns-column title="<?= _("User") ?>"
                   cls="bbn-c"
                   width="180"
                   field="user"
       ></bbns-column>
-      <bbns-column title="<?=_("Ftp")?>"
+      <bbns-column title="<?= _("Ftp") ?>"
                   width="50"
                   cls="bbn-c"
                   :render="renderFtp"
                   field="ftp_user"
       ></bbns-column>
-      <bbns-column title="<?=_("Email")?>"
+      <bbns-column title="<?= _("Email") ?>"
                   cls="bbn-c"
                   width="180"
                   type="email"
                   field="email_address"
       ></bbns-column>
-      <bbns-column title="<?=_("Auto_Reply")?>"
+      <bbns-column title="<?= _("Auto_Reply") ?>"
                   width="50"
                   cls="bbn-c"
                   :render="renderReplayEmail"
       ></bbns-column>
-      <bbns-column title="<?=_("Extra Adresses")?>"
+      <bbns-column title="<?= _("Extra Adresses") ?>"
                   width="200"
                   field="extra_addresses"
       ></bbns-column>
-      <bbns-column title="<?=_("Last logins")?>"
+      <bbns-column title="<?= _("Last logins") ?>"
                   field="last_logins"
                   width="150"
       ></bbns-column>
-      <bbns-column title="<?=_("Quota")?>"
+      <bbns-column title="<?= _("Quota") ?>"
                   cls="bbn-c"
                   :render="renderQuota"
                   field="total_info"
@@ -53,12 +53,12 @@
                   :width="100"
                   cls="bbn-c"
                   :buttons="[{
-                    text: '<?=_("Edit")?>',
+                    text: '<?= _("Edit") ?>',
                     action: editUser,
                     notext: true,
                     icon: 'nf nf-fa-edit'
                   },{
-                    text: '<?=_("Delete User")?>',
+                    text: '<?= _("Delete User") ?>',
                     action: deleteUser,
                     icon: 'nf nf-fa-trash',
                     notext: true

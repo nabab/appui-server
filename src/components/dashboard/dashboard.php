@@ -36,33 +36,33 @@
                  :data="widgetData"
                  :uid="source.widgets.list.updates.key"/>
     
-    <!-- <bbns-widget title="<?=_("List Admins")?>"
+    <!-- <bbns-widget title="<?= _("List Admins") ?>"
                 item-component="appui-server-widget-server-admin"
                 :items="admins"
                 v-if="admins.length"/>
-    <bbns-widget title="<?=_("Logs")?>"
+    <bbns-widget title="<?= _("Logs") ?>"
                 component="appui-server-widget-server-logs"
                 :source="topLevel.log"
                 v-if="topLevel.length"/>
-    <bbns-widget title="<?=_("IP address")?>"
+    <bbns-widget title="<?= _("IP address") ?>"
                 item-component="appui-server-widget-server-ip"
                 :items="topLevel.informations.ip_address"
                 v-if="topLevel.length"/>
     
     
-    <bbns-widget title="<?=_("Kernel")?>"
+    <bbns-widget title="<?= _("Kernel") ?>"
                 component="appui-server-widget-server-kernel"
                 :source="infos.kernel"
                 v-if="infos.kernel"/>
-    <bbns-widget title="<?=_("info_server/fcount")?>"
+    <bbns-widget title="<?= _("info_server/fcount") ?>"
                  component="appui-server-widget-server-infos"
                  :source="infos.fcount"
                  v-if="infos.fcount.length"/>
-    <bbns-widget title="<?=_("info_server/host")?>"
+    <bbns-widget title="<?= _("info_server/host") ?>"
                  component="appui-server-widget-server-infos"
                  :source="infos.host"
                  v-if="infos.host.length"/>
-    <bbns-widget title="<?=_("top_level/informations")?>"
+    <bbns-widget title="<?= _("top_level/informations") ?>"
                  item-component="appui-server-widget-server-infos"
                  :items="[
                    {created_by: topLevel.informations.created_by},

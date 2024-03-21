@@ -5,9 +5,9 @@
         <span class="bbn-xl bbn-b" v-text="item.domain"></span>
       </div>
       <div class="bbn-padded  bbn-grid-fields">
-        <label class="bbn-b"><?=_("Access:")?></label>
+        <label class="bbn-b"><?= _("Access:") ?></label>
         <span class="domains admin" v-text="item.access_log"></span>
-        <label class="bbn-b"><?=_("Error:")?></label>
+        <label class="bbn-b"><?= _("Error:") ?></label>
         <span class="domains admin" v-text="item.error_log"></span>
       </div>
     </div>
@@ -17,9 +17,9 @@
 
 <div>
       <div class="bbn-padded  bbn-grid-fields">
-        <label class="bbn-b"><?=_("Access:")?></label>
+        <label class="bbn-b"><?= _("Access:") ?></label>
         <span class="domains admin" v-text="source.access_log"></span>
-        <label class="bbn-b"><?=_("Error:")?></label>
+        <label class="bbn-b"><?= _("Error:") ?></label>
         <span class="domains admin" v-text="source.error_log"></span>
       </div>
     </div>

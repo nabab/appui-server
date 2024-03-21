@@ -5,11 +5,11 @@
                ref="infoDomainTable"
                :source="source.root + 'data/domain/informations/' + source.server + '/' + source.domain"
     >
-      <bbns-column title="<?=_("Information")?>"
+      <bbns-column title="<?= _("Information") ?>"
                   field="info"
       ></bbns-column>
 
-      <bbns-column title="<?=_("Value")?>"
+      <bbns-column title="<?= _("Value") ?>"
                   field="value"
       ></bbns-column>
 

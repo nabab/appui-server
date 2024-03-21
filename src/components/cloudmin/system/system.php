@@ -8,7 +8,7 @@
                     :load="false"
                     :source="source"
                     icon="nf nf-fa-home"
-                    title="<?=_("Home")?>"
+                    title="<?= _("Home") ?>"
                     component="appui-server-cloudmin-system-tab-dashboard"/>
   </bbn-router>
 </div>

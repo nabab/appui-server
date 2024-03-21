@@ -10,45 +10,45 @@
              :max-row-height="100"
              :zoomable="true">
     <bbns-column field="id"
-                 title="<?=_('ID')?>"
+                 title="<?= _('ID') ?>"
                  :width="80"/>
     <bbns-column field="server"
-                 title="<?=_('Server')?>"
+                 title="<?= _('Server') ?>"
                  v-if="!source || !source.server"
                  :render="renderServer"/>
     <bbns-column field="created"
-                 title="<?=_('Created')?>"
+                 title="<?= _('Created') ?>"
                  type="datetime"
                  cls="bbn-c"
                  :render="renderDate"
                  :width="150"/>
     <bbns-column field="user"
-                 title="<?=_('User')?>"
+                 title="<?= _('User') ?>"
                  :source="users"/>
     <bbns-column field="method"
-                 title="<?=_('Action')?>"/>
+                 title="<?= _('Action') ?>"/>
     <bbns-column field="args"
-                 title="<?=_('Arguments')?>"
+                 title="<?= _('Arguments') ?>"
                  :render="renderArgs"/>
     <bbns-column field="start"
-                 title="<?=_('Start')?>"
+                 title="<?= _('Start') ?>"
                  type="datetime"
                  cls="bbn-c"
                  :render="renderDate"
                  :width="150"/>
     <bbns-column field="end"
-                 title="<?=_('End')?>"
+                 title="<?= _('End') ?>"
                  type="datetime"
                  cls="bbn-c"
                  :render="renderDate"
                  :width="150"/>
     <bbns-column field="failed"
-                 title="<?=_('Failed')?>"
+                 title="<?= _('Failed') ?>"
                  :render="renderFailed"
                  cls="bbn-c"
                  :width="70"/>
     <bbns-column field="error"
-                 title="<?=_('Error Message')?>"/>
+                 title="<?= _('Error Message') ?>"/>
     <bbns-column cls="bbn-c"
                  :width="70"
                  :buttons="getButtons"/>

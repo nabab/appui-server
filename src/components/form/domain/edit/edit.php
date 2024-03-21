@@ -6,11 +6,11 @@
           @success="onSuccess"
           :validator="onValidation">
   <div class="bbn-grid-fields bbn-padded">
-    <label class="bbn-label"><?=_('Description')?></label>
+    <label class="bbn-label"><?= _('Description') ?></label>
     <bbn-input v-model="source.row.description"
                :autocomplete="false"/>
     <template v-if="source.row.type === 'top'">
-      <label class="bbn-label"><?=_('Password')?></label>
+      <label class="bbn-label"><?= _('Password') ?></label>
       <div class="bbn-flex-width">
         <bbn-checkbox :label="_('Leave unchanged')"
                       v-model="pswdDisabled"
@@ -27,7 +27,7 @@
                   :autocomplete="false"
                   :disabled="pswdDisabled"/>
       </div>
-      <label class="bbn-label"><?=_('Total server quota')?></label>
+      <label class="bbn-label"><?= _('Total server quota') ?></label>
       <div>
         <bbn-radio :source="[{
                       text: _('Unlimited'),
@@ -43,7 +43,7 @@
                     }]"
                     v-model="serverQuota"/>
       </div>
-      <label class="bbn-label"><?=_("Server administrator's quota")?></label>
+      <label class="bbn-label"><?= _("Server administrator's quota") ?></label>
       <div>
         <bbn-radio :source="[{
                       text: _('Unlimited'),
@@ -61,7 +61,7 @@
       </div>
     </template>
     <template>
-      <label class="bbn-label"><?=_('Features')?></label>
+      <label class="bbn-label"><?= _('Features') ?></label>
       <div>
         <bbn-checkbox v-if="!!currentFeatures && currentFeatures.length"
                       v-for="(f, i) in currentFeatures"

@@ -9,7 +9,7 @@
                     :source="source.systems"
                     icon="nf nf-fa-laptop"
                     bcolor="#fdcd04"
-                    title="<?=_("Systems")?>"
+                    title="<?= _("Systems") ?>"
                     component="appui-server-cloudmin-tab-systems"/>
     <bbns-container url="commands"
                     :load="false"
@@ -17,6 +17,6 @@
                     component="appui-server-cloudmin-tab-commands"
                     icon="nf nf-fa-cogs"
                     :source="source"
-                    title="<?=_("Commands")?>"/>
+                    title="<?= _("Commands") ?>"/>
   </bbn-router>
 </div>

@@ -8,21 +8,21 @@
            :order="[{field: 'name', dir: 'ASC'}]"
            :editable="true"
            editor="appui-server-form-domain-edit">
-  <bbns-column title="<?=_("Name")?>"
+  <bbns-column title="<?= _("Name") ?>"
                field="name"
                cls="bbn-c"
                :width="300"
                :render="renderDomain"/>
-  <bbns-column title="<?=_("Parent")?>"
+  <bbns-column title="<?= _("Parent") ?>"
                field="parent"
                cls="bbn-c"
                :width="300"
                :render="renderParent"/>
-  <bbns-column title="<?=_("Created")?>"
+  <bbns-column title="<?= _("Created") ?>"
                cls="bbn-c"
                :width="250"
                field="created"/>
-  <bbns-column title="<?=_("User")?>"
+  <bbns-column title="<?= _("User") ?>"
                field="users"
                :render="renderUsers"/>
   <bbns-column :tcomponent="$options.components.newDomain"
