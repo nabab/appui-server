@@ -26,7 +26,7 @@
         return !!val ? dayjs(val).format('DD/MM/YYYY HH:mm:ss') : '';
       },
       getUser(id){
-        return appui.app.getUserName(id);
+        return appui.getUserName(id);
       },
       getArgs(args){
         args = JSON.parse(args);

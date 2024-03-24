@@ -8,7 +8,7 @@
     data(){
       return {
         root: appui.plugins['appui-server'] + '/',
-        users: appui.app.users
+        users: appui.users
       }
     },
     methods: {
