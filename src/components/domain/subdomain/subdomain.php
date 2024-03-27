@@ -5,7 +5,7 @@
               :nav="true">
     <bbns-container url="info"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-domain-subdomain-info"
                     icon="nf nf-fa-info"
                     bcolor="cornflowerblue"
@@ -15,7 +15,7 @@
                     :notext="true"/>
     <bbns-container url="command"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-domain-subdomain-commands"
                     icon="nf nf-mdi-function"
                     bcolor="darkorange"

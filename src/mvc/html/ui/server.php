@@ -76,7 +76,7 @@
                 ref="router"
                 :nav="true">
       <bbns-container url="home"
-                      :static="true"
+                      :fixed="true"
                       :load="false"
                       :source="source"
                       icon="nf nf-fa-home"
@@ -87,7 +87,7 @@
                       :notext="true"/>
       <bbns-container url="cloudmin"
                       :load="false"
-                      :static="true"
+                      :fixed="true"
                       component="appui-server-cloudmin"
                       icon="nf nf-fae-cloud"
                       bcolor="dodgerblue"
@@ -98,7 +98,7 @@
                       v-if="!!source.cloudmin"/>
       <bbns-container url="domains"
                       :load="false"
-                      :static="true"
+                      :fixed="true"
                       component="appui-server-domains"
                       icon="nf nf-fa-th_list"
                       bcolor="sandybrown"
@@ -108,7 +108,7 @@
                       :notext="true"/>
       <bbns-container url="tasks"
                       :load="false"
-                      :static="true"
+                      :fixed="true"
                       component="appui-server-tasks"
                       icon="nf nf-oct-tasklist"
                       bcolor="chocolate"
@@ -118,7 +118,7 @@
                       :notext="true"/>
       <bbns-container url="commands"
                       :load="false"
-                      :static="true"
+                      :fixed="true"
                       component="appui-server-commands"
                       icon="nf nf-mdi-function"
                       bcolor="yellowgreen"

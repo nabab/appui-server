@@ -4,7 +4,7 @@
               :nav="true"
               :master="true">
     <bbns-container url="home"
-                    :static="true"
+                    :fixed="true"
                     :load="true"
                     icon="nf nf-fa-home"
                     bcolor="tomato"
@@ -12,7 +12,7 @@
                     title="<?= _("Dashboard") ?>"
                     :notext="true"/>
     <bbns-container url="servers"
-                    :static="true"
+                    :fixed="true"
                     :load="true"
                     icon="nf nf-oct-server"
                     bcolor="mediumseagreen"
@@ -20,7 +20,7 @@
                     title="<?= _("Servers") ?>"
                     :notext="true"/>
     <bbns-container url="domains"
-                    :static="true"
+                    :fixed="true"
                     :load="true"
                     icon="nf nf-fa-th_list"
                     bcolor="darkseagreen"
@@ -28,7 +28,7 @@
                     title="<?= _("Domains") ?>"
                     :notext="true"/>
     <bbns-container url="scaleway"
-                    :static="true"
+                    :fixed="true"
                     :load="true"
                     icon="nf nf-oct-server"
                     bcolor="purple"
@@ -37,7 +37,7 @@
                     :notext="true"/>
     <bbns-container url="tasks"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-tasks"
                     icon="nf nf-oct-tasklist"
                     bcolor="chocolate"

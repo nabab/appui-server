@@ -1,4 +1,7 @@
 <?php
+use bbn\X;
+use bbn\Appui\Server;
+
 return [[
   'id' => 'appui-server-0',
   'frequency' => 3,
@@ -8,7 +11,14 @@ return [[
       'data' => []
     ];
     if (isset($data['data'])) {
-      $running = \bbn\Appui\Server::getRunningTasks();
+      try {
+        $running = Server::getRunningTasks();
+      }
+      catch (Exception $e) {
+        X::log($e->getMessage());
+        return [];
+      }
+
       $runningHash = md5(json_encode($running));
       if (isset($data['data']['runningTasksHash'])
         && ($runningHash !== $data['data']['runningTasksHash'])
@@ -20,7 +30,8 @@ return [[
           ]
         ];
       }
-      $queue = \bbn\Appui\Server::getCurrentTasksQueue();
+
+      $queue = Server::getCurrentTasksQueue();
       $queueHash = md5(json_encode($queue));
       if (isset($data['data']['tasksQueueHash'])
         && ($queueHash !== $data['data']['tasksQueueHash'])
@@ -32,6 +43,7 @@ return [[
         $res['data']['serviceWorkers']['tasksQueueHash'] = $queueHash;
       }
     }
+
     return $res;
   }
 ]];

@@ -4,7 +4,7 @@
               ref="router"
               :nav="true">
     <bbns-container url="home"
-                    :static="true"
+                    :fixed="true"
                     :load="false"
                     :source="source"
                     icon="nf nf-fa-home"
@@ -15,7 +15,7 @@
                     :notext="true"/>
     <bbns-container url="subdomains"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-domain-subdomains"
                     icon="nf nf-fa-th_list"
                     bcolor="darkkhaki"
@@ -25,7 +25,7 @@
                     :notext="true"/>
     <bbns-container url="users"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-domain-users"
                     icon="nf nf-fa-users"
                     bcolor="darkseagreen"
@@ -35,7 +35,7 @@
                     :notext="true"/>
     <bbns-container url="information"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-domain-information"
                     icon="nf nf-fa-info"
                     bcolor="steelblue"
@@ -45,7 +45,7 @@
                     :notext="true"/>
     <bbns-container url="commands"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-domain-commands"
                     icon="nf nf-mdi-function"
                     bcolor="firebrick"

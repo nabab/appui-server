@@ -4,7 +4,7 @@
               ref="router"
               :nav="true">
     <bbns-container url="home"
-                    :static="true"
+                    :fixed="true"
                     :load="false"
                     :source="source"
                     icon="nf nf-fa-home"

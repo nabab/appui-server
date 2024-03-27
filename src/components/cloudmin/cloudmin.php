@@ -4,7 +4,7 @@
               ref="router"
               :nav="true">
     <bbns-container url="systems"
-                    :static="true"
+                    :fixed="true"
                     :load="false"
                     :source="source.systems"
                     icon="nf nf-fa-laptop"
@@ -13,7 +13,7 @@
                     component="appui-server-cloudmin-tab-systems"/>
     <bbns-container url="commands"
                     :load="false"
-                    :static="true"
+                    :fixed="true"
                     component="appui-server-cloudmin-tab-commands"
                     icon="nf nf-fa-cogs"
                     :source="source"
