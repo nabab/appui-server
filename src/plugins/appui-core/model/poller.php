@@ -1,6 +1,7 @@
 <?php
 use bbn\X;
 use bbn\Appui\Server;
+return [];
 
 return [[
   'id' => 'appui-server-0',
