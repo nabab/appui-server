@@ -22,8 +22,8 @@
                   class="bbn-flex-fill bbn-left-sspace"
                   button-right="nf nf-mdi-key_plus"
                   :button-left="pswdIcon"
-                  @clickLeftButton="pswdVisible = !pswdVisible"
-                  @clickRightButton="generatePswd"
+                  @clickleftbutton="pswdVisible = !pswdVisible"
+                  @clickrightbutton="generatePswd"
                   :autocomplete="false"
                   :disabled="pswdDisabled"/>
       </div>
