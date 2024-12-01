@@ -3,7 +3,7 @@
           :source="source"
           :autocomplete="false"
           @success="onSuccess">
-  <div class="bbn-grid-fields bbn-padded">
+  <div class="bbn-grid-fields bbn-padding">
     <label class="bbn-label"><?= _('Type') ?></label>
     <div>
       <bbn-radiobuttons :source="[{

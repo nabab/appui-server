@@ -4,7 +4,7 @@
           :autocomplete="false"
           :validation="validation"
           @success="onSuccess">
-  <div class="bbn-grid-fields bbn-spadded">
+  <div class="bbn-grid-fields bbn-spadding">
     <label class="bbn-label"><?= _('Name') ?></label>
     <bbn-input v-model="source.name"
                :required="true"/>

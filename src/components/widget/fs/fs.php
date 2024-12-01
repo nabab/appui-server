@@ -1,4 +1,4 @@
-<div class="appui-server-widget-fs bbn-padded">
+<div class="appui-server-widget-fs bbn-padding">
   <bbn-chart type="radial"
              :source="chartData"
              :legend="chartData.labels"
@@ -11,7 +11,7 @@
              @ready="details = true"/>
   <div v-if="!!chartData && chartData.values && !!details"
        v-for="(v, i) in chartData.values"
-       :class="['bbn-grid-fields', 'bbn-bordered', 'bbn-spadded', {
+       :class="['bbn-grid-fields', 'bbn-border', 'bbn-spadding', {
          'bbn-bottom-xsspace': !!chartData.values[i+1]
        }]"
        :style="{

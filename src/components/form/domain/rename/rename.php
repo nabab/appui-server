@@ -4,7 +4,7 @@
           ref="form"
           @success="onSuccess"
           :validation="onValidation">
-  <div class="bbn-padded bbn-w-100">
+  <div class="bbn-padding bbn-w-100">
     <bbn-input v-model="source.newdomain"
                :placeholder="_('New name')"
                class="bbn-w-100"/>

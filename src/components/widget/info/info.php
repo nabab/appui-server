@@ -1,4 +1,4 @@
-<div class="appui-server-widget-info bbn-padded bbn-grid-fields"
+<div class="appui-server-widget-info bbn-padding bbn-grid-fields"
      v-if="source.items">
   <label v-text="_('Hostname')"/>
   <div v-text="source.items.host.hostname"/>

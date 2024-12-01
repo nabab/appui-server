@@ -1,4 +1,4 @@
-<div class="appui-server-widget-services bbn-padded">
+<div class="appui-server-widget-services bbn-padding">
   <div class="bbn-grid-fields bbn-r">
     <template v-for="(item, i) in source.items">
       <div v-text="item.name"/>

@@ -6,7 +6,7 @@
           confirm-leave="<?= _("Are you sure you want to close?") ?>"
           :prefilled="true"
 >
-  <div class="bbn-padded bbn-overlay bbn-grid-fields">
+  <div class="bbn-padding bbn-overlay bbn-grid-fields">
     <label class="bbn-r">
       <?= _("Domain") ?>
     </label>

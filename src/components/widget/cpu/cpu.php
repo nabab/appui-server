@@ -1,4 +1,4 @@
-<div class="appui-server-widget-cpu bbn-padded">
+<div class="appui-server-widget-cpu bbn-padding">
   <bbn-chart type="radial"
              :source="chartData"
              :legend="chartData.labels"

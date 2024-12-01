@@ -6,7 +6,7 @@
 >
   <div class="bbn-c bbn-flex-height">
     <div>
-      <div class="bbn-padded bbn-flex-width">
+      <div class="bbn-padding bbn-flex-width">
         <div><?= _('Data start') ?></div>
         <div class="bbn-flex-fill">
           <bbn-datepicker type="date"
@@ -14,7 +14,7 @@
           ></bbn-datepicker>
         </div>
       </div>
-      <div class="bbn-padded bbn-flex-width">
+      <div class="bbn-padding bbn-flex-width">
         <div><?= _('Data end') ?></div>
         <div class="bbn-flex-fill">
           <bbn-datepicker type="date"

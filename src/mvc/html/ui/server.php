@@ -1,12 +1,12 @@
 <div class="bbn-overlay bbn-flex-width">
-  <div class="bbn-flex-height bbn-vspadded bbn-hmargin"
+  <div class="bbn-flex-height bbn-vspadding bbn-hmargin"
        style="width: 200px"
        v-if="tasksQueue.length || runningTasks.length">
-    <div class="bbn-header bbn-spadded bbn-b bbn-c"><?= _('TASKS QUEUE') ?></div>
-    <div class="bbn-flex-fill bbn-bordered-right bbn-bordered-left bbn-bordered-bottom bbn-spadded">
+    <div class="bbn-header bbn-spadding bbn-b bbn-c"><?= _('TASKS QUEUE') ?></div>
+    <div class="bbn-flex-fill bbn-border-right bbn-border-left bbn-border-bottom bbn-spadding">
       <bbn-scroll>
         <div v-for="(t, i) in runningTasks"
-             :class="['bbn-xspadded', 'bbn-primary', {'bbn-top-sspace': i > 0}]">
+             :class="['bbn-xspadding', 'bbn-primary', {'bbn-top-sspace': i > 0}]">
           <div class="bbn-flex-width">
             <i class="nf nf-fa-calendar bbn-right-sspace"
                title="<?= _('Created') ?>"/>
@@ -40,7 +40,7 @@
           </div>
         </div>
         <div v-for="(t, i) in tasksQueue"
-             :class="['bbn-xspadded', {'bbn-top-sspace': (i > 0) || runningTasks.length}]">
+             :class="['bbn-xspadding', {'bbn-top-sspace': (i > 0) || runningTasks.length}]">
           <div class="bbn-flex-width">
             <i class="nf nf-fa-calendar bbn-right-sspace"
                title="<?= _('Created') ?>"/>

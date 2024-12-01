@@ -6,7 +6,7 @@
           @success="successEditUser"
         
 >
-  <div class="bbn-padded bbn-grid-fields">
+  <div class="bbn-padding bbn-grid-fields">
     <label class="bbn-r">
       <?= _("Domain") ?>
     </label>

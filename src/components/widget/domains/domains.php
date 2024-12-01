@@ -1,4 +1,4 @@
-<div class="appui-server-widget-domains bbn-spadded">
+<div class="appui-server-widget-domains bbn-spadding">
   <bbn-tree :source="source.items"
             children="subdomains"
             source-text="name"

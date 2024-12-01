@@ -5,7 +5,7 @@
           :autocomplete="false"
           @success="onSuccess"
           :validator="onValidation">
-  <div class="bbn-grid-fields bbn-padded">
+  <div class="bbn-grid-fields bbn-padding">
     <label class="bbn-label"><?= _('Description') ?></label>
     <bbn-input v-model="source.row.description"
                :autocomplete="false"/>
