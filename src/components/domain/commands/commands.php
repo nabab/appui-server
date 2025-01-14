@@ -7,14 +7,14 @@
              ref="commandsDomainList"
              :source="source.root + 'data/domain/commands/' + source.server + '/' + source.domain"
   >
-    <bbns-column title="<?= _("Commands:") ?>"
+    <bbns-column label="<?= _("Commands:") ?>"
                 field="command"
                 class="bbn-l"
     ></bbns-column>
-    <bbns-column title="<?= _("Category commands:") ?>"
+    <bbns-column label="<?= _("Category commands:") ?>"
                 field="category"
     ></bbns-column>
-    <bbns-column title="<?= _("Description:") ?>"
+    <bbns-column label="<?= _("Description:") ?>"
                 field="description"
     ></bbns-column>
 

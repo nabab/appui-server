@@ -80,10 +80,10 @@
         }
       },*/
       /*autoreply_config(row){
-        this.getPopup().open({
+        this.getPopup({
           height: '40%',
           width: '70%',
-          title: bbn._("Config Autoreply email"),
+          label: bbn._("Config Autoreply email"),
           component: 'appui-server-popup-domains-autoreply_message',
           source: row,
         });
@@ -94,7 +94,7 @@
         row.server = this.source.server;
         row.domain = this.source.domain;
         return this.$refs.usersTable.edit(row, {
-          title: bbn._('Modify user') + ' ' + row.user,
+          label: bbn._('Modify user') + ' ' + row.user,
           height: '70%',
           width: '30%',
           onClose: () =>{
@@ -161,10 +161,10 @@
         },
         methods:{
           addUser(){
-            this.getPopup().open({
+            this.getPopup({
               height: '70%',
               width: '50%',
-              title: bbn._("Add new user"),
+              label: bbn._("Add new user"),
               component: 'appui-server-popup-domains-user-add',
               source: users,
               onClose: () =>{

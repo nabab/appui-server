@@ -10,7 +10,7 @@
                     :load="false"
                     :source="source"
                     icon="nf nf-fa-home"
-                    :title="'<?= _("Home") ?>'"
+                    :label="'<?= _("Home") ?>'"
                     component="appui-server-cloudmin-system-domain-tab-dashboard"
     ></bbns-container>
   </bbn-router>

@@ -10,7 +10,7 @@
                     icon="nf nf-fa-home"
                     bcolor="turquoise"
                     fcolor="white"
-                    title="<?= _("Home") ?>"
+                    label="<?= _("Home") ?>"
                     component="appui-server-domain-dashboard"
                     :notext="true"/>
     <bbns-container url="subdomains"
@@ -21,7 +21,7 @@
                     bcolor="darkkhaki"
                     fcolor="white"
                     :source="source"
-                    title="<?= _("Sub-domains") ?>"
+                    label="<?= _("Sub-domains") ?>"
                     :notext="true"/>
     <bbns-container url="users"
                     :load="false"
@@ -31,7 +31,7 @@
                     bcolor="darkseagreen"
                     fcolor="white"
                     :source="source"
-                    title="<?= _("Users") ?>"
+                    label="<?= _("Users") ?>"
                     :notext="true"/>
     <bbns-container url="information"
                     :load="false"
@@ -41,7 +41,7 @@
                     bcolor="steelblue"
                     fcolor="white"
                     :source="source"
-                    title="<?= _("Information") ?>"
+                    label="<?= _("Information") ?>"
                     :notext="true"/>
     <bbns-container url="commands"
                     :load="false"
@@ -51,7 +51,7 @@
                     bcolor="firebrick"
                     fcolor="white"
                     :source="source"
-                    title="<?= _("Commands") ?>"
+                    label="<?= _("Commands") ?>"
                     :notext="true"/>
   </bbn-router>
 </div>

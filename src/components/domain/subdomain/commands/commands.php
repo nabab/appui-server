@@ -6,14 +6,14 @@
              :group-by="1"
              :source="source.root + 'data/subdomain/commands/'+ source.server + '/' + source.domain + '/' + source.sub_domain"
   >
-    <bbns-column title="<?= _("Commands:") ?>"
+    <bbns-column label="<?= _("Commands:") ?>"
                 field="command"
                 class="bbn-l"
     ></bbns-column>
-    <bbns-column title="<?= _("Category commands:") ?>"
+    <bbns-column label="<?= _("Category commands:") ?>"
                 field="category"
     ></bbns-column>
-    <bbns-column title="<?= _("Description:") ?>"
+    <bbns-column label="<?= _("Description:") ?>"
                 field="description"
     ></bbns-column>
 

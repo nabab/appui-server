@@ -11,7 +11,7 @@
                     bcolor="cornflowerblue"
                     fcolor="white"
                     :source="source"
-                    title="<?= _("info") ?>"
+                    label="<?= _("info") ?>"
                     :notext="true"/>
     <bbns-container url="command"
                     :load="false"
@@ -21,7 +21,7 @@
                     bcolor="darkorange"
                     fcolor="white"
                     :source="source"
-                    title="<?= _("Commands") ?>"
+                    label="<?= _("Commands") ?>"
                     :notext="true"/>
   </bbn-router>
 </div>

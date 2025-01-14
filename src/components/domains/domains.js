@@ -97,12 +97,12 @@
       editDomain(row, col, idx){
         bbn.fn.log('edit', row);
         return this.getRef('table').edit(row, {
-          title: bbn._('Edit %s', row.name)
+          label: bbn._('Edit %s', row.name)
         }, idx);
       },
       cloneDomain(row){
-        this.getPopup().open({
-            title: bbn._('Clone %s', row.name),
+        this.getPopup({
+            label: bbn._('Clone %s', row.name),
             component: 'appui-server-form-domain-clone',
             minWidth: 400,
             source:{
@@ -128,8 +128,8 @@
         });
       },
       renameDomain(row){
-        this.getPopup().open({
-          title: bbn._('Rename %s', row.name),
+        this.getPopup({
+          label: bbn._('Rename %s', row.name),
           component: 'appui-server-form-domain-rename',
           minWidth: 400,
           source:{
@@ -176,8 +176,8 @@
         },
         methods:{
           addDomain(){
-            this.getPopup().open({
-              title: bbn._("Add new domain"),
+            this.getPopup({
+              label: bbn._("Add new domain"),
               component: 'appui-server-form-domain-add',
               source: {
                 server: this.source.options.server,

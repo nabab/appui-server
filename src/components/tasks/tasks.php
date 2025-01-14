@@ -10,45 +10,45 @@
              :max-row-height="100"
              :zoomable="true">
     <bbns-column field="id"
-                 title="<?= _('ID') ?>"
+                 label="<?= _('ID') ?>"
                  :width="80"/>
     <bbns-column field="server"
-                 title="<?= _('Server') ?>"
+                 label="<?= _('Server') ?>"
                  v-if="!source || !source.server"
                  :render="renderServer"/>
     <bbns-column field="created"
-                 title="<?= _('Created') ?>"
+                 label="<?= _('Created') ?>"
                  type="datetime"
                  cls="bbn-c"
                  :render="renderDate"
                  :width="150"/>
     <bbns-column field="user"
-                 title="<?= _('User') ?>"
+                 label="<?= _('User') ?>"
                  :source="users"/>
     <bbns-column field="method"
-                 title="<?= _('Action') ?>"/>
+                 label="<?= _('Action') ?>"/>
     <bbns-column field="args"
-                 title="<?= _('Arguments') ?>"
+                 label="<?= _('Arguments') ?>"
                  :render="renderArgs"/>
     <bbns-column field="start"
-                 title="<?= _('Start') ?>"
+                 label="<?= _('Start') ?>"
                  type="datetime"
                  cls="bbn-c"
                  :render="renderDate"
                  :width="150"/>
     <bbns-column field="end"
-                 title="<?= _('End') ?>"
+                 label="<?= _('End') ?>"
                  type="datetime"
                  cls="bbn-c"
                  :render="renderDate"
                  :width="150"/>
     <bbns-column field="failed"
-                 title="<?= _('Failed') ?>"
+                 label="<?= _('Failed') ?>"
                  :render="renderFailed"
                  cls="bbn-c"
                  :width="70"/>
     <bbns-column field="error"
-                 title="<?= _('Error Message') ?>"/>
+                 label="<?= _('Error Message') ?>"/>
     <bbns-column cls="bbn-c"
                  :width="70"
                  :buttons="getButtons"/>

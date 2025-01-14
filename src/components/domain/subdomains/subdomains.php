@@ -4,16 +4,16 @@
              class="bbn-100"
              ref="listSubDomainsTable"
              :source="source.root + 'data/domain/subdomains/' + source.server + '/' + source.domain">
-    <bbns-column title="<?= _("Active") ?>"
+    <bbns-column label="<?= _("Active") ?>"
                  cls="bbn-c"
                  :width= "50"
                  :buttons="stateButtonSubDomain"
                  field="disabled"/>
-    <bbns-column title="<?= _("Sub-domains") ?>"
+    <bbns-column label="<?= _("Sub-domains") ?>"
                  cls="bbn-c"
                  field="sub_domains"
                  :render="renderSubDomain"/>
-    <bbns-column title="<?= _("Created") ?>"
+    <bbns-column label="<?= _("Created") ?>"
                  cls="bbn-c"
                  field="created"/>
     <bbns-column :tcomponent="$options.components.newSubDomain"

@@ -9,7 +9,7 @@
                     icon="nf nf-fa-home"
                     bcolor="tomato"
                     fcolor="white"
-                    title="<?= _("Dashboard") ?>"
+                    label="<?= _("Dashboard") ?>"
                     :notext="true"/>
     <bbns-container url="servers"
                     :fixed="true"
@@ -17,7 +17,7 @@
                     icon="nf nf-oct-server"
                     bcolor="mediumseagreen"
                     fcolor="white"
-                    title="<?= _("Servers") ?>"
+                    label="<?= _("Servers") ?>"
                     :notext="true"/>
     <bbns-container url="domains"
                     :fixed="true"
@@ -25,7 +25,7 @@
                     icon="nf nf-fa-th_list"
                     bcolor="darkseagreen"
                     fcolor="white"
-                    title="<?= _("Domains") ?>"
+                    label="<?= _("Domains") ?>"
                     :notext="true"/>
     <bbns-container url="scaleway"
                     :fixed="true"
@@ -33,7 +33,7 @@
                     icon="nf nf-oct-server"
                     bcolor="purple"
                     fcolor="white"
-                    title="<?= _("Scaleway") ?>"
+                    label="<?= _("Scaleway") ?>"
                     :notext="true"/>
     <bbns-container url="tasks"
                     :load="false"
@@ -42,7 +42,7 @@
                     icon="nf nf-oct-tasklist"
                     bcolor="chocolate"
                     fcolor="white"
-                    title="<?= _("Tasks") ?>"
+                    label="<?= _("Tasks") ?>"
                     :notext="true"/>
   </bbn-router>
 </div>

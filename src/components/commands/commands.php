@@ -8,12 +8,12 @@
              :data="{
                server: source.server
              }">
-    <bbns-column title="<?= _("Command") ?>"
+    <bbns-column label="<?= _("Command") ?>"
                  field="command"
                  class="bbn-l"/>
-    <bbns-column title="<?= _("Category") ?>"
+    <bbns-column label="<?= _("Category") ?>"
                  field="category"/>
-    <bbns-column title="<?= _("Description") ?>"
+    <bbns-column label="<?= _("Description") ?>"
                  field="description"/>
   </bbn-table>
 </div>

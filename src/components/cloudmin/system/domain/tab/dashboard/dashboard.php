@@ -1,11 +1,11 @@
 <div class="bbn-overlay">
   <bbn-dashboard>
-    <bbns-widget :title="titleWidget.general"
+    <bbns-widget :label="titleWidget.general"
                  component="appui-server-widget-infos"
                  :source="general"
                  ref="general"
     ></bbns-widget>
-    <bbns-widget :title="titleWidget.users"
+    <bbns-widget :label="titleWidget.users"
                  component="appui-server-widget-users"
                  :source="source.users"
                  ref="users"

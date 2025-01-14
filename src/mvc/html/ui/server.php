@@ -82,7 +82,7 @@
                       icon="nf nf-fa-home"
                       bcolor="teal"
                       fcolor="white"
-                      title="<?= _("Home") ?>"
+                      label="<?= _("Home") ?>"
                       component="appui-server-dashboard"
                       :notext="true"/>
       <bbns-container url="cloudmin"
@@ -93,7 +93,7 @@
                       bcolor="dodgerblue"
                       fcolor="white"
                       :source="source"
-                      title="<?= _("Cloudmin") ?>"
+                      label="<?= _("Cloudmin") ?>"
                       :notext="true"
                       v-if="!!source.cloudmin"/>
       <bbns-container url="domains"
@@ -104,7 +104,7 @@
                       bcolor="sandybrown"
                       fcolor="white"
                       :source="source"
-                      title="<?= _("Domains") ?>"
+                      label="<?= _("Domains") ?>"
                       :notext="true"/>
       <bbns-container url="tasks"
                       :load="false"
@@ -114,7 +114,7 @@
                       bcolor="chocolate"
                       fcolor="white"
                       :source="source"
-                      title="<?= _("Tasks") ?>"
+                      label="<?= _("Tasks") ?>"
                       :notext="true"/>
       <bbns-container url="commands"
                       :load="false"
@@ -124,7 +124,7 @@
                       bcolor="yellowgreen"
                       fcolor="white"
                       :source="source"
-                      title="<?= _("Commands") ?>"
+                      label="<?= _("Commands") ?>"
                       :notext="true"/>
     </bbn-router>
   </div>

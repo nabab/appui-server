@@ -68,11 +68,11 @@
                        :order="[{field: 'parameter', dir: 'ASC'}]"
                        :scrollable="false"
             >
-              <bbns-column title="` + bbn._('Parameter') + `"
+              <bbns-column label="` + bbn._('Parameter') + `"
                            field='name'
                            cls='bbn-b bbn-c'
               ></bbns-column>
-              <bbns-column title="` + bbn._('Values') + `"
+              <bbns-column label="` + bbn._('Values') + `"
                            field='values'
               ></bbns-column>
             </bbn-table>

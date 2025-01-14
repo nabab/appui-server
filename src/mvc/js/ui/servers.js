@@ -51,8 +51,8 @@
         }
       },
       add(){
-        this.getPopup().open({
-          title: bbn._('Add server'),
+        this.getPopup({
+          label: bbn._('Add server'),
           component: 'appui-server-form-server-edit',
           source: {
             id: '',
@@ -69,8 +69,8 @@
         if (row.id) {
           this.post(this.root + 'data/server/password', {id: row.id}, d => {
             if (d.success) {
-              this.getPopup().open({
-                title: bbn._('Edit server'),
+              this.getPopup({
+                label: bbn._('Edit server'),
                 component: 'appui-server-form-server-edit',
                 source: {
                   id: row.id,

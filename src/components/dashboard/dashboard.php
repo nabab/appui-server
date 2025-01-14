@@ -1,68 +1,68 @@
 <div class="bbn-overlay">
   <bbn-dashboard :order="!!source.widgets ? source.widgets.order : []">
     <bbns-widget v-if="!!source.widgets && source.widgets.list.info"
-                 :title="source.widgets.list.info.text"
+                 :label="source.widgets.list.info.text"
                  v-bind="source.widgets.list.info"
                  :data="widgetData"
                  :uid="source.widgets.list.info.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.cpu"
-                 :title="source.widgets.list.cpu.text"
+                 :label="source.widgets.list.cpu.text"
                  v-bind="source.widgets.list.cpu"
                  :data="widgetData"
                  :uid="source.widgets.list.cpu.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.memory"
-                 :title="source.widgets.list.memory.text"
+                 :label="source.widgets.list.memory.text"
                  v-bind="source.widgets.list.memory"
                  :data="widgetData"
                  :uid="source.widgets.list.memory.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.fs"
-                 :title="source.widgets.list.fs.text"
+                 :label="source.widgets.list.fs.text"
                  v-bind="source.widgets.list.fs"
                  :data="widgetData"
                  :uid="source.widgets.list.fs.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.domains"
-                 :title="source.widgets.list.domains.text"
+                 :label="source.widgets.list.domains.text"
                  v-bind="source.widgets.list.domains"
                  :data="widgetData"
                  :uid="source.widgets.list.domains.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.services"
-                 :title="source.widgets.list.services.text"
+                 :label="source.widgets.list.services.text"
                  v-bind="source.widgets.list.services"
                  :data="widgetData"
                  :uid="source.widgets.list.services.key"/>
     <bbns-widget v-if="!!source.widgets && source.widgets.list.updates"
-                 :title="source.widgets.list.updates.text"
+                 :label="source.widgets.list.updates.text"
                  v-bind="source.widgets.list.updates"
                  :data="widgetData"
                  :uid="source.widgets.list.updates.key"/>
     
-    <!-- <bbns-widget title="<?= _("List Admins") ?>"
+    <!-- <bbns-widget label="<?= _("List Admins") ?>"
                 item-component="appui-server-widget-server-admin"
                 :items="admins"
                 v-if="admins.length"/>
-    <bbns-widget title="<?= _("Logs") ?>"
+    <bbns-widget label="<?= _("Logs") ?>"
                 component="appui-server-widget-server-logs"
                 :source="topLevel.log"
                 v-if="topLevel.length"/>
-    <bbns-widget title="<?= _("IP address") ?>"
+    <bbns-widget label="<?= _("IP address") ?>"
                 item-component="appui-server-widget-server-ip"
                 :items="topLevel.informations.ip_address"
                 v-if="topLevel.length"/>
     
     
-    <bbns-widget title="<?= _("Kernel") ?>"
+    <bbns-widget label="<?= _("Kernel") ?>"
                 component="appui-server-widget-server-kernel"
                 :source="infos.kernel"
                 v-if="infos.kernel"/>
-    <bbns-widget title="<?= _("info_server/fcount") ?>"
+    <bbns-widget label="<?= _("info_server/fcount") ?>"
                  component="appui-server-widget-server-infos"
                  :source="infos.fcount"
                  v-if="infos.fcount.length"/>
-    <bbns-widget title="<?= _("info_server/host") ?>"
+    <bbns-widget label="<?= _("info_server/host") ?>"
                  component="appui-server-widget-server-infos"
                  :source="infos.host"
                  v-if="infos.host.length"/>
-    <bbns-widget title="<?= _("top_level/informations") ?>"
+    <bbns-widget label="<?= _("top_level/informations") ?>"
                  item-component="appui-server-widget-server-infos"
                  :items="[
                    {created_by: topLevel.informations.created_by},
