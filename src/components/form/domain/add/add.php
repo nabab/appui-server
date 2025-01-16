@@ -9,11 +9,11 @@
       <bbn-radiobuttons :source="[{
                             text: _('Top-level'),
                             value: 'top',
-                            icon: 'nf nf-mdi-format_vertical_align_top'
+                            icon: 'nf nf-md-format_vertical_align_top'
                         }, {
                             text: _('Sub-server'),
                             value: 'sub',
-                            icon: 'nf nf-mdi-subdirectory_arrow_right',
+                            icon: 'nf nf-md-subdirectory_arrow_right',
                             disabled: !domains.length
                         }, {
                             text: _('Alias'),
@@ -43,7 +43,7 @@
       <bbn-input v-model="source.password"
                 :required="true"
                 :type="pswdType"
-                button-right="nf nf-mdi-key_plus"
+                button-right="nf nf-md-key_plus"
                 :button-left="pswdIcon"
                 @clickleftbutton="pswdVisible = !pswdVisible"
                 @clickrightbutton="generatePswd"

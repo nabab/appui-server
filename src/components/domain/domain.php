@@ -47,7 +47,7 @@
                     :load="false"
                     :fixed="true"
                     component="appui-server-domain-commands"
-                    icon="nf nf-mdi-function"
+                    icon="nf nf-md-function"
                     bcolor="firebrick"
                     fcolor="white"
                     :source="source"

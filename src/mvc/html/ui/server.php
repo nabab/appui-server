@@ -14,7 +14,7 @@
                  v-text="fdate(t.created)"/>
           </div>
           <div class="bbn-flex-width">
-            <i class="nf nf-mdi-calendar_clock bbn-right-sspace"
+            <i class="nf nf-md-calendar_clock bbn-right-sspace"
                title="<?= _('Started') ?>"/>
             <div class="bbn-flex-fill"
                  v-text="fdate(t.start)"/>
@@ -26,13 +26,13 @@
                  v-text="getUser(t.user)"/>
           </div>
           <div class="bbn-flex-width">
-            <i class="nf nf-mdi-function bbn-right-sspace"
+            <i class="nf nf-md-function bbn-right-sspace"
                title="<?= _('Task') ?>"/>
             <div class="bbn-flex-fill"
                  v-text="t.method"/>
           </div>
           <div class="bbn-flex-width">
-            <i class="nf nf-mdi-code_brackets bbn-right-sspace"
+            <i class="nf nf-md-code_brackets bbn-right-sspace"
                title="<?= _('Arguments') ?>"/>
             <div class="bbn-flex-fill"
                  v-text="getArgs(t.args)"
@@ -54,13 +54,13 @@
                  v-text="getUser(t.user)"/>
           </div>
           <div class="bbn-flex-width">
-            <i class="nf nf-mdi-function bbn-right-sspace"
+            <i class="nf nf-md-function bbn-right-sspace"
                title="<?= _('Task') ?>"/>
             <div class="bbn-flex-fill"
                  v-text="t.method"/>
           </div>
           <div class="bbn-flex-width">
-            <i class="nf nf-mdi-code_brackets bbn-right-sspace"
+            <i class="nf nf-md-code_brackets bbn-right-sspace"
                title="<?= _('Arguments') ?>"/>
             <div class="bbn-flex-fill"
                  v-text="getArgs(t.args)"
@@ -120,7 +120,7 @@
                       :load="false"
                       :fixed="true"
                       component="appui-server-commands"
-                      icon="nf nf-mdi-function"
+                      icon="nf nf-md-function"
                       bcolor="yellowgreen"
                       fcolor="white"
                       :source="source"

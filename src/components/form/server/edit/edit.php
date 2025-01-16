@@ -17,13 +17,13 @@
     <label class="bbn-label"><?= _('Password') ?></label>
     <bbn-input v-model="source.pass1"
                :type="pass1type"
-               :button-right="pass1type === 'password' ? 'nf nf-mdi-eye' : 'nf nf-mdi-eye_off'"
+               :button-right="pass1type === 'password' ? 'nf nf-md-eye' : 'nf nf-md-eye_off'"
                @clickrightbutton="pass1type = pass1type === 'password' ? 'text' : 'password'"
                :required="true"/>
     <label class="bbn-label"><?= _('Repeat password') ?></label>
     <bbn-input v-model="source.pass2"
                :type="pass2type"
-               :button-right="pass2type === 'password' ? 'nf nf-mdi-eye' : 'nf nf-mdi-eye_off'"
+               :button-right="pass2type === 'password' ? 'nf nf-md-eye' : 'nf nf-md-eye_off'"
                @clickrightbutton="pass2type = pass2type === 'password' ? 'text' : 'password'"
                :required="true"/>
     <label class="bbn-label"><?= _('Cloudmin') ?></label>

@@ -20,7 +20,7 @@
                   :required="!pswdDisabled"
                   :type="pswdType"
                   class="bbn-flex-fill bbn-left-sspace"
-                  button-right="nf nf-mdi-key_plus"
+                  button-right="nf nf-md-key_plus"
                   :button-left="pswdIcon"
                   @clickleftbutton="pswdVisible = !pswdVisible"
                   @clickrightbutton="generatePswd"

@@ -43,7 +43,7 @@
           text: bbn._('Rename'),
           action: this.renameDomain,
           notext: true,
-          icon: 'nf nf-mdi-format_title'
+          icon: 'nf nf-md-format_title'
         }, {
           text: bbn._('Edit'),
           action: this.editDomain,

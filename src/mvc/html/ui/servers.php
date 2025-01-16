@@ -109,17 +109,17 @@
                group="services"/>
   <bbns-column :buttons="[{
                  text: _('Open'),
-                 icon: 'nf nf-mdi-open_in_app',
+                 icon: 'nf nf-md-open_in_app',
                  notext: true,
                  action: open
                }, {
                  text: _('Open on browser'),
-                 icon: 'nf nf-mdi-open_in_new',
+                 icon: 'nf nf-md-open_in_new',
                  notext: true,
                  action: openExt
                }, {
                  text: _('Force cache reload'),
-                 icon: 'nf nf-mdi-cached',
+                 icon: 'nf nf-md-cached',
                  notext: true,
                  action: reloadCache
                }, {

@@ -17,7 +17,7 @@
                     :load="false"
                     :fixed="true"
                     component="appui-server-domain-subdomain-commands"
-                    icon="nf nf-mdi-function"
+                    icon="nf nf-md-function"
                     bcolor="darkorange"
                     fcolor="white"
                     :source="source"
