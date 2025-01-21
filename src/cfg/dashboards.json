@@ -11,7 +11,7 @@
   },
   {
     "text": "Appui-Server",
-    "code": "appui-server",
+    "code": "server",
     "items": [
       {
         "code": "servers",
@@ -25,7 +25,7 @@
   },
   {
     "text": "Appui-Server Server",
-    "code": "appui-server-server",
+    "code": "server",
     "items": [
       {
         "code": "cpu",
