@@ -17,24 +17,43 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
 stages:          # List of stages for jobs, and their order of execution
+  - codeberg
   - github
 
+codeberg-sync:
+  stage: codeberg
+  script:
+    - echo "Synching with Codeberg"
+    - rm -rf ~/plugins_appui-server
+    - mkdir ~/plugins_appui-server
+    - cd ~/plugins_appui-server
+    - git clone --bare git@git.bbn.so:plugins/appui-server.git .
+    - git remote add --mirror=fetch codeberg git@codeberg.org:appui/server.git
+    - git fetch git@git.bbn.so:plugins/appui-server.git master
+    - git fetch git@codeberg.org:appui/server.git master
+    - git push -f git@codeberg.org:appui/server.git master
+    - git push -f git@codeberg.org:appui/server.git --tags
+    - cd -
+    - rm -rf ~/plugins_appui-server
+    - echo "Codeberg synching finished !"
+  tags:
+    - codeberg
 github-sync:       # This job runs in the build stage, which runs first.
   stage: github
   script:
     - echo "Synching with Github..."
-    - cd ~/
-    - rm -rf plugins
-    - mkdir -p plugins/appui-server
-    - git clone --bare git@git.bbn.so:plugins/appui-server.git plugins/appui-server
-    - cd plugins/appui-server
+    - rm -rf ~/plugins_appui-server
+    - mkdir ~/plugins_appui-server
+    - cd ~/plugins_appui-server
+    - git clone --bare git@git.bbn.so:plugins/appui-server.git .
     - git remote add --mirror=fetch github git@github.com:nabab/appui-server.git
     - git fetch git@git.bbn.so:plugins/appui-server.git master
     - git fetch git@github.com:nabab/appui-server.git master
-    - git push -f git@github.com:nabab/appui-server.git --all
+    - git push -f git@github.com:nabab/appui-server.git master
     - git push -f git@github.com:nabab/appui-server.git --tags
     - cd -
-    - rm -rf plugins
-    - echo "Synching finished !"
+    - rm -rf ~/plugins_appui-server
+    - echo "Github synching finished !"
   tags:
     - github
+
