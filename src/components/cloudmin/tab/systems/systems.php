@@ -18,7 +18,7 @@
                  field="value"
                  cls="bbn-c"
                  :render="renderOs"
-                 :hidden="true"/>
+                 :invisible="true"/>
     <bbns-column label="<?= _("Ip") ?>"
                  field="value"
                  cls="bbn-c"
@@ -27,7 +27,7 @@
                  field="name"
                  cls="bbn-c"
                  :render="renderMac"
-                 :hidden="true"/>
+                 :invisible="true"/>
     <bbns-column label="<?= _("Domains") ?>"
                  field="value"
                  :render="renderTotDomains"
@@ -47,12 +47,12 @@
                  :render="renderBackups"
                  cls="bbn-c"
                  :width="50"
-                 :hidden="true"/>
+                 :invisible="true"/>
     <bbns-column label="<?= _("Updates") ?>"
                  field="value"
                  :render="renderUpdates"
                  cls="bbn-c"
                  :width="100"
-                 :hidden="true"/>
+                 :invisible="true"/>
   </bbn-table>
 </div>
