@@ -9,7 +9,7 @@
     'root' => APPUI_SERVER_ROOT,
     'server' => $ctrl->post['server'],
     'domain' => $ctrl->post['domain'],
-    'domains' => $ctrl->reroute(APPUI_SERVER_ROOT.'data/server/home', $ctrl->post)
+    'domains' => $ctrl->reroute(APPUI_SERVER_ROOT.'data/server/home', $ctrl->post),
     'root_dashboard' =>  APPUI_SERVER_ROOT.'ui/server/home/'
   ])->combo(null, true);
 
