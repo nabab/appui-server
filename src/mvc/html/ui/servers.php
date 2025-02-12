@@ -131,7 +131,7 @@
                  text: _('Delete'),
                  icon: 'nf nf-fa-trash',
                  notext: true,
-                 action: remove
+                 action: removeItem
                }]"
                fixed="right"
                :width="180"

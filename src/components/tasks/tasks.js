@@ -31,12 +31,12 @@
       getButtons(row){
         return !!row.active && !row.start && !row.failed ? [{
           text: bbn._('Remove'),
-          action: this.remove,
+          action: this.removeItem,
           icon: 'nf nf-fa-trash',
           notext: true
         }] : [];
       },
-      remove(row){
+      removeItem(row){
         if (!!row.server && !!row.id) {
           this.confirm(bbn._('Are you sure you want to remove this task?'), () => {
             this.post(this.root + 'actions/server/tasks/remove', {

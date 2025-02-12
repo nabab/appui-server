@@ -86,7 +86,7 @@
           });
         }
       },
-      remove(row){
+      removeItem(row){
         if (row.id) {
           this.confirm(bbn._('Are you sure you want to delete this server?'), () => {
             this.post(this.root + 'actions/server/remove', {id: row.id}, d => {
