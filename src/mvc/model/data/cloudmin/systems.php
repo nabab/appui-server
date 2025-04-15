@@ -7,7 +7,7 @@ $backup = $model->tmpPath('appui-server') . 'into.text';
 //$backup_lan = BBN_DATA_PATH . 'plugins/appui-server/into_lan.text';
 
 
-$backup_lan_id = $model->inc->options->fromCode('cloudmin.lan', 'servers', 'server', BBN_APPUI);
+$backup_lan_id = $model->inc->options->fromCode('cloudmin.lan', 'servers', 'server', 'appui');
 $cred = $model->inc->options->option($backup_lan_id);
 
 $psw =  new Passwords($model->db);

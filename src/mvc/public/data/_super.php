@@ -9,7 +9,7 @@ else if (!empty($ctrl->arguments) && !empty($ctrl->arguments[0])) {
 }
 
 if (!empty($serverName)
-  && ($idOption = $ctrl->inc->options->fromCode($serverName, 'servers', 'server', BBN_APPUI))
+  && ($idOption = $ctrl->inc->options->fromCode($serverName, 'servers', 'server', 'appui'))
 ){
   
   $server = $ctrl->inc->options->option($idOption);

@@ -6,7 +6,7 @@ if( !empty($model->inc->vm) &&
   (!empty($model->data['tab']) || !empty($model->data['toplevel']))
 ){
 
-  $server = $model->inc->options->option($model->inc->options->fromCode($model->data['server'], 'servers', 'server', BBN_APPUI));
+  $server = $model->inc->options->option($model->inc->options->fromCode($model->data['server'], 'servers', 'server', 'appui'));
 
   $cmds = [
     'list_domains' => [],

@@ -1,6 +1,6 @@
 <?php
 if( !empty($ctrl->arguments[0]) &&
-  !empty($id = $ctrl->inc->options->fromCode($ctrl->arguments[0], 'servers', 'server', BBN_APPUI)) &&
+  !empty($id = $ctrl->inc->options->fromCode($ctrl->arguments[0], 'servers', 'server', 'appui')) &&
   !empty($ctrl->arguments[1])
 ){
 

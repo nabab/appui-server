@@ -13,7 +13,7 @@ return 1;
  //configuration object virtualmin or cloudmin
  if ( !empty($ctrl->post) &&
      !empty($ctrl->post['server']) &&
-     !empty($id_option = $ctrl->inc->options->fromCode($ctrl->post['server'], 'servers', 'server', BBN_APPUI))
+     !empty($id_option = $ctrl->inc->options->fromCode($ctrl->post['server'], 'servers', 'server', 'appui'))
  ){
    $server = $ctrl->inc->options->option($id_option);
    $ctrl->addInc('vm', new \bbn\Api\Virtualmin([

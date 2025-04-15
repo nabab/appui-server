@@ -15,7 +15,7 @@ if( !empty($model->inc->vm) &&
   !empty($model->data['user']) &&
   !empty($model->data['pass'])
 ){
-  $server = $model->inc->options->option($model->inc->options->fromCode($model->data['server'], 'servers', 'server', BBN_APPUI));
+  $server = $model->inc->options->option($model->inc->options->fromCode($model->data['server'], 'servers', 'server', 'appui'));
 
 
   $list = [

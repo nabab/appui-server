@@ -6,7 +6,7 @@
  * Time: 15.23
  */
 
-$backup_lan_id = $model->inc->options->fromCode('cloudmin.lan', 'servers', 'server', BBN_APPUI);
+$backup_lan_id = $model->inc->options->fromCode('cloudmin.lan', 'servers', 'server', 'appui');
 $cred = $model->inc->options->option($backup_lan_id);
 
 $psw =  new \bbn\Appui\Passwords($model->db);
