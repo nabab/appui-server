@@ -1,10 +1,6 @@
 <?php
-/*
- * Describe what it does!
- *
- **/
 
-/** @var $this \bbn\Mvc\Controller */
+/** @var bbn\Mvc\Controller $ctrl */
 
 if (!\defined('APPUI_SERVER_ROOT')) {
   define('APPUI_SERVER_ROOT', $ctrl->pluginUrl('appui-server') . '/');

@@ -5,7 +5,7 @@
  * Date: 24/03/17
  * Time: 19.58
  *
- * @var $ctrl \bbn\Mvc\Controller
+ * @var bbn\Mvc\Model $model
  */
 
 if( !empty($model->inc->vm) &&

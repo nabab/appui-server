@@ -1,10 +1,6 @@
 <?php
-/*
- * Describe what it does!
- *
- **/
 
-/** @var $this \bbn\Mvc\Controller */
+/** @var bbn\Mvc\Controller $ctrl */
 
 if (!empty($ctrl->post['data']['server'])) {
   $server = \bbn\Str::isUid($ctrl->post['data']['server'])

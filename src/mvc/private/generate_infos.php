@@ -1,10 +1,6 @@
 <?php
-/*
- * Describe what it does!
- *
- **/
 
-/** @var $this \bbn\Mvc\Controller */
+/** @var bbn\Mvc\Controller $ctrl */
 $backup_lan = $ctrl->tmpPath('appui-server') . 'into_lan.text';
 $infos_file = $ctrl->tmpPath('appui-server') . 'infos/';
 $text = file_get_contents($backup_lan);

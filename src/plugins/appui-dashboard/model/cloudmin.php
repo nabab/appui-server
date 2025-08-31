@@ -1,6 +1,6 @@
 <?php
 
-/** @var \bbn\Mvc\Model $model */
+/** @var bbn\Mvc\Model $model */
 $model->data['filters'] = [
   'conditions' => [[
     'field' => 'JSON_EXTRACT(value, "$.cloudmin")',

@@ -6,7 +6,7 @@
  * Date: 24/03/17
  * Time: 11.28
  *
- * @var $ctrl \bbn\Mvc\Controller
+ * @var bbn\Mvc\Controller $ctrl
  */
 
 if ( !empty($ctrl->post) ){

@@ -5,7 +5,7 @@
  * Date: 24/03/17
  * Time: 11.18
  *
- * @var $ctrl \bbn\Mvc\Controller
+ * @var bbn\Mvc\Controller $ctrl
  */
 
 return 1;
