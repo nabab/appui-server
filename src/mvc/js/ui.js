@@ -23,9 +23,9 @@
                 switch (t.method)  {
                   case 'startService':
                   case 'stopService':
-                    if (bbn.fn.isVue(server)) {
+                    if (bbn.cp.isComponent(server)) {
                       let widget = server.find('appui-server-widget-services');
-                      if (bbn.fn.isVue(widget)) {
+                      if (bbn.cp.isComponent(widget)) {
                         widget.forceRefresh();
                       }
                     }
@@ -36,21 +36,21 @@
                   case 'renameDomain':
                   case 'setDomainState':
                   case 'deleteDomain':
-                    if (bbn.fn.isVue(server)) {
+                    if (bbn.cp.isComponent(server)) {
                       let widget = server.find('appui-server-widget-domains');
-                      if (bbn.fn.isVue(widget)) {
+                      if (bbn.cp.isComponent(widget)) {
                         widget.forceRefresh();
                       }
                       let page = server.find('appui-server-domains'),
-                          table = bbn.fn.isVue(page) ? page.getRef('table') : false;
-                      if (bbn.fn.isVue(table)) {
+                          table = bbn.cp.isComponent(page) ? page.getRef('table') : false;
+                      if (bbn.cp.isComponent(table)) {
                         table.updateData();
                       }
                     }
                     let globalContainer = this.findByKey('domains', 'bbn-container'),
-                        globalPage = bbn.fn.isVue(globalContainer) ? globalContainer.getComponent() : false,
-                        globalTable = bbn.fn.isVue(globalPage) ? globalPage.getRef('table') : false;
-                    if (bbn.fn.isVue(globalTable)) {
+                        globalPage = bbn.cp.isComponent(globalContainer) ? globalContainer.getComponent() : false,
+                        globalTable = bbn.cp.isComponent(globalPage) ? globalPage.getRef('table') : false;
+                    if (bbn.cp.isComponent(globalTable)) {
                       globalTable.updateData();
                     }
                     if (t.method === 'createDomain') {
@@ -63,10 +63,10 @@
                     }
                     break;
                 }
-                if (bbn.fn.isVue(server)) {
+                if (bbn.cp.isComponent(server)) {
                   let serverTasksPage = server.find('appui-server-tasks'),
-                      serverTasksTable = bbn.fn.isVue(serverTasksPage) ? serverTasksPage.getRef('table') : false;
-                  if (bbn.fn.isVue(serverTasksTable)) {
+                      serverTasksTable = bbn.cp.isComponent(serverTasksPage) ? serverTasksPage.getRef('table') : false;
+                  if (bbn.cp.isComponent(serverTasksTable)) {
                     serverTasksTable.updateData();
                   }
                 }
@@ -82,9 +82,9 @@
           || (data.runningTasks !== undefined)
         ) {
           let tasksContainer = this.findByKey('tasks', 'bbn-container'),
-              tasksPage = bbn.fn.isVue(tasksContainer) ? tasksContainer.find('appui-server-tasks') : false,
-              tasksTable = bbn.fn.isVue(tasksPage) ? tasksPage.getRef('table') : false;
-          if (bbn.fn.isVue(tasksTable)) {
+              tasksPage = bbn.cp.isComponent(tasksContainer) ? tasksContainer.find('appui-server-tasks') : false,
+              tasksTable = bbn.cp.isComponent(tasksPage) ? tasksPage.getRef('table') : false;
+          if (bbn.cp.isComponent(tasksTable)) {
             tasksTable.updateData();
           }
         }
