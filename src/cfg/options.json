@@ -1,0 +1,11 @@
+[
+  {
+    "icon": "nf nf-md-server",
+    "text": "Servers",
+    "code": "servers",
+    "cfg": {
+      "show_code": 1,
+      "show_value": 1
+    }
+  }
+]
