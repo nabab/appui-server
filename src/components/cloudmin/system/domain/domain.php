@@ -3,7 +3,7 @@
                :scrollable="true"
                :autoload="true"
                ref="domainTabNav"
-               :nav="true"
+               mode="tabs"
   >
     <bbns-container url="home"
                     :fixed="true"

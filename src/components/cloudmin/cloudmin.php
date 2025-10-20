@@ -2,7 +2,7 @@
   <bbn-router :scrollable="true"
               :autoload="true"
               ref="router"
-              :nav="true">
+              mode="tabs">
     <bbns-container url="systems"
                     :fixed="true"
                     :load="false"

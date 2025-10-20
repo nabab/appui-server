@@ -1,7 +1,7 @@
 <div class="appui-server bbn-overlay">
   <bbn-router :scrollable="true"
               :autoload="true"
-              :nav="true"
+              mode="tabs"
               :master="true">
     <bbns-container url="home"
                     :fixed="true"
