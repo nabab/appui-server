@@ -1,4 +1,5 @@
 <?php
+use bbn\Str;
 $res = ['success' => false];
 if (($dashboard = new \bbn\Appui\Dashboard('appui-server-server'))) {
   $widgets = $dashboard->getUserWidgetsCode($model->pluginUrl('appui-dashboard').'/data/');
@@ -104,13 +105,13 @@ if (!empty($model->inc->vm)) {
   $informations = [];
 
   foreach ( $delimiters as $i => &$d ){
-    if ((($pos = strpos($infos_server, ($i ? "\n" : '').$d['search'])) !== false)
+    if ((($pos = Str::pos($infos_server, ($i ? "\n" : '').$d['search'])) !== false)
       && (isset($delimiters[$i+1])
-        && (($pos2 = strpos($infos_server, "\n".$delimiters[$i+1]['search'])) !== false))
+        && (($pos2 = Str::pos($infos_server, "\n".$delimiters[$i+1]['search'])) !== false))
     ) {
-      $d['st'] = substr($infos_server, $pos, $pos2 - $pos);
+      $d['st'] = Str::sub($infos_server, $pos, $pos2 - $pos);
     }
-    if ( strlen($d['st']) > 0 ){
+    if ( Str::len($d['st']) > 0 ){
       $informations[$d['name']] = [];
       if ($d['name'] === 'disk_fs'){
         $arr=  explode('*', $d['st']);
@@ -145,9 +146,9 @@ if (!empty($model->inc->vm)) {
             return $val !== "";
           });
           foreach($fields as $y => $field){
-            if ( ($pos = strpos($field, ":")) !== false ){
-              $idx = str_replace(" ", "", substr($field, 0, $pos));
-              $value = substr($field, $pos, strlen($field) - $pos);
+            if ( ($pos = Str::pos($field, ":")) !== false ){
+              $idx = str_replace(" ", "", Str::sub($field, 0, $pos));
+              $value = Str::sub($field, $pos, Str::len($field) - $pos);
               $value = str_replace(": ", "", $value);
               if( count($fields) > 1 ){
                 $informations[$d['name']][$idx] = $value;

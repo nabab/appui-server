@@ -1,5 +1,6 @@
 <?php
 
+use bbn\Str;
 use bbn\Appui\Passwords;
 use bbn\Api\Virtualmin;
 
@@ -55,7 +56,7 @@ if ( is_array($cred) ){
 
         foreach( $domains as $i => $domain ){
           foreach( $domains[$i]['values'] as $idx => $v ){
-            if( (strpos($idx, 'login') > -1) || (strpos($idx, 'password') > -1) ){
+            if( (Str::pos($idx, 'login') > -1) || (Str::pos($idx, 'password') > -1) ){
               unset($domains[$i]['values'][$idx]);
             }
           };
@@ -63,7 +64,7 @@ if ( is_array($cred) ){
       }
       if ( !empty($system['values']) ){
         foreach( $systems[$k]['values'] as $key => $val ){
-          if( (strpos($key, 'login') > -1) || (strpos($key, 'password') > -1) ){
+          if( (Str::pos($key, 'login') > -1) || (Str::pos($key, 'password') > -1) ){
             unset($systems[$k]['values'][$key]);
           }
         };

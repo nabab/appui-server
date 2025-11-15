@@ -1,4 +1,5 @@
 <?php
+use bbn\Str;
 if( !empty($model->inc->vm) &&
   !empty($model->data['domain']) &&
   !empty($model->data['user'])
@@ -11,13 +12,13 @@ if( !empty($model->inc->vm) &&
 
     if ( count($extra_emails) > count($extra_original_emails) ){
       $emails = implode(" ",  array_diff($extra_emails, $extra_original_emails));
-      if( !empty(strlen($emails)) ){
+      if( !empty(Str::len($emails)) ){
         $params['add-email'] = $emails;
       }
     }
     if ( count($extra_emails) < count($extra_original_emails) ){
       $emails = implode(" ", array_diff($extra_original_emails, $extra_emails));
-      if( !empty(strlen($emails)) ){
+      if( !empty(Str::len($emails)) ){
         $params['remove-email'] = $emails;
       }
     }
@@ -27,7 +28,7 @@ if( !empty($model->inc->vm) &&
     unset( $model->data['res'] );
 
     foreach($model->data as $prop => $val){
-      if ( strpos($prop, "_") !== false){
+      if ( Str::pos($prop, "_") !== false){
          $prop =str_replace("_", "-", $prop);
       }
       $params[$prop] = $val;

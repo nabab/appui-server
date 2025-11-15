@@ -1,4 +1,5 @@
 <?php
+use bbn\Str;
 
 if( !empty($model->inc->vm) &&
   !empty($model->inc->options) &&
@@ -12,7 +13,7 @@ if( !empty($model->inc->vm) &&
     $folder = $model->cachePath()."bbn/api/virtualmin/";
     $content_cache = array_diff(scandir($folder), ['..', '.']);
     foreach( $content_cache as $ele ){
-      if ( strpos($ele, $model->data['server']) !== false ){
+      if ( Str::pos($ele, $model->data['server']) !== false ){
         if ( is_dir($folder.$ele) ){
           // \bbn\X::log($folder, 'cache_delete');
           \bbn\File\Dir::delete($folder.$ele);

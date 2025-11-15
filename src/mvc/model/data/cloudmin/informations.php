@@ -1,4 +1,5 @@
 <?php
+use bbn\Str;
 /**
  * Created by BBN Solutions.
  * User: Vito Fava
@@ -22,7 +23,7 @@
 //
 //   //
 //   // $names = array_map(function($a){ return $a['name'];}, $domains);
-//   // $names = array_filter($names, function($a){ return strpos($a, 'list') !== false;});
+//   // $names = array_filter($names, function($a){ return Str::pos($a, 'list') !== false;});
 //   // sort($names);
 //
 //   return [

@@ -5,6 +5,7 @@
  * Date: 23/11/17
  * Time: 14.38
  */
+use bbn\Str;
 
 /*
 if ( !empty($model->data['server']) ){
@@ -40,7 +41,7 @@ if ( !empty($model->data['server']) ){
       foreach ( $all_users as $j => $val ){
         $users .= $val['name']. "  ";
       }
-      $users = substr($users, 0, strlen($users)-1);
+      $users = Str::sub($users, 0, Str::len($users)-1);
     }
     else{
       $users = "";

@@ -2,6 +2,7 @@
 
 use Exception;
 use bbn\X;
+use bbn\Str;
 use bbn\File\Dir;
 use bbn\Api\Virtualmin;
 
@@ -109,7 +110,7 @@ if ( !empty($model->data['system']) ){
 
 
       foreach( $infos as $key => $val ){
-        if( (strpos($key, 'login') > -1) || (strpos($key, 'password') > -1) ){
+        if( (Str::pos($key, 'login') > -1) || (Str::pos($key, 'password') > -1) ){
           unset($infos[$key]);
         }
       }

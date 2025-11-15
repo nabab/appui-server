@@ -1,4 +1,5 @@
 <?php
+use bbn\Str;
 
 /** @var bbn\Mvc\Controller $ctrl */
 $backup_lan = $ctrl->tmpPath('appui-server') . 'into_lan.text';
@@ -29,7 +30,7 @@ $commands = json_decode(file_get_contents($backup_command), true);
 
 
 $commands = array_filter($commands, function($val, $key){
-  if ((array_search('host', array_column($val, 'name')) === false) && (strpos($key, 'list') > -1)){
+  if ((array_search('host', array_column($val, 'name')) === false) && (Str::pos($key, 'list') > -1)){
     return true;
   }
 },ARRAY_FILTER_USE_BOTH);
@@ -39,7 +40,7 @@ $commands = array_filter($commands, function($val, $key){
 //
 // $commands_for_host = array_filter($commands, function($val, $key){
 //   foreach($val as $v){
-//     if ((array_search('host', $val) !== false) && (strpos($key, 'list') > -1)){
+//     if ((array_search('host', $val) !== false) && (Str::pos($key, 'list') > -1)){
 //       return true;
 //     }
 //   }
@@ -123,13 +124,13 @@ foreach( $all_systems as $k => $system ){
       ]);
     }
     foreach( $infos as $key => $val ){
-      if( (strpos($key, 'login') > -1) || (strpos($key, 'password') > -1) ){
+      if( (Str::pos($key, 'login') > -1) || (Str::pos($key, 'password') > -1) ){
         unset($infos[$key]);
       }
     }
 
      // $infos = array_filter($infos, function($val, $key){
-     //   if ( (strpos($key, 'password') < 0) || (strpos($key, 'login') < 0) ){
+     //   if ( (Str::pos($key, 'password') < 0) || (Str::pos($key, 'login') < 0) ){
      //     return true;
      //   }
      // },ARRAY_FILTER_USE_BOTH);
