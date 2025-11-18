@@ -14,7 +14,7 @@
       },
       renderUptime(row){
         if (row.uptime) {
-          let dur = dayjs.duration(row.uptime * 1000),
+          let dur = bbn.date().duration(row.uptime * 1000),
               years = dur.format('Y'),
               months = dur.format('M'),
               days = dur.format('D'),

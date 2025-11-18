@@ -13,7 +13,7 @@
     },
     methods: {
       renderDate(row, col, idx, val){
-        return !!val ? dayjs(val).format('DD/MM/YYYY HH:mm:ss') : '';
+        return !!val ? bbn.date(val).format('DD/MM/YYYY HH:mm:ss') : '';
       },
       renderFailed(row){
         return !!row.failed ? '<i class="nf nf-fa-close bbn-red"></i>' : '';

@@ -2,7 +2,7 @@
   return {
     methods: {
       getUptime(){
-        let dur = dayjs.duration(this.source.items.uptime * 1000),
+        let dur = bbn.date().duration(this.source.items.uptime * 1000),
             years = dur.format('Y'),
             months = dur.format('M'),
             days = dur.format('D'),
