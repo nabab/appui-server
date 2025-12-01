@@ -23,7 +23,7 @@
     },
     methods: {
       fdate(val){
-        return !!val ? bbn.date(val).format('DD/MM/YYYY HH:mm:ss') : '';
+        return !!val ? bbn.dt(val).format('DD/MM/YYYY HH:mm:ss') : '';
       },
       getUser(id){
         return appui.getUserName(id);
