@@ -136,7 +136,7 @@ foreach( $all_systems as $k => $system ){
      // },ARRAY_FILTER_USE_BOTH);
 
      $file = $infos_file.$system['name'].'.json';
-     file_put_contents($file, Json_encode($infos));
+     file_put_contents($file, json_encode($infos));
 
 }
 

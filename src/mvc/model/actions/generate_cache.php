@@ -115,7 +115,7 @@ if ( !empty($model->data['system']) ){
         }
       }
 
-      if ( (file_put_contents($cache, Json_encode($infos)) !== false) ){
+      if ( (file_put_contents($cache, json_encode($infos)) !== false) ){
         return true;
       }
     }
