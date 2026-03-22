@@ -1,15 +1,7 @@
 <?php
-/**
- * Created by BBN Solutions.
- * User: Vito Fava
- * Date: 21/11/17
- * Time: 18.49
- */
-
-//case system
-
-if (defined('BBN_BASEURL') && !empty($ctrl->arguments[0])) {
-  if ( BBN_BASEURL === 'server/ui/cloudmin/' ){
+/** @var bbn\Mvc\Controller $ctrl */
+if ($ctrl->getConstant('baseURL') && !empty($ctrl->arguments[0])) {
+  if ($ctrl->getConstant('baseURL') === 'server/ui/cloudmin/' ){
     $ctrl->obj->bcolor = "#afffcc";
     $ctrl->addData([
       'root' => APPUI_SERVER_ROOT,
