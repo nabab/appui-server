@@ -2,7 +2,7 @@
 
 if ($model->hasData('server', true)) {
   try {
-    $server = new \bbn\Appui\Server($model->data['server']);
+    $server = new \bbn\Appui\Server($model->db, $model->data['server']);
   }
   catch (Exception $e) {
     return [];

@@ -5,7 +5,7 @@ if (!empty($ctrl->post['id'])
   && empty($ctrl->post['start'])
   && empty($ctrl->post['failed'])
 ) {
-  $server = new \bbn\Appui\Server($ctrl->post['server']);
+  $server = new \bbn\Appui\Server($ctrl->db, $ctrl->post['server']);
   if (method_exists($server, $ctrl->post['method'])
     && $server->setQueueTaskStart($ctrl->post['id'])
   ) {

@@ -4,7 +4,7 @@ if ($servers  = $ctrl->inc->options->options('servers', 'server', 'appui')) {
   // Create servers cache
   foreach ($servers as $server) {
     try {
-      $s = new \bbn\Appui\Server($server);
+      $s = new \bbn\Appui\Server($ctrl->db, $server);
       $s->makeCache();
     }
     catch (Exception $e) {

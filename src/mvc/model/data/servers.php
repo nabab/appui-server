@@ -26,7 +26,7 @@ if ($grid->check()) {
     $caches = ['kernel', 'host', 'progs', 'procs', 'uptime'];
     foreach ($data['data'] as $i => $d) {
       try {
-        $server = new \bbn\Appui\Server($d['code']);
+        $server = new \bbn\Appui\Server($model->db, $d['code']);
         $server->setOffline();
         foreach ($caches as $c) {
           $cd = $server->getCache($c, false);

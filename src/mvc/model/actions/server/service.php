@@ -1,7 +1,7 @@
 <?php
 
 if ($model->hasData(['service', 'server', 'action'], true)
-    && ($server = new \bbn\Appui\Server($model->data['server']))
+    && ($server = new \bbn\Appui\Server($model->db, $model->data['server']))
 ) {
   switch ($model->data['action']) {
     case 'start':

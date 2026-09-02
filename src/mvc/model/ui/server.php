@@ -6,7 +6,7 @@
  * Time: 18.28
  */
 
-if (($dashboard = new \bbn\Appui\Dashboard('appui-server-server'))) {
+if (($dashboard = new \bbn\Appui\Dashboard($model->db, 'appui-server-server'))) {
   $widgets = $dashboard->getUserWidgetsCode($model->pluginUrl('appui-dashboard').'/data/');
   $widgets = [
     'list' => $widgets,

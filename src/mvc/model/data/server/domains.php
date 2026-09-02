@@ -3,7 +3,7 @@
 if ($model->hasData('server', true)) {
   $serverName = $model->data['server'];
   try {
-    $server = new \bbn\Appui\Server($serverName);
+    $server = new \bbn\Appui\Server($model->db, $serverName);
   }
   catch (Exception $e) {
     return [
